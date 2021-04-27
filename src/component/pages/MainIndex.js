@@ -4,7 +4,8 @@ import {Typography, Button, Grid} from '@material-ui/core'
 
 const useStyles = makeStyles({
     root:{
-
+        border: '1px red solid',
+        padding: '10em',
     },
     wrapper:{
 
