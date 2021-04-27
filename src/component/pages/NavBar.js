@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import {Typography, Button, IconButton, AppBar, Toolbar} from '@material-ui/core';
+import {Typography, Button, IconButton, AppBar, Toolbar, SwipeableDrawer, Divider, List, ListItem} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 
 
@@ -45,12 +45,21 @@ const useStyles = makeStyles({
             display: 'block',
         }
     },
+    swipeDrawer:{
+        width: 250,
+        borderRadius: '3em 0em 0em 3em',
+    },
 });
 
 
 export default function NavBar() {
 
     const classes = useStyles();
+    const [drawer, setDrawer] = useState(false);
+
+    const toggle = () => {
+        setDrawer(!drawer);
+    } 
 
 
     return (
@@ -70,7 +79,7 @@ export default function NavBar() {
                          <div className={classes.tabDiv}>
                             {/* Mobile Tab */}
                             <div className={classes.tabHideMobile}>
-                                <IconButton>
+                                <IconButton onClick={toggle} >
                                     <MenuIcon style={{fontSize: '2em'}} />
                                 </IconButton>
                             </div>
@@ -89,6 +98,37 @@ export default function NavBar() {
                     </Toolbar>
 
                 </AppBar>
+
+                <SwipeableDrawer
+                    anchor='right'
+                    open={drawer}   
+                    onOpen={toggle}
+                    onClose={toggle}
+                >
+                    <div className={classes.swipeDrawer}>
+
+                
+
+                    <List>
+                        <ListItem>
+                            <Button variant='outlined' className={classes.tabBtn}>Services</Button>
+                        </ListItem>
+                        <Divider/>
+                        <ListItem>
+                            <Button variant='outlined' className={classes.tabBtn}>About</Button>
+                        </ListItem>
+                        <Divider/>
+                        <ListItem>
+                        <Button variant='outlined' className={classes.tabBtn}>Blog</Button>
+                        </ListItem>
+                        <Divider/>
+                        <ListItem>
+                            <Button variant='outlined' className={classes.tabBtn}>Contact</Button>
+                        </ListItem>
+                        <Divider/>
+                    </List>
+                    </div>
+                </SwipeableDrawer>
                 
             </div>
     )
