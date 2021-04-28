@@ -6,6 +6,7 @@ const useStyles = makeStyles({
     root:{
         border: '1px red solid',
         padding: '10em',
+        backgroundColor: 'rgb(15, 17, 23 )',
     },
     wrapper:{
 

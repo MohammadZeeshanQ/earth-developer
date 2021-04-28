@@ -6,7 +6,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles({
     root:{
-
     },
     container:{
        height: 64, 
@@ -64,8 +63,8 @@ export default function NavBar() {
 
     return (
         <div className={classes.root}>
-
-                <AppBar position='fixed' elevation='2' color='transparent' className={classes.container}>
+            
+                <AppBar position='fixed' elevation='2' color='white' className={classes.container}>
 
                     <Toolbar>
                         <div className={classes.appBarDiv}>
