@@ -19,12 +19,16 @@ const useStyles = makeStyles({
         flexGrow: 1,
         textAlign: 'left'
     },
+    logoText:{
+        color: '#fcfcfc',
+    },
     tabDiv:{
 
     },
     tabBtn:{
         margin: "0 .1em",
-        border: 'none'
+        border: 'none',
+        color: '#fcfcfc'
     },
     tabHideMobile:{
         '@media (max-width: 600px)':{
@@ -63,8 +67,8 @@ export default function NavBar() {
 
     return (
         <div className={classes.root}>
-            
-                <AppBar position='fixed' elevation='2' color='white' className={classes.container}>
+
+                <AppBar position='fixed' elevation='2' color='transparent' className={classes.container}>
 
                     <Toolbar>
                         <div className={classes.appBarDiv}>
@@ -79,7 +83,7 @@ export default function NavBar() {
                             {/* Mobile Tab */}
                             <div className={classes.tabHideMobile}>
                                 <IconButton onClick={toggle} >
-                                    <MenuIcon style={{fontSize: '2em'}} />
+                                    <MenuIcon style={{fontSize: '2em', color: '#fcfcfc'}} />
                                 </IconButton>
                             </div>
 

@@ -10,7 +10,7 @@ import LinkedIn from '../../assets/images/icons/github.png'
 
 const useStyles = makeStyles({
     root:{
-        position: "absolute",
+        position: "fixed",
         top: '40%',
         right: '0',
 

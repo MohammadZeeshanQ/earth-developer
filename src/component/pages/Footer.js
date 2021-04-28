@@ -9,7 +9,6 @@ import Instagram from '../../assets/images/icons/instagram.png'
 
 const useStyles = makeStyles({
     root:{
-        border: '1px green solid',
         backgroundColor: "rgb(57, 61, 72)",
     },
     wrapper:{
