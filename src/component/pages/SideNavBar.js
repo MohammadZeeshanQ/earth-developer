@@ -3,8 +3,8 @@ import {makeStyles} from '@material-ui/core/styles'
 import {IconButton} from '@material-ui/core'
 
 import FacebookIcon from '../../assets/images/icons/facebook.png'
-import Github from '../../assets/images/icons/linkedin.png'
-import LinkedIn from '../../assets/images/icons/github.png'
+import LinkedIn from '../../assets/images/icons/linkedin.png'
+import Github from '../../assets/images/icons/github.png'
 
 
 
@@ -50,7 +50,7 @@ export default function SideNavBar() {
                         <img className={classes.socialMediaIcons} src={FacebookIcon} alt='Facebook'/>
                     </IconButton>
 
-                     <IconButton style={IconStyle} size='small'>
+                     <IconButton style={IconStyle} size='small' href='https://github.com/MohammadZeeshanQ'>
                         <img className={classes.socialMediaIcons} src={Github} alt='Github'/>
                     </IconButton >
 

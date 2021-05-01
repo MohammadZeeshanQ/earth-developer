@@ -74,7 +74,7 @@ export default function Footer() {
                     <img className={classes.socialMediaIcons} src={LinkedIn} alt='LinkedIn' />
                     </IconButton>
 
-                    <IconButton size="small">
+                    <IconButton size="small" href='https://github.com/MohammadZeeshanQ'>
                     <img className={classes.socialMediaIcons} src={Github} alt='Github' />
                     </IconButton>
                 </div>
