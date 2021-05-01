@@ -58,6 +58,7 @@ const useStyles = makeStyles({
     swipeDrawer:{
         width: 250,
         borderRadius: '3em 0em 0em 3em',
+        backgroundColor: 'rgb(15, 17, 23)',
     },
 });
 
