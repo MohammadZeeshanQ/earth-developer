@@ -8,7 +8,8 @@ const useStyles = makeStyles({
     root:{
     },
     container:{
-       height: 64, 
+       height: 64,
+       backgroundColor: 'rgb(15, 17, 23)',
     },
     appBarDiv:{
         width: '100%',
@@ -28,7 +29,13 @@ const useStyles = makeStyles({
     tabBtn:{
         margin: "0 .1em",
         border: 'none',
-        color: '#fcfcfc'
+        color: '#fcfcfc',
+
+        '&:hover':{
+            backgroundColor: '#fcfcfc',
+            transition: '.4s ease all',
+            color: '#0e0e0e',
+        },
     },
     tabHideMobile:{
         '@media (max-width: 600px)':{

@@ -13,7 +13,7 @@ const useStyles = makeStyles({
         position: "fixed",
         top: '40%',
         right: '0',
-
+        zIndex: '5',
         '@media (max-width: 1000px)':{
             display: 'none'
         },
@@ -28,6 +28,11 @@ const useStyles = makeStyles({
     socialMediaIcons:{
         width: '1.5em',
         margin: '1em',
+
+        "&:hover":{
+            transform: "scale(1.2)",
+            transition: ".3s ease all",
+        },
     },
 });
 

@@ -24,6 +24,11 @@ const useStyles = makeStyles({
     socialMediaIcons:{
         margin: '0.5em',
         width: '1.3em',
+
+        "&:hover":{
+            transform: "scale(1.2)",
+            transition: ".3s ease all",
+        },
     },
     madeByDiv:{
         marginTop: '2em',
