@@ -55,12 +55,20 @@ const useStyles = makeStyles({
             display: 'block',
         }
     },
+    swipeDrawerContainer:{
+        backgroundColor: 'rgb(15, 17, 23)',
+    },
     swipeDrawer:{
         width: 250,
         borderRadius: '3em 0em 0em 3em',
-        backgroundColor: 'rgb(15, 17, 23)',
+    },
+    tabMobileBtn:{
+        color: '#0e0e0e',
+        margin: "0 .1em",
+        border: 'none',
     },
 });
+
 
 
 export default function NavBar() {
@@ -113,10 +121,11 @@ export default function NavBar() {
                 </AppBar>
 
                 <SwipeableDrawer
+                    className={classes.swipeDrawerContainer}
                     anchor='right'
                     open={drawer}   
                     onOpen={toggle}
-                    onClose={toggle}
+                    onClose={toggle}       
                 >
                     <div className={classes.swipeDrawer}>
 
@@ -124,19 +133,19 @@ export default function NavBar() {
 
                     <List>
                         <ListItem>
-                            <Button variant='outlined' className={classes.tabBtn}>Services</Button>
+                            <Button variant='outlined' className={classes.tabMobileBtn}>Services</Button>
                         </ListItem>
                         <Divider/>
                         <ListItem>
-                            <Button variant='outlined' className={classes.tabBtn}>About</Button>
+                            <Button variant='outlined' className={classes.tabMobileBtn}>About</Button>
                         </ListItem>
                         <Divider/>
                         <ListItem>
-                        <Button variant='outlined' className={classes.tabBtn}>Blog</Button>
+                        <Button variant='outlined' className={classes.tabMobileBtn}>Blog</Button>
                         </ListItem>
                         <Divider/>
                         <ListItem>
-                            <Button variant='outlined' className={classes.tabBtn}>Contact</Button>
+                            <Button variant='outlined' className={classes.tabMobileBtn}>Contact</Button>
                         </ListItem>
                         <Divider/>
                     </List>
