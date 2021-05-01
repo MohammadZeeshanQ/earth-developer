@@ -12,6 +12,10 @@ const useStyles = makeStyles({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+
+        '@media(max-width: 600px)':{
+            height: '90vh',
+        },
     },
     wrapper:{
         position: 'relative',
@@ -31,6 +35,16 @@ const useStyles = makeStyles({
     headingTextWrapper:{
         color: '#fcfcfc'
     },
+    headingHeader1:{
+        '@media(max-width: 600px)':{
+            fontSize: '4em',
+        },
+    },
+    headingHeader2:{
+        '@media(max-width: 600px)':{
+            fontSize: '3.5em',
+        },
+    },
     headingDotColor:{
         color: '#FFDD10 ',
     },
@@ -48,7 +62,9 @@ export default function MainIndex() {
 
                     <div className={classes.headingTextWrapper}>
                         <Typography variant='h1' className={classes.headingHeader1}>Welcome to</Typography>
-                        <Typography variant='h1' className={classes.headingHeader2}>Planet Earth<span className={classes.headingDotColor}>.</span></Typography>
+                        <Typography variant='h1' className={classes.headingHeader2}>Planet Earth
+                            <span className={classes.headingDotColor}>.</span>
+                        </Typography>
                     </div>
                     <div className={classes.headingBtnWrapper}>
                         
