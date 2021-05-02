@@ -21,12 +21,14 @@ const useStyles = makeStyles({
         textAlign: 'left'
     },
     logoText:{
+        fontFamily: 'Nunito-Bold',
         color: '#fcfcfc',
     },
     tabDiv:{
 
     },
     tabBtn:{
+        fontFamily: 'Nunito-Reg',
         margin: "0 .1em",
         border: 'none',
         color: '#fcfcfc',
@@ -63,6 +65,7 @@ const useStyles = makeStyles({
         borderRadius: '3em 0em 0em 3em',
     },
     tabMobileBtn:{
+        fontFamily: 'Nunito-Reg',
         color: '#0e0e0e',
         margin: "0 .1em",
         border: 'none',

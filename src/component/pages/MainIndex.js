@@ -36,11 +36,13 @@ const useStyles = makeStyles({
         color: '#fcfcfc'
     },
     headingHeader1:{
+        fontFamily: 'Nunito-Bold',
         '@media(max-width: 600px)':{
             fontSize: '4em',
         },
     },
     headingHeader2:{
+        fontFamily: 'Nunito-Bold',
         '@media(max-width: 600px)':{
             fontSize: '3.5em',
         },

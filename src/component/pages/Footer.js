@@ -34,19 +34,19 @@ const useStyles = makeStyles({
         marginTop: '2em',
     },
     madeByLabel:{
-
+        fontFamily: 'Nunito-Reg',
     },
     madeByName:{
-
+        fontFamily: 'Nunito-Reg',
     },
     copyrightDiv:{
         marginTop: '1em',
     },
     copyrightLabel:{
-
+        fontFamily: 'Nunito-Reg',
     },
     copyrightPreservedLabel:{
-
+        fontFamily: 'Nunito-Reg',
     }
 
 
