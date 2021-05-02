@@ -6,7 +6,7 @@ import ContactPage from './component/pages/section/Contact'
 import ErrorPage from './component/pages/ErrorPage'
 import Footer from './component/pages/Footer'
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Route,
   Switch,
 } from "react-router-dom";
