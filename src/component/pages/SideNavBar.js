@@ -46,7 +46,7 @@ export default function SideNavBar() {
         <div className={classes.root}>
             <div className={classes.wrapper}>
                 <div className={classes.iconcontainer}>
-                    <IconButton style={IconStyle} size='small'>
+                    <IconButton style={IconStyle} size='small' href='https://www.facebook.com/Mohammad.Zzeshan' >
                         <img className={classes.socialMediaIcons} src={FacebookIcon} alt='Facebook'/>
                     </IconButton>
 

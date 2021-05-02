@@ -62,7 +62,7 @@ export default function Footer() {
             <div className={classes.wrapper}>
 
                 <div className={classes.socialMediaDiv}>
-                    <IconButton size="small">
+                    <IconButton size="small" href='https://www.facebook.com/Mohammad.Zzeshan'>
                         <img className={classes.socialMediaIcons} src={FacebookIcon} alt='Facebook' />
                     </IconButton>
 

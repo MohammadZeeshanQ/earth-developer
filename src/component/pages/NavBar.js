@@ -107,10 +107,9 @@ export default function NavBar() {
 
                             {/* Desktop Tab */}
                             <div className={classes.tabHideDesktop}>
-                                <Button variant='outlined' className={classes.tabBtn}>Services</Button>
-                                <Button variant='outlined' className={classes.tabBtn}>About</Button>
-                                <Button variant='outlined' className={classes.tabBtn}>Blog</Button>
-                                <Button variant='outlined' className={classes.tabBtn}>Contact</Button>
+                                <Button variant='outlined' className={classes.tabBtn}>Projects</Button>
+                                <Button variant='outlined' className={classes.tabBtn} >About</Button>
+                                <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/contact' >Contact</Button>
                             </div>
 
                          </div>
@@ -133,15 +132,11 @@ export default function NavBar() {
 
                     <List>
                         <ListItem>
-                            <Button variant='outlined' className={classes.tabMobileBtn}>Services</Button>
+                            <Button variant='outlined' className={classes.tabMobileBtn}>Projects</Button>
                         </ListItem>
                         <Divider/>
                         <ListItem>
                             <Button variant='outlined' className={classes.tabMobileBtn}>About</Button>
-                        </ListItem>
-                        <Divider/>
-                        <ListItem>
-                        <Button variant='outlined' className={classes.tabMobileBtn}>Blog</Button>
                         </ListItem>
                         <Divider/>
                         <ListItem>
