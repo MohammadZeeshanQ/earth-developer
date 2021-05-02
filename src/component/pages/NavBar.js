@@ -90,7 +90,7 @@ export default function NavBar() {
                         <div className={classes.appBarDiv}>
 
                          <div className={classes.logoDiv}>
-                            <IconButton href='/'>
+                            <IconButton href='/earth-developer/'>
                                 <Typography className={classes.logoText} variant='h6'>
                                     EARTH
                                 </Typography>
