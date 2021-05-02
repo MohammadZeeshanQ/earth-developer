@@ -6,7 +6,7 @@ import ContactPage from './component/pages/section/Contact'
 import ErrorPage from './component/pages/ErrorPage'
 import Footer from './component/pages/Footer'
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Switch,
 } from "react-router-dom";
@@ -21,8 +21,8 @@ function App() {
     <Router>
       <Switch>
           <Route exact path="/earth-developer/" component={Index} />
-          <Route exact path="/about" component={AboutPage} />
-          <Route exact path="/contact" component={ContactPage} />
+          <Route exact path="/earth-developer/about" component={AboutPage} />
+          <Route exact path="/earth-developer/contact" component={ContactPage} />
           <Route path="*" component={ErrorPage} />
         </Switch>
     </Router>
