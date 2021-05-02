@@ -36,7 +36,7 @@ const useStyles = makeStyles({
         '&:hover':{
             backgroundColor: '#fcfcfc',
             transition: '.4s ease all',
-            color: '#0e0e0e',
+            color: '#000000',
         },
     },
     tabHideMobile:{
@@ -110,8 +110,8 @@ export default function NavBar() {
 
                             {/* Desktop Tab */}
                             <div className={classes.tabHideDesktop}>
-                                <Button variant='outlined' className={classes.tabBtn}>Projects</Button>
-                                <Button variant='outlined' className={classes.tabBtn} >About</Button>
+                                <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/project'>Projects</Button>
+                                <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/about'>About</Button>
                                 <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/contact' >Contact</Button>
                             </div>
 
@@ -135,15 +135,15 @@ export default function NavBar() {
 
                     <List>
                         <ListItem>
-                            <Button variant='outlined' className={classes.tabMobileBtn}>Projects</Button>
+                            <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/project'>Projects</Button>
                         </ListItem>
                         <Divider/>
                         <ListItem>
-                            <Button variant='outlined' className={classes.tabMobileBtn}>About</Button>
+                            <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/about'>About</Button>
                         </ListItem>
                         <Divider/>
                         <ListItem>
-                            <Button variant='outlined' className={classes.tabMobileBtn}>Contact</Button>
+                            <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/contact'>Contact</Button>
                         </ListItem>
                         <Divider/>
                     </List>
