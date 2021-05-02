@@ -21,8 +21,8 @@ function App() {
     <Router>
       <Switch>
           <Route exact path="/earth-developer/" component={Index} />
-          <Route exact path="/earth-developer/about" component={AboutPage} />
-          <Route exact path="/earth-developer/contact" component={ContactPage} />
+          <Route exact path="/about" component={AboutPage} />
+          <Route exact path="/contact" component={ContactPage} />
           <Route path="*" component={ErrorPage} />
         </Switch>
     </Router>
