@@ -5,9 +5,10 @@ import App from './App';
 import { HashRouter } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 
+
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter basename={process.env.PUBLIC_URL + "/"}>
+    <HashRouter basename={"/earth-developer/"}>
       <App />
     </HashRouter>
   </React.StrictMode>,

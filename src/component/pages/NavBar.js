@@ -84,6 +84,10 @@ export default function NavBar() {
     } 
 
 
+    useEffect(() => {
+        console.log(`/earth-developer/ : Public URL`);
+    }, []);
+
     return (
         <div className={classes.root}>
 
@@ -111,7 +115,7 @@ export default function NavBar() {
                             {/* Desktop Tab */}
                             <div className={classes.tabHideDesktop}>
                                 <Button variant='outlined' className={classes.tabBtn} href='/#/project'>Projects</Button>
-                                <Button variant='outlined' className={classes.tabBtn} href='/#/about'>About</Button>
+                                <Button variant='outlined' className={classes.tabBtn} href={"/earth-developer/#/about"} >About</Button>
                                 <Button variant='outlined' className={classes.tabBtn} href='/#/contact' >Contact</Button>
                             </div>
 
