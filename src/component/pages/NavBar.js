@@ -86,6 +86,7 @@ export default function NavBar() {
 
     useEffect(() => {
         console.log(`/earth-developer/ : Public URL`);
+        console.log('Ver 1.0');
     }, []);
 
     return (
