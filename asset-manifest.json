@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/earth-developer/static/css/main.2ccde22d.chunk.css",
-    "main.js": "/earth-developer/static/js/main.01c68a1a.chunk.js",
-    "main.js.map": "/earth-developer/static/js/main.01c68a1a.chunk.js.map",
+    "main.js": "/earth-developer/static/js/main.b9ae6074.chunk.js",
+    "main.js.map": "/earth-developer/static/js/main.b9ae6074.chunk.js.map",
     "runtime-main.js": "/earth-developer/static/js/runtime-main.99127329.js",
     "runtime-main.js.map": "/earth-developer/static/js/runtime-main.99127329.js.map",
-    "static/js/2.3bf12f5f.chunk.js": "/earth-developer/static/js/2.3bf12f5f.chunk.js",
-    "static/js/2.3bf12f5f.chunk.js.map": "/earth-developer/static/js/2.3bf12f5f.chunk.js.map",
+    "static/js/2.f4d47855.chunk.js": "/earth-developer/static/js/2.f4d47855.chunk.js",
+    "static/js/2.f4d47855.chunk.js.map": "/earth-developer/static/js/2.f4d47855.chunk.js.map",
     "static/js/3.dfc42a08.chunk.js": "/earth-developer/static/js/3.dfc42a08.chunk.js",
     "static/js/3.dfc42a08.chunk.js.map": "/earth-developer/static/js/3.dfc42a08.chunk.js.map",
     "index.html": "/earth-developer/index.html",
     "static/css/main.2ccde22d.chunk.css.map": "/earth-developer/static/css/main.2ccde22d.chunk.css.map",
-    "static/js/2.3bf12f5f.chunk.js.LICENSE.txt": "/earth-developer/static/js/2.3bf12f5f.chunk.js.LICENSE.txt",
+    "static/js/2.f4d47855.chunk.js.LICENSE.txt": "/earth-developer/static/js/2.f4d47855.chunk.js.LICENSE.txt",
     "static/media/App.css": "/earth-developer/static/media/Oxygen-Regular.9d375dd5.ttf",
     "static/media/canva.036af431.png": "/earth-developer/static/media/canva.036af431.png",
     "static/media/developer.0a489342.jpg": "/earth-developer/static/media/developer.0a489342.jpg",
@@ -25,8 +25,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.99127329.js",
-    "static/js/2.3bf12f5f.chunk.js",
+    "static/js/2.f4d47855.chunk.js",
     "static/css/main.2ccde22d.chunk.css",
-    "static/js/main.01c68a1a.chunk.js"
+    "static/js/main.b9ae6074.chunk.js"
   ]
 }
