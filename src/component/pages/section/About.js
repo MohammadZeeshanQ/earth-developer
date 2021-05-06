@@ -91,6 +91,11 @@ const useStyles = makeStyles({
         width: '2.5em',
         margin: '0 1em 1em 0',
 
+        '&:hover':{
+            transform: 'scale(1.4)',
+            transition: '.4s ease all',
+        },
+
         '@media(max-width: 600px)':{
             width: '4em',
             margin: '1em',

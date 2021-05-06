@@ -115,9 +115,9 @@ export default function NavBar() {
 
                             {/* Desktop Tab */}
                             <div className={classes.tabHideDesktop}>
-                                <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/project' onClick={() => setDrawer(!drawer)}>Projects</Button>
-                                <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/about' onClick={() => setDrawer(!drawer)}>About</Button>
-                                <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/contact' onClick={() => setDrawer(!drawer)}>Contact</Button>
+                                <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/project'>Projects</Button>
+                                <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/about'>About</Button>
+                                <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/contact'>Contact</Button>
                             </div>
 
                          </div>
@@ -140,15 +140,15 @@ export default function NavBar() {
 
                     <List>
                         <ListItem>
-                            <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/project'>Projects</Button>
+                            <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/project' onClick={() => setDrawer(!drawer)}>Projects</Button>
                         </ListItem>
                         <Divider/>
                         <ListItem>
-                            <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/about'>About</Button>
+                            <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/about' onClick={() => setDrawer(!drawer)}>About</Button>
                         </ListItem>
                         <Divider/>
                         <ListItem>
-                            <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/contact'>Contact</Button>
+                            <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/contact' onClick={() => setDrawer(!drawer)}>Contact</Button>
                         </ListItem>
                         <Divider/>
                     </List>
