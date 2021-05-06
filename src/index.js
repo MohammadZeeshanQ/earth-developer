@@ -2,15 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { HashRouter } from "react-router-dom";
-import reportWebVitals from './reportWebVitals';
+import { HashRouter, BrowserRouter } from "react-router-dom";
+import reportWebVitals from './reportWebVitals'; 
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter basename={"/earth-developer/"}>
+    <BrowserRouter basename={"/earth-developer/"}>
       <App />
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

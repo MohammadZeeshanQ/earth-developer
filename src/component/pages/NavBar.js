@@ -114,9 +114,9 @@ export default function NavBar() {
 
                             {/* Desktop Tab */}
                             <div className={classes.tabHideDesktop}>
-                                <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/project'>Projects</Button>
-                                <Button variant='outlined' className={classes.tabBtn} href={"/earth-developer/#/about"} >About</Button>
-                                <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/contact' >Contact</Button>
+                                <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/project'>Projects</Button>
+                                <Button variant='outlined' className={classes.tabBtn} href={"/earth-developer/about"} >About</Button>
+                                <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/contact' >Contact</Button>
                             </div>
 
                          </div>
