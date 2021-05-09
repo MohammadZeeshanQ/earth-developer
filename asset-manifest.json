@@ -1,32 +1,35 @@
 {
   "files": {
     "main.css": "/earth-developer/static/css/main.2ccde22d.chunk.css",
-    "main.js": "/earth-developer/static/js/main.7d00f54b.chunk.js",
-    "main.js.map": "/earth-developer/static/js/main.7d00f54b.chunk.js.map",
-    "runtime-main.js": "/earth-developer/static/js/runtime-main.55d88cbf.js",
-    "runtime-main.js.map": "/earth-developer/static/js/runtime-main.55d88cbf.js.map",
-    "static/js/2.402d93b7.chunk.js": "/earth-developer/static/js/2.402d93b7.chunk.js",
-    "static/js/2.402d93b7.chunk.js.map": "/earth-developer/static/js/2.402d93b7.chunk.js.map",
-    "static/js/3.5ac18d65.chunk.js": "/earth-developer/static/js/3.5ac18d65.chunk.js",
-    "static/js/3.5ac18d65.chunk.js.map": "/earth-developer/static/js/3.5ac18d65.chunk.js.map",
+    "main.js": "/earth-developer/static/js/main.4e05592a.chunk.js",
+    "main.js.map": "/earth-developer/static/js/main.4e05592a.chunk.js.map",
+    "runtime-main.js": "/earth-developer/static/js/runtime-main.24b99bc1.js",
+    "runtime-main.js.map": "/earth-developer/static/js/runtime-main.24b99bc1.js.map",
+    "static/js/2.c54d3620.chunk.js": "/earth-developer/static/js/2.c54d3620.chunk.js",
+    "static/js/2.c54d3620.chunk.js.map": "/earth-developer/static/js/2.c54d3620.chunk.js.map",
+    "static/js/3.f7d2790c.chunk.js": "/earth-developer/static/js/3.f7d2790c.chunk.js",
+    "static/js/3.f7d2790c.chunk.js.map": "/earth-developer/static/js/3.f7d2790c.chunk.js.map",
     "index.html": "/earth-developer/index.html",
     "static/css/main.2ccde22d.chunk.css.map": "/earth-developer/static/css/main.2ccde22d.chunk.css.map",
-    "static/js/2.402d93b7.chunk.js.LICENSE.txt": "/earth-developer/static/js/2.402d93b7.chunk.js.LICENSE.txt",
+    "static/js/2.c54d3620.chunk.js.LICENSE.txt": "/earth-developer/static/js/2.c54d3620.chunk.js.LICENSE.txt",
     "static/media/App.css": "/earth-developer/static/media/Oxygen-Regular.9d375dd5.ttf",
     "static/media/canva.036af431.png": "/earth-developer/static/media/canva.036af431.png",
     "static/media/developer.0a489342.jpg": "/earth-developer/static/media/developer.0a489342.jpg",
     "static/media/facebook.6fb2e8ce.png": "/earth-developer/static/media/facebook.6fb2e8ce.png",
     "static/media/gimp.c30d8cee.png": "/earth-developer/static/media/gimp.c30d8cee.png",
     "static/media/github.7e6c50da.png": "/earth-developer/static/media/github.7e6c50da.png",
+    "static/media/imageFrontEnd.8e63ada2.png": "/earth-developer/static/media/imageFrontEnd.8e63ada2.png",
+    "static/media/imageGraphicDesigner.48e062f9.png": "/earth-developer/static/media/imageGraphicDesigner.48e062f9.png",
+    "static/media/imageWebDesign.448a2273.png": "/earth-developer/static/media/imageWebDesign.448a2273.png",
     "static/media/instagram.2d268095.png": "/earth-developer/static/media/instagram.2d268095.png",
     "static/media/js.1e88dab3.png": "/earth-developer/static/media/js.1e88dab3.png",
     "static/media/react.48c9743e.png": "/earth-developer/static/media/react.48c9743e.png",
     "static/media/video2.217bc138.mp4": "/earth-developer/static/media/video2.217bc138.mp4"
   },
   "entrypoints": [
-    "static/js/runtime-main.55d88cbf.js",
-    "static/js/2.402d93b7.chunk.js",
+    "static/js/runtime-main.24b99bc1.js",
+    "static/js/2.c54d3620.chunk.js",
     "static/css/main.2ccde22d.chunk.css",
-    "static/js/main.7d00f54b.chunk.js"
+    "static/js/main.4e05592a.chunk.js"
   ]
 }
