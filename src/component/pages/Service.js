@@ -70,7 +70,7 @@ const useStyles = makeStyles({
     },
     itemHeader:{
         color: '#fcfcfc',
-        fontFamily: 'Nunito-Bold',
+        fontFamily: 'Nunito-Semi',
         textAlign: 'center',
 
         '@media(min-width: 720px) and (max-width: 900px)':{
