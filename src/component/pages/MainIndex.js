@@ -7,14 +7,14 @@ const useStyles = makeStyles({
     root:{
         position: 'relative',
         width: '100vw',
-        height: '100vh',
+        padding: '15em 0',
         backgroundColor: 'rgb(15, 17, 23, .5)',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
 
         '@media(max-width: 600px)':{
-            height: '90vh',
+            padding: '16em 0',
         },
     },
     wrapper:{
@@ -38,7 +38,7 @@ const useStyles = makeStyles({
     headingHeader1:{
         fontFamily: 'Nunito-Bold',
         '@media(max-width: 600px)':{
-            fontSize: '4em',
+            fontSize: '3.5em',
         },
     },
     headingHeader2:{

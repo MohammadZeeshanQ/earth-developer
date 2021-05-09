@@ -9,7 +9,7 @@ const useStyles = makeStyles({
     },
     container:{
        height: 64,
-       backgroundColor: 'rgb(15, 17, 23)',
+       backgroundColor: '#1c1c1c',
     },
     appBarDiv:{
         width: '100%',
@@ -86,7 +86,7 @@ export default function NavBar() {
 
     useEffect(() => {
         console.log(`/earth-developer/ : Public URL`);
-        console.log('Version 1.02');
+        console.log('Version 1.03');
     }, []);
 
     return (

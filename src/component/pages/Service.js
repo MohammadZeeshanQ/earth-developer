@@ -1,6 +1,7 @@
 import React from 'react'
 import {makeStyles} from '@material-ui/core/styles'
 import {Grid, Typography, Button} from '@material-ui/core'
+import Tilt from 'react-tilt'
 
 import imageFrontEnd from '../../assets/images/services/imageFrontEnd.png'
 import imageWebDesign from '../../assets/images/services/imageWebDesign.png'
@@ -8,39 +9,73 @@ import imageGraphicDesigner from '../../assets/images/services/imageGraphicDesig
 
 const useStyles = makeStyles({
     root:{
-
+        backgroundColor: '#1a1a1a',
     },
     wrapper:{
+        padding: '3em 0',
 
+        '@media(max-width: 600px)':{
+            padding: '2em 0',
+        },
     },
     header:{
+        color: '#fcfcfc',
+        fontFamily: 'Nunito-Bold',
+        textAlign: 'center',
 
+        '@media(min-width: 720px) and (max-width: 900px)':{
+            fontSize: '2em',
+        },
+
+        '@media(max-width: 600px)':{
+            fontSize: '2.5em',
+        },
     },
     gridContainer:{
+        padding: '3em 0',
 
+        '@media(max-width: 600px)':{
+            padding: '2em 0',
+        },
     },
     gridItem:{
-        border: '1px red solid',
         display: 'flex',
         flexDirection: 'column',
         justifyContent : 'space-between',
         alignItems: 'center',
+
+        '@media(max-width: 600px)':{
+            paddingBottom: '3em',
+        },
     },
     itemWrapper:{
 
     },
     itemImageWrapper:{
-
+        textAlign: 'center',
     },
     itemImage:{
-        width: '15em',
-        border: '1px blue solid',
+        width: '18em',
+
+        '@media(min-width: 720px) and (max-width: 900px)':{
+            width: '10em',
+        },
+
+        '@media(max-width: 600px)':{
+            width: '12em',
+        },
     },
     itemHeaderWrapper:{
 
     },
     itemHeader:{
+        color: '#fcfcfc',
+        fontFamily: 'Nunito-Bold',
+        textAlign: 'center',
 
+        '@media(min-width: 720px) and (max-width: 900px)':{
+            fontSize: '1em',
+        },
     },
 });
 
@@ -69,6 +104,7 @@ export default function Service() {
                 <Typography variant='h3' className={classes.header}>
                     What I do
                 </Typography>
+
                 <Grid
                     container
                     className={classes.gridContainer}
@@ -87,23 +123,25 @@ export default function Service() {
                         sm={3}
                         md={3}
                     >
-                        
-                        <div className={classes.itemWrapper}>
-                            <div className={classes.itemImageWrapper}>
-                                <img className={classes.itemImage} src={value.image} alt={value.alt} />
-                            </div>
-                            <div className={classes.itemHeaderWrapper}>
-                                <Typography variant='h6' className={classes.itemHeader}>
-                                    {value.name}
-                                </Typography>
-                            </div>
-                        </div>    
+                        <Tilt className="Tilt" options={{ max : 45, speed : 300, prospective: 1000 }}>
+                            <div className={classes.itemWrapper} >
+                                <div className={classes.itemImageWrapper}>
+                                    <img className={classes.itemImage} src={value.image} alt={value.alt} />
+                                </div>
+                                <div className={classes.itemHeaderWrapper}>
+                                    <Typography variant='h5' className={classes.itemHeader}>
+                                        {value.name}
+                                    </Typography>
+                                </div>
+                            </div> 
+                        </Tilt>   
 
                     </Grid>
                   )}
                     
 
                 </Grid>
+                <script type="text/javascript" src="vanilla-tilt.js"></script>
             </div>
         </div>
     )

@@ -20,12 +20,13 @@ const useStyles = makeStyles({
 
     },
     messageWrapper:{
-
+        
         '@media (min-width: 1200px)':{
             height:'100%',
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'center',
+            justifyContent: 'start',
+            paddingTop: '1em',
 
         },
 
