@@ -1,6 +1,6 @@
 import React from 'react'
 import {makeStyles} from '@material-ui/core/styles'
-import {Grid, Typography, Button} from '@material-ui/core'
+import {Grid, Typography, Button, Paper} from '@material-ui/core'
 import Tilt from 'react-tilt'
 
 import imageFrontEnd from '../../assets/images/services/imageFrontEnd.png'
@@ -9,7 +9,7 @@ import imageGraphicDesigner from '../../assets/images/services/imageGraphicDesig
 
 const useStyles = makeStyles({
     root:{
-        backgroundColor: '#1a1a1a',
+        backgroundColor: '#fcfcfc',
     },
     wrapper:{
         padding: '3em 0',
@@ -19,7 +19,7 @@ const useStyles = makeStyles({
         },
     },
     header:{
-        color: '#fcfcfc',
+        color: '#1a1a1a',
         fontFamily: 'Nunito-Bold',
         textAlign: 'center',
 
@@ -69,7 +69,7 @@ const useStyles = makeStyles({
 
     },
     itemHeader:{
-        color: '#fcfcfc',
+        color: '#1a1a1a',
         fontFamily: 'Nunito-Semi',
         textAlign: 'center',
 

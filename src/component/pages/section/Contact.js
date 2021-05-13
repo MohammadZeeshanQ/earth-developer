@@ -86,7 +86,22 @@ const useStyles = makeStyles({
 });
 
 export default function Contact() {
+
     const classes = useStyles();
+
+    const sendEmail = (e) => {
+        e.preventDefault(e);
+
+        emailjs.sendForm('service_gmw78vk' , 'template_8726hwb' ,  e.target , 'user_8aetlhmZHWhMHlxBHbDlJ')
+        .then((result) => {
+            console.log(result.text);
+        },
+        (error) => {
+            console.log(error.text);
+        });
+        e.target.reset();
+
+    }
     return (
         <div className={classes.root}>
             <div className={classes.wrapper}>
@@ -121,25 +136,28 @@ export default function Contact() {
                         sm={4}
                         md={4}
                     >
-                        <div className={classes.inputContainer}>
+                        <form onSubmit={sendEmail}>
+                            <div className={classes.inputContainer}>
 
-                            <div className={classes.inputWrapper}>
-                                <TextField required className={classes.inputName} id='personName' label='Name' variant='outlined' />
+                                <div className={classes.inputWrapper}>
+                                    <TextField required className={classes.inputName} id='personName' label='Name' variant='outlined' name='name' />
+                                </div>
+                                <div className={classes.inputWrapper}>
+                                    <TextField required className={classes.inputEmail} id='personEmail' label='Email' variant='outlined' name='email'/>
+                                </div>
+                                <div className={classes.inputWrapper}>
+                                    <TextField required className={classes.inputCompany} id='Subject' label='Subject' variant='outlined' name='subject' />
+                                </div>
+                                <div className={classes.inputWrapper}>
+                                    <TextField required className={classes.inputMessage} id='personMessage' label='Message' multiline rowsMax={3} variant='outlined'  name='message'/>
+                                </div>
+                                <div className={classes.inputBtnWrapper}>
+                                    <Button variant='contained' className={classes.inputBtn} color='primary' type='submit' >Submit</Button>
+                                </div>
+                                
                             </div>
-                            <div className={classes.inputWrapper}>
-                                <TextField required className={classes.inputEmail} id='personEmail' label='Email' variant='outlined'/>
-                            </div>
-                            <div className={classes.inputWrapper}>
-                                <TextField className={classes.inputCompany} id='personCompany' label='Company Name' variant='outlined'/>
-                            </div>
-                            <div className={classes.inputWrapper}>
-                                <TextField required className={classes.inputMessage} id='personMessage' label='Message' multiline rowsMax={3} variant='outlined' />
-                            </div>
-                            <div className={classes.inputBtnWrapper}>
-                                <Button variant='contained' className={classes.inputBtn} color='primary'>Submit</Button>
-                            </div>
-                            
-                        </div>
+                        </form>
+
                     </Grid>
 
                 </Grid>

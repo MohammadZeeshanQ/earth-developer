@@ -6,7 +6,7 @@ import MobileBg from '../../assets/images/background/MobileView.png'
 import DesktopBg from '../../assets/images/background/PcVIew.png'
 const useStyles = makeStyles({
     root:{
-        backgroundColor: '#1a1a1a'
+        backgroundColor: '#fcfcfc'
     },  
     wrapper:{
         position: 'relative',
@@ -32,8 +32,8 @@ const useStyles = makeStyles({
     textWrapper:{
         position: 'absolute',
         top: '13%',
-        right: '10%',
-        color: '#fcfcfc',
+        right: '4%',
+        color: '#1a1a1a',
         textAlign: 'right',
 
         '@media(max-width: 600px)':{
@@ -73,7 +73,7 @@ export default function ProjectView() {
             <div className={classes.wrapper}>
 
                 <div className={classes.textWrapper}>
-                    <Typography variant='h3' className={classes.textHeader}>
+                    <Typography variant='h2' className={classes.textHeader}>
                         Responsive Websites
                     </Typography>
                     <Typography variant='h6' className={classes.textMessage}>
