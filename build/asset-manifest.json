@@ -1,18 +1,20 @@
 {
   "files": {
     "main.css": "/earth-developer/static/css/main.2ccde22d.chunk.css",
-    "main.js": "/earth-developer/static/js/main.4e05592a.chunk.js",
-    "main.js.map": "/earth-developer/static/js/main.4e05592a.chunk.js.map",
+    "main.js": "/earth-developer/static/js/main.32f41b5d.chunk.js",
+    "main.js.map": "/earth-developer/static/js/main.32f41b5d.chunk.js.map",
     "runtime-main.js": "/earth-developer/static/js/runtime-main.24b99bc1.js",
     "runtime-main.js.map": "/earth-developer/static/js/runtime-main.24b99bc1.js.map",
-    "static/js/2.c54d3620.chunk.js": "/earth-developer/static/js/2.c54d3620.chunk.js",
-    "static/js/2.c54d3620.chunk.js.map": "/earth-developer/static/js/2.c54d3620.chunk.js.map",
+    "static/js/2.073cc5e7.chunk.js": "/earth-developer/static/js/2.073cc5e7.chunk.js",
+    "static/js/2.073cc5e7.chunk.js.map": "/earth-developer/static/js/2.073cc5e7.chunk.js.map",
     "static/js/3.f7d2790c.chunk.js": "/earth-developer/static/js/3.f7d2790c.chunk.js",
     "static/js/3.f7d2790c.chunk.js.map": "/earth-developer/static/js/3.f7d2790c.chunk.js.map",
     "index.html": "/earth-developer/index.html",
     "static/css/main.2ccde22d.chunk.css.map": "/earth-developer/static/css/main.2ccde22d.chunk.css.map",
-    "static/js/2.c54d3620.chunk.js.LICENSE.txt": "/earth-developer/static/js/2.c54d3620.chunk.js.LICENSE.txt",
+    "static/js/2.073cc5e7.chunk.js.LICENSE.txt": "/earth-developer/static/js/2.073cc5e7.chunk.js.LICENSE.txt",
+    "static/media/MobileView.57815f15.png": "/earth-developer/static/media/MobileView.57815f15.png",
     "static/media/App.css": "/earth-developer/static/media/Oxygen-Regular.9d375dd5.ttf",
+    "static/media/PcVIew.775417ef.png": "/earth-developer/static/media/PcVIew.775417ef.png",
     "static/media/canva.036af431.png": "/earth-developer/static/media/canva.036af431.png",
     "static/media/developer.0a489342.jpg": "/earth-developer/static/media/developer.0a489342.jpg",
     "static/media/facebook.6fb2e8ce.png": "/earth-developer/static/media/facebook.6fb2e8ce.png",
@@ -28,8 +30,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.24b99bc1.js",
-    "static/js/2.c54d3620.chunk.js",
+    "static/js/2.073cc5e7.chunk.js",
     "static/css/main.2ccde22d.chunk.css",
-    "static/js/main.4e05592a.chunk.js"
+    "static/js/main.32f41b5d.chunk.js"
   ]
 }
