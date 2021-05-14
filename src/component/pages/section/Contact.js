@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {makeStyles} from '@material-ui/core/styles'
-import {Typography, Grid, Button, TextField} from '@material-ui/core'
+import {Typography, Grid, Button, TextField, Snackbar} from '@material-ui/core'
+import {Alert, AlertTitle} from '@material-ui/lab';
 
 import emailjs from 'emailjs-com'
 
@@ -87,21 +88,42 @@ const useStyles = makeStyles({
 
 export default function Contact() {
 
+    const [successOpen, setSuccessOpen] = useState(false);
+    const [errorOpen, setErrorOpen] = useState(false);
     const classes = useStyles();
+
 
     const sendEmail = (e) => {
         e.preventDefault(e);
 
         emailjs.sendForm('service_gmw78vk' , 'template_8726hwb' ,  e.target , 'user_8aetlhmZHWhMHlxBHbDlJ')
         .then((result) => {
+            setSuccessOpen(true);
             console.log(result.text);
+            
         },
         (error) => {
+            setErrorOpen(true);
             console.log(error.text);
         });
         e.target.reset();
+    };
 
-    }
+
+
+    const handleClose = (reason) => {
+        if (reason === 'clickaway') {
+          return;
+        }
+    
+        setSuccessOpen(false);
+        setErrorOpen(false);
+      };
+
+
+
+
+
     return (
         <div className={classes.root}>
             <div className={classes.wrapper}>
@@ -157,11 +179,25 @@ export default function Contact() {
                                 
                             </div>
                         </form>
-
                     </Grid>
 
                 </Grid>
+
+                
             </div>
+
+                <Snackbar open={successOpen} autoHideDuration={10000} onClose={handleClose}>
+                        <Alert onClose={handleClose} severity="success" variant='filled'>
+                        This is a success message!
+                        </Alert>
+                </Snackbar>
+
+                <Snackbar open={errorOpen} autoHideDuration={10000} onClose={handleClose}>
+                    <Alert severity="error" onClose={handleClose} variant="filled">
+                        <AlertTitle>Failed</AlertTitle>
+                        Please try again.
+                    </Alert>
+                </Snackbar>
         </div>
     )
 }
