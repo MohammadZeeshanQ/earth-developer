@@ -1,31 +1,31 @@
-import React, {useState} from 'react'
-import {makeStyles} from '@material-ui/core/styles'
-import {Typography, Grid, Button, TextField, Snackbar} from '@material-ui/core'
-import {Alert, AlertTitle} from '@material-ui/lab';
+import React, { useState } from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import { Typography, Grid, Button, TextField, Snackbar } from '@material-ui/core'
+import { Alert, AlertTitle } from '@material-ui/lab';
 
 import emailjs from 'emailjs-com'
 
 const useStyles = makeStyles({
-    root:{
+    root: {
 
     },
-    wrapper:{
+    wrapper: {
         padding: '10em 0',
 
-        '@media (max-width: 600px)':{
+        '@media (max-width: 600px)': {
             padding: '6em 0'
         },
     },
-    gridContainer:{
+    gridContainer: {
 
     },
-    gridItem:{
+    gridItem: {
 
     },
-    messageWrapper:{
-        
-        '@media (min-width: 1200px)':{
-            height:'100%',
+    messageWrapper: {
+
+        '@media (min-width: 1200px)': {
+            height: '100%',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'start',
@@ -33,55 +33,54 @@ const useStyles = makeStyles({
 
         },
 
-        '@media (max-width: 600px)':{
+        '@media (max-width: 600px)': {
             textAlign: "center",
             padding: '1em 2em'
         },
     },
-    messageHeader:{
+    messageHeader: {
         fontFamily: 'Nunito-Bold',
-        '@media (max-width: 600px)':{
+        '@media (max-width: 600px)': {
             fontSize: '2em'
         },
     },
-    messageDescription:{
+    messageDescription: {
         color: '#848480 ',
         paddingTop: '1em',
-        
-        '@media (max-width: 600px)':{
+
+        '@media (max-width: 600px)': {
             paddingTop: '1em'
         },
     },
-    inputContainer:{
+    inputContainer: {
 
-        '@media (max-width: 600px)':{
+        '@media (max-width: 600px)': {
             padding: '1em 2em',
         },
     },
-    inputWrapper:{
+    inputWrapper: {
         margin: '1em 0',
-        
+
     },
-    inputName:{
-        width: '100%'
-        
-    },
-    inputEmail:{
+    inputName: {
         width: '100%'
     },
-    inputCompany:{
+    inputEmail: {
         width: '100%'
     },
-    inputMessage:{
+    inputCompany: {
         width: '100%'
     },
-    inputBtnWrapper:{
+    inputMessage: {
+        width: '100%'
+    },
+    inputBtnWrapper: {
         margin: '1em 0',
     },
-    inputBtnWrapper:{
+    inputBtnWrapper: {
         marginTop: '3em',
     },
-    inputBtn:{
+    inputBtn: {
         width: '100%'
     },
 });
@@ -93,19 +92,19 @@ export default function Contact() {
     const classes = useStyles();
 
 
+
     const sendEmail = (e) => {
         e.preventDefault(e);
 
-        emailjs.sendForm('service_gmw78vk' , 'template_8726hwb' ,  e.target , 'user_8aetlhmZHWhMHlxBHbDlJ')
-        .then((result) => {
-            setSuccessOpen(true);
-            console.log(result.text);
-            
-        },
-        (error) => {
-            setErrorOpen(true);
-            console.log(error.text);
-        });
+        emailjs.sendForm('service_gmw78vk', 'template_8726hwb', e.target, 'user_8aetlhmZHWhMHlxBHbDlJ')
+            .then((result) => {
+                setSuccessOpen(true);
+                console.log(result.text);
+            },
+                (error) => {
+                    setErrorOpen(true);
+                    console.log(error.text);
+                });
         e.target.reset();
     };
 
@@ -113,23 +112,20 @@ export default function Contact() {
 
     const handleClose = (reason) => {
         if (reason === 'clickaway') {
-          return;
+            return;
         }
-    
+
         setSuccessOpen(false);
         setErrorOpen(false);
-      };
-
-
-
+    };
 
 
     return (
         <div className={classes.root}>
             <div className={classes.wrapper}>
-                <Grid 
+                <Grid
                     container
-                    justify='space-around' 
+                    justify='space-around'
                     xs={12}
                     sm={12}
                     md={12}
@@ -142,11 +138,11 @@ export default function Contact() {
                         className={classes.gridItem}
                     >
                         <div className={classes.messageWrapper}>
-                            <Typography variant= 'h4' className={classes.messageHeader} >
+                            <Typography variant='h4' className={classes.messageHeader} >
                                 Hi There, feel free to contact me!
                             </Typography>
-                            <Typography variant= 'body1' className={classes.messageDescription } >
-                                I'm here to help and answer any question you might have. 
+                            <Typography variant='body1' className={classes.messageDescription} >
+                                I'm here to help and answer any question you might have.
                                 I'm looking forward to hear from you.
                             </Typography>
                         </div>
@@ -165,39 +161,40 @@ export default function Contact() {
                                     <TextField required className={classes.inputName} id='personName' label='Name' variant='outlined' name='name' />
                                 </div>
                                 <div className={classes.inputWrapper}>
-                                    <TextField required className={classes.inputEmail} id='personEmail' label='Email' variant='outlined' name='email'/>
+                                    <TextField required className={classes.inputEmail} id='personEmail' label='Email' variant='outlined' name='email' />
                                 </div>
                                 <div className={classes.inputWrapper}>
                                     <TextField required className={classes.inputCompany} id='Subject' label='Subject' variant='outlined' name='subject' />
                                 </div>
                                 <div className={classes.inputWrapper}>
-                                    <TextField required className={classes.inputMessage} id='personMessage' label='Message' multiline rowsMax={3} variant='outlined'  name='message'/>
+                                    <TextField required className={classes.inputMessage} id='personMessage' label='Message' multiline rowsMax={3} variant='outlined' name='message' />
                                 </div>
                                 <div className={classes.inputBtnWrapper}>
                                     <Button variant='contained' className={classes.inputBtn} color='primary' type='submit' >Submit</Button>
                                 </div>
-                                
+
                             </div>
                         </form>
                     </Grid>
 
                 </Grid>
 
-                
+
             </div>
 
-                <Snackbar open={successOpen} autoHideDuration={10000} onClose={handleClose}>
-                        <Alert onClose={handleClose} severity="success" variant='filled'>
-                        This is a success message!
-                        </Alert>
-                </Snackbar>
+            <Snackbar open={successOpen} autoHideDuration={8000} onClose={handleClose}>
+                <Alert onClose={handleClose} severity="success" variant='filled'>
+                    <AlertTitle>Success!</AlertTitle>
+                    Message has  been sent.
+                </Alert>
+            </Snackbar>
 
-                <Snackbar open={errorOpen} autoHideDuration={10000} onClose={handleClose}>
-                    <Alert severity="error" onClose={handleClose} variant="filled">
-                        <AlertTitle>Failed</AlertTitle>
-                        Please try again.
-                    </Alert>
-                </Snackbar>
+            <Snackbar open={errorOpen} autoHideDuration={8000} onClose={handleClose}>
+                <Alert severity="error" onClose={handleClose} variant="filled">
+                    <AlertTitle>Failed!</AlertTitle>
+                    Please try again.
+                </Alert>
+            </Snackbar>
         </div>
     )
 }
