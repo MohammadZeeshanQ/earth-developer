@@ -1,70 +1,70 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import {Typography, Button, IconButton, AppBar, Toolbar, SwipeableDrawer, Divider, List, ListItem} from '@material-ui/core';
+import { Typography, Button, IconButton, AppBar, Toolbar, SwipeableDrawer, Divider, List, ListItem } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 
 
 const useStyles = makeStyles({
-    root:{
+    root: {
     },
-    container:{
-       height: 64,
-       backgroundColor: '#1c1c1c',
+    container: {
+        height: 64,
+        backgroundColor: '#1c1c1c',
     },
-    appBarDiv:{
+    appBarDiv: {
         width: '100%',
         display: 'flex',
-        alignItems:"center",
+        alignItems: "center",
     },
-    logoDiv:{
+    logoDiv: {
         flexGrow: 1,
         textAlign: 'left'
     },
-    logoText:{
+    logoText: {
         fontFamily: 'Nunito-Bold',
         color: '#fcfcfc',
     },
-    tabDiv:{
+    tabDiv: {
 
     },
-    tabBtn:{
+    tabBtn: {
         fontFamily: 'Nunito-Reg',
         margin: "0 .1em",
         border: 'none',
         color: '#fcfcfc',
 
-        '&:hover':{
+        '&:hover': {
             backgroundColor: '#fcfcfc',
             transition: '.4s ease all',
             color: '#000000',
         },
     },
-    tabHideMobile:{
-        '@media (max-width: 600px)':{
+    tabHideMobile: {
+        '@media (max-width: 600px)': {
             display: 'block',
         },
 
-        '@media (min-width: 602px)':{
+        '@media (min-width: 602px)': {
             display: 'none',
         }
     },
-    tabHideDesktop:{
-        '@media (max-width: 4000px)':{
+    tabHideDesktop: {
+        '@media (max-width: 4000px)': {
             display: 'none',
         },
 
-        '@media (min-width: 602px)':{
+        '@media (min-width: 602px)': {
             display: 'block',
         }
     },
-    swipeDrawerContainer:{
+    swipeDrawerContainer: {
         backgroundColor: 'rgb(15, 17, 23)',
     },
-    swipeDrawer:{
+    swipeDrawer: {
         width: 250,
         borderRadius: '3em 0em 0em 3em',
     },
-    tabMobileBtn:{
+    tabMobileBtn: {
         fontFamily: 'Nunito-Reg',
         color: '#0e0e0e',
         margin: "0 .1em",
@@ -81,35 +81,35 @@ export default function NavBar() {
 
     const toggle = () => {
         setDrawer(!drawer);
-    } 
+    }
 
 
     useEffect(() => {
-        console.log(`/earth-developer/ : Public URL`);
-        console.log('Version 1.03');
+        console.log(`${location.href} : Public URL`);
+        console.log('Version 1.04');
     }, []);
 
     return (
         <div className={classes.root}>
 
-                <AppBar position='fixed' elevation='2' color='transparent' className={classes.container}>
+            <AppBar position='fixed' elevation='2' color='transparent' className={classes.container}>
 
-                    <Toolbar>
-                        <div className={classes.appBarDiv}> 
+                <Toolbar>
+                    <div className={classes.appBarDiv}>
 
-                         <div className={classes.logoDiv}>
+                        <div className={classes.logoDiv}>
                             <IconButton href='/earth-developer/#/'>
                                 <Typography className={classes.logoText} variant='h6'>
                                     EARTH
                                 </Typography>
                             </IconButton>
-                         </div>
+                        </div>
 
-                         <div className={classes.tabDiv}>
+                        <div className={classes.tabDiv}>
                             {/* Mobile Tab */}
                             <div className={classes.tabHideMobile}>
                                 <IconButton onClick={toggle} >
-                                    <MenuIcon style={{fontSize: '2em', color: '#fcfcfc'}} />
+                                    <MenuIcon style={{ fontSize: '2em', color: '#fcfcfc' }} />
                                 </IconButton>
                             </div>
 
@@ -120,41 +120,41 @@ export default function NavBar() {
                                 <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/contact'>Contact</Button>
                             </div>
 
-                         </div>
-                            
                         </div>
-                    </Toolbar>
 
-                </AppBar>
+                    </div>
+                </Toolbar>
 
-                <SwipeableDrawer
-                    className={classes.swipeDrawerContainer}
-                    anchor='right'
-                    open={drawer}   
-                    onOpen={toggle}
-                    onClose={toggle}       
-                >
-                    <div className={classes.swipeDrawer}>
+            </AppBar>
 
-                
+            <SwipeableDrawer
+                className={classes.swipeDrawerContainer}
+                anchor='right'
+                open={drawer}
+                onOpen={toggle}
+                onClose={toggle}
+            >
+                <div className={classes.swipeDrawer}>
+
+
 
                     <List>
                         <ListItem>
                             <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/project' onClick={() => setDrawer(!drawer)}>Projects</Button>
                         </ListItem>
-                        <Divider/>
+                        <Divider />
                         <ListItem>
                             <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/about' onClick={() => setDrawer(!drawer)}>About</Button>
                         </ListItem>
-                        <Divider/>
+                        <Divider />
                         <ListItem>
                             <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/contact' onClick={() => setDrawer(!drawer)}>Contact</Button>
                         </ListItem>
-                        <Divider/>
+                        <Divider />
                     </List>
-                    </div>
-                </SwipeableDrawer>
-                
-            </div>
+                </div>
+            </SwipeableDrawer>
+
+        </div>
     )
 }
