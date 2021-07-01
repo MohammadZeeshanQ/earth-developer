@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/earth-developer/static/css/main.db888c1f.chunk.css",
-    "main.js": "/earth-developer/static/js/main.ad18598a.chunk.js",
-    "main.js.map": "/earth-developer/static/js/main.ad18598a.chunk.js.map",
+    "main.css": "/earth-developer/static/css/main.ab968f43.chunk.css",
+    "main.js": "/earth-developer/static/js/main.5475cd18.chunk.js",
+    "main.js.map": "/earth-developer/static/js/main.5475cd18.chunk.js.map",
     "runtime-main.js": "/earth-developer/static/js/runtime-main.f9fba765.js",
     "runtime-main.js.map": "/earth-developer/static/js/runtime-main.f9fba765.js.map",
     "static/js/2.28a7a6df.chunk.js": "/earth-developer/static/js/2.28a7a6df.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.4a40de67.chunk.js": "/earth-developer/static/js/3.4a40de67.chunk.js",
     "static/js/3.4a40de67.chunk.js.map": "/earth-developer/static/js/3.4a40de67.chunk.js.map",
     "index.html": "/earth-developer/index.html",
-    "static/css/main.db888c1f.chunk.css.map": "/earth-developer/static/css/main.db888c1f.chunk.css.map",
+    "static/css/main.ab968f43.chunk.css.map": "/earth-developer/static/css/main.ab968f43.chunk.css.map",
     "static/js/2.28a7a6df.chunk.js.LICENSE.txt": "/earth-developer/static/js/2.28a7a6df.chunk.js.LICENSE.txt",
     "static/media/MobileView.d891a5a1.png": "/earth-developer/static/media/MobileView.d891a5a1.png",
     "static/media/App.css": "/earth-developer/static/media/Oxygen-Regular.9d375dd5.ttf",
@@ -28,7 +28,7 @@
   "entrypoints": [
     "static/js/runtime-main.f9fba765.js",
     "static/js/2.28a7a6df.chunk.js",
-    "static/css/main.db888c1f.chunk.css",
-    "static/js/main.ad18598a.chunk.js"
+    "static/css/main.ab968f43.chunk.css",
+    "static/js/main.5475cd18.chunk.js"
   ]
 }
