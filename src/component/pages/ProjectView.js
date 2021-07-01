@@ -1,6 +1,6 @@
 import React from 'react'
 import {makeStyles} from '@material-ui/core/styles'
-import {Button, Typography} from '@material-ui/core'
+import {Typography} from '@material-ui/core'
 
 import MobileBg from '../../assets/images/background/MobileView.png'
 import DesktopBg from '../../assets/images/background/PcVIew.png'

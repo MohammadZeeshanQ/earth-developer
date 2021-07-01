@@ -1,6 +1,6 @@
 import React from 'react'
 import {makeStyles} from '@material-ui/core/styles'
-import {Grid, Typography, Button, Paper} from '@material-ui/core'
+import {Grid, Typography} from '@material-ui/core'
 import Tilt from 'react-tilt'
 
 import imageFrontEnd from '../../assets/images/services/imageFrontEnd.png'
