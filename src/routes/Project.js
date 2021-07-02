@@ -5,27 +5,72 @@ import { Typography, Button, Grid, Divider, Chip } from '@material-ui/core';
 
 const gridData = [
     {
-        'title': 'Project1',
-        'description': 'lorem aspem',
+        'title': 'Covid Vision',
+        'description': 'A web app developed to retrieve information regarding Covid-19 cases',
         'program': [
-            { 'code': 'html', },
-            { 'code': 'css', }
+            { 'code': 'React.Js', },
+            { 'code': 'Material-Ui', },
         ],
     },
     {
-        'title': 'Project2',
-        'description': 'lorem aspem',
+        'title': 'Fashion Landing Website',
+        'description': 'Minimalist Landging Website to display Trendy Fashion clothing.',
         'program': [
-            { 'code': 'html', },
-            { 'code': 'css', }
+            { 'code': 'React.Js', },
+            { 'code': 'Material-Ui', },
         ],
     },
     {
-        'title': 'Project3',
-        'description': 'lorem aspem',
+        'title': 'Big-Bag Landing Website',
+        'description': 'Website build for marketing new trendy bags for various purpose.',
         'program': [
-            { 'code': 'html', },
-            { 'code': 'css', }
+            { 'code': 'HTML', },
+            { 'code': 'Javascript', },
+            { 'code': 'LESS', }
+        ],
+    },
+    {
+        'title': '3D Illustration Website',
+        'description': 'Minimalist Business Website with 3D illustration.',
+        'program': [
+            { 'code': 'React.Js', },
+            { 'code': 'Material-Ui', },
+        ],
+    },
+    {
+        'title': 'Parallax Landing Website',
+        'description': 'Website build with Parallax library for object scrolling animation.',
+        'program': [
+            { 'code': 'HTML', },
+            { 'code': 'LESS', },
+            { 'code': 'Javascript', },
+            { 'code': 'Parallax.Js', },
+        ],
+    },
+    {
+        'title': 'Product Landing Website',
+        'description': 'Landing Page for a Speaker Product with basic UI',
+        'program': [
+            { 'code': 'HTML', },
+            { 'code': 'LESS', },
+            { 'code': 'CSS', },
+        ],
+    },
+    {
+        'title': 'Mountainer Landing Website',
+        'description': 'Simple Website business website with pricing card.',
+        'program': [
+            { 'code': 'HTML', },
+            { 'code': 'Material-Ui', },
+        ],
+    },
+    {
+        'title': 'Registration Webpages',
+        'description': 'Repository that contains multiple Login and SingIn webpages template.',
+        'program': [
+            { 'code': 'HTML', },
+            { 'code': 'CSS', },
+            { 'code': 'Material-Ui', },
         ],
     },
 
@@ -33,7 +78,77 @@ const gridData = [
 
 
 const useStyles = makeStyles({
+    root: {
+        // '@media(max-width: 600px)': {
 
+        // },
+        // '@media(min-width: 601px) and (max-width: 900px)': {
+
+        // },
+    },
+
+    wrapper: {
+        width: '80%',
+        margin: 'auto',
+
+        '@media(max-width: 600px)': {
+
+        },
+        '@media(min-width: 601px) and (max-width: 900px)': {
+
+        },
+    },
+
+    headerContainer: {
+        padding: '8rem 0 4rem 0',
+        textAlign: 'center',
+    },
+
+    header: {
+        fontFamily: 'Oxy-Bold',
+        fontSize: '4rem',
+    },
+
+    gridContainer: {
+
+    },
+
+    gridItem: {
+        border: '1px solid #1c1c1c',
+        margin: '1rem',
+
+        '&:hover': {
+            transform: 'scale(1.1)',
+            transition: '.5s ease all',
+        },
+    },
+
+    gridImageContainer: {
+
+    },
+
+    gridImage: {
+
+    },
+
+    gridTextContainer: {
+        padding: '1rem',
+    },
+
+    title: {
+        fontFamily: 'Oxy-Bold',
+    },
+
+    description: {
+        fontFamily: 'Oxy-Reg',
+        margin: '1rem 0',
+    },
+
+    chipTitle: {
+        fontFamily: 'Oxy-Reg',
+        letterSpacing: '0.6px',
+        margin: '.3rem .3rem 0 0',
+    },
 });
 
 
@@ -43,12 +158,20 @@ export default function Project() {
     return (
         <div className={classes.root}>
             <div className={classes.wrapper}>
+
+                <div className={classes.headerContainer}>
+                    <Typography className={classes.header} variant='h1'>
+                        Projects
+                    </Typography>
+                </div>
+
                 <Grid
                     container
                     xs={12}
                     sm={12}
                     md={12}
-                    style={{ paddingTop: '6rem', }}
+                    justify='center'
+                    className={classes.gridContainer}
                 >
                     {
                         gridData.map(({ title, program, description }, index) =>
@@ -56,24 +179,26 @@ export default function Project() {
                                 item
                                 key={index}
                                 xs={12}
-                                sm={4}
-                                md={4}
-                                style={{ border: '1px red solid' }}
+                                sm={3}
+                                md={3}
+                                className={classes.gridItem}
                             >
-                                <div className={classes.projectContainer}>
-                                    <Typography variant='h6'>
+                                <div className={classes.gridImageContainer}>
+
+                                </div>
+
+                                <div className={classes.gridTextContainer}>
+                                    <Typography className={classes.title} variant='h6'>
                                         {title}
                                     </Typography>
-                                    <Divider />
 
-                                    <Typography variant='body1'>
+                                    <Typography className={classes.description} variant='body2'>
                                         {description}
                                     </Typography>
-                                    <Divider />
 
                                     {
                                         program.map((programs, i) =>
-                                            <Chip color='primary' label={programs.code} />
+                                            <Chip className={classes.chipTitle} color='secondary' label={programs.code} />
                                         )
                                     }
 
