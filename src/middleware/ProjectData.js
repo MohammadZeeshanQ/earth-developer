@@ -13,6 +13,7 @@ export const gridData = [
     {
         'title': 'Covid Vision',
         'image': covidWeb,
+        'link': 'https://covid-vision.netlify.app/',
         'description': 'Web App developed to retrieve Covid-19 cases information',
         'program': [
             { 'code': 'React.Js', },
@@ -22,6 +23,7 @@ export const gridData = [
     {
         'title': 'Fashion Website',
         'image': FashionImage,
+        'link': 'https://github.com/MohammadZeeshanQ/minimal-fashion',
         'description': 'Minimalist Landging Website to display Trendy Fashion clothing.',
         'program': [
             { 'code': 'React.Js', },
@@ -31,6 +33,7 @@ export const gridData = [
     {
         'title': 'Big-Bag Website',
         'image': BagImage,
+        'link': 'https://github.com/MohammadZeeshanQ/big-bag',
         'description': 'Website build for marketing new trendy bags for various purpose.',
         'program': [
             { 'code': 'HTML', },
@@ -41,6 +44,7 @@ export const gridData = [
     {
         'title': '3D Illustration',
         'image': IllustrationWeb,
+        'link': 'https://github.com/MohammadZeeshanQ/astronaut-landing-page',
         'description': 'Minimalist Business Website with 3D illustration.',
         'program': [
             { 'code': 'React.Js', },
@@ -50,6 +54,7 @@ export const gridData = [
     {
         'title': 'Registration UI',
         'image': loginWeb,
+        'link': 'https://github.com/MohammadZeeshanQ/log-in-theme',
         'description': 'Multiple Login and SingIn webpages template.',
         'program': [
             { 'code': 'HTML', },
@@ -60,6 +65,7 @@ export const gridData = [
     {
         'title': 'Product Website',
         'image': SoundImage,
+        'link': 'https://github.com/MohammadZeeshanQ/sound-bass',
         'description': 'Landing Page for a Speaker Product with basic UI',
         'program': [
             { 'code': 'HTML', },
@@ -70,6 +76,7 @@ export const gridData = [
     {
         'title': 'Parallax Website',
         'image': earthWeb,
+        'link': 'https://github.com/MohammadZeeshanQ/parallax-website',
         'description': 'Website build with Parallax library for object scrolling animation.',
         'program': [
             { 'code': 'HTML', },
@@ -81,6 +88,7 @@ export const gridData = [
     {
         'title': 'Mountainer Website',
         'image': mountWeb,
+        'link': 'https://github.com/MohammadZeeshanQ/mountains',
         'description': 'Simple Website business website with pricing card.',
         'program': [
             { 'code': 'HTML', },

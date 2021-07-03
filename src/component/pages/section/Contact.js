@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography, Grid, Button, TextField, Snackbar } from '@material-ui/core'
 import { Alert, AlertTitle } from '@material-ui/lab';
+import SendIcon from '@material-ui/icons/Send';
 
 import emailjs from 'emailjs-com'
 
@@ -75,15 +76,18 @@ const useStyles = makeStyles({
         width: '100%'
     },
     inputBtnWrapper: {
-        margin: '1em 0',
-    },
-    inputBtnWrapper: {
         marginTop: '3em',
+        display: 'flex',
+        alignItems: 'center',
     },
     inputBtn: {
+        fontFamily: 'Oxy-Reg',
         width: '100%',
         backgroundColor: '#FF4F5A',
         color: '#fcfcfc',
+        fontSize: '1.05rem',
+        padding: '.6rem 0',
+        textTransform: 'none',
     },
 });
 
@@ -175,7 +179,14 @@ export default function Contact() {
                                     <TextField required className={classes.inputMessage} id='personMessage' label='Message' multiline rowsMax={3} variant='outlined' name='message' />
                                 </div>
                                 <div className={classes.inputBtnWrapper}>
-                                    <Button variant='contained' className={classes.inputBtn} type='submit' >Submit</Button>
+                                    <Button
+                                        variant='contained'
+                                        className={classes.inputBtn}
+                                        type='submit'
+                                        endIcon={<SendIcon style={{ fontSize: '1.4rem', marginLeft: '.5rem', }} />}
+                                    >
+                                        Submit
+                                    </Button>
                                 </div>
 
                             </div>

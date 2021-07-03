@@ -26,6 +26,7 @@
 
 body {
   background-color: #fcfcfc;
+  overflow-x: hidden;
 }
 
 .App {

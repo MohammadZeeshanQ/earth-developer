@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import { Typography, Button, Grid } from '@material-ui/core'
+import { Typography } from '@material-ui/core'
 import EarthVideo from '../../assets/videos/video2.mp4'
 
 const useStyles = makeStyles({
@@ -40,7 +40,7 @@ const useStyles = makeStyles({
         letterSpacing: '1px',
 
         '@media(max-width: 600px)': {
-            fontSize: '3.5em',
+            fontSize: '3em',
         },
     },
     headingHeader2: {
@@ -48,7 +48,7 @@ const useStyles = makeStyles({
         letterSpacing: '1px',
 
         '@media(max-width: 600px)': {
-            fontSize: '3.5em',
+            fontSize: '3em',
         },
     },
     headingDotColor: {

@@ -15,7 +15,7 @@ const useStyles = makeStyles({
         padding: '4em 0',
 
         '@media(max-width: 600px)': {
-            padding: '2em 0',
+            padding: '4em 0 1rem 0',
         },
     },
     header: {
@@ -126,7 +126,7 @@ export default function Service() {
                             sm={3}
                             md={3}
                         >
-                            <Tilt className="Tilt" options={{ max: 25, speed: 300, prospective: 1000 }}>
+                            <Tilt className="Tilt" options={{ max: 30, speed: 300, prospective: 1000 }}>
                                 <div className={classes.itemWrapper} >
                                     <div className={classes.itemImageWrapper}>
                                         <img className={classes.itemImage} src={value.image} alt={value.alt} />

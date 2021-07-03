@@ -2,10 +2,10 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography, IconButton } from '@material-ui/core'
 
-import FacebookIcon from '../../assets/images/icons/facebook.png'
-import Github from '../../assets/images/icons/github.png'
-import LinkedIn from '../../assets/images/icons/linkedin.png'
-import Instagram from '../../assets/images/icons/instagram.png'
+import FacebookIcon from '../../../assets/images/icons/facebook.png'
+import Github from '../../../assets/images/icons/github.png'
+import LinkedIn from '../../../assets/images/icons/linkedin.png'
+import Instagram from '../../../assets/images/icons/instagram.png'
 
 const useStyles = makeStyles({
     root: {
@@ -23,7 +23,7 @@ const useStyles = makeStyles({
     },
     socialMediaIcons: {
         margin: '0.5em',
-        width: '1.3em',
+        maxWidth: '1.3em',
 
         "&:hover": {
             transform: "scale(1.2)",

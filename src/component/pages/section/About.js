@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Typography, Grid, Button } from '@material-ui/core'
+import { Typography, Grid } from '@material-ui/core'
 
 
 import Developer from '../../../assets/images/background/developer.jpg'
@@ -173,7 +173,7 @@ export default function About() {
 
                                 <div className={classes.skillIconWrapper}>
                                     {devIconPath.map((image) =>
-                                        <img src={image.path} className={classes.skillIcons} />
+                                        <img src={image.path} className={classes.skillIcons} alt='Skills' />
                                     )}
                                 </div>
 

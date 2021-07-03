@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import { Typography, Button, Grid, Divider, Chip } from '@material-ui/core';
+import { Typography, Grid, Chip } from '@material-ui/core';
 
 import { gridData } from '../middleware/ProjectData.js';
 
@@ -182,7 +182,8 @@ export default function Project() {
                     className={classes.gridContainer}
                 >
                     {
-                        gridData.map(({ title, image, program, description }, index) =>
+                        gridData.map(({ title, image, link, program, description }, index) =>
+
                             <Grid
                                 item
                                 key={index}
@@ -191,27 +192,30 @@ export default function Project() {
                                 md={3}
                                 className={classes.gridItem}
                             >
-                                <div className={classes.gridImageContainer}>
-                                    <img className={classes.gridImage} src={image} alt='Project Images' />
-                                </div>
+                                <a href={link} style={{ textDecoration: 'none', color: '#1c1c1c', }}>
+                                    <div className={classes.gridImageContainer}>
+                                        <img className={classes.gridImage} src={image} alt='Project Images' />
+                                    </div>
 
-                                <div className={classes.gridTextContainer}>
-                                    <Typography className={classes.title} variant='h6'>
-                                        {title}
-                                    </Typography>
+                                    <div className={classes.gridTextContainer}>
+                                        <Typography className={classes.title} variant='h6'>
+                                            {title}
+                                        </Typography>
 
-                                    <Typography className={classes.description} variant='body2'>
-                                        {description}
-                                    </Typography>
+                                        <Typography className={classes.description} variant='body2'>
+                                            {description}
+                                        </Typography>
 
-                                    {
-                                        program.map((programs, i) =>
-                                            <Chip className={classes.chipTitle} label={programs.code} />
-                                        )
-                                    }
+                                        {
+                                            program.map((programs, i) =>
+                                                <Chip className={classes.chipTitle} label={programs.code} />
+                                            )
+                                        }
 
-                                </div>
+                                    </div>
+                                </a>
                             </Grid>
+
                         )
                     }
 

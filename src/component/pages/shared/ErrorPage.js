@@ -1,35 +1,35 @@
 import React from 'react'
-import {makeStyles} from '@material-ui/core/styles'
-import {Typography, Button} from '@material-ui/core'
-import {YellowButton} from './shared/YellowButton'
+import { makeStyles } from '@material-ui/core/styles'
+import { Typography, Button } from '@material-ui/core'
+
 
 const useStyles = makeStyles({
-    root:{
+    root: {
         backgroundColor: '#000000',
         backgroundImage: 'linear-gradient(147deg, #2c3e50 0%, #000000 74%)',
     },
-    wrapper:{
+    wrapper: {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         alignContent: 'center',
     },
-    messageDiv:{
+    messageDiv: {
         padding: '15em 0',
         textAlign: 'center',
         color: '#fcfcfc',
 
-        '@media(max-width: 600px)':{
+        '@media(max-width: 600px)': {
             padding: '12em 2em',
         }
     },
-    messageHeader:{
+    messageHeader: {
         fontFamily: 'Oxy-Bold',
     },
-    messageText:{
+    messageText: {
         fontFamily: 'Oxy-Reg',
     },
-    redirectBtn:{
+    redirectBtn: {
         backgroundColor: '#fbb034',
         backgroundImage: 'linear-gradient(315deg, #fbb034 0%, #ffdd00 74%)',
         fontFamily: 'Nunito-Bold',
