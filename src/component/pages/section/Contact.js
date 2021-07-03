@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography, Grid, Button, TextField, Snackbar } from '@material-ui/core'
 import { Alert, AlertTitle } from '@material-ui/lab';
@@ -81,7 +81,9 @@ const useStyles = makeStyles({
         marginTop: '3em',
     },
     inputBtn: {
-        width: '100%'
+        width: '100%',
+        backgroundColor: '#FF4F5A',
+        color: '#fcfcfc',
     },
 });
 
@@ -91,6 +93,9 @@ export default function Contact() {
     const [errorOpen, setErrorOpen] = useState(false);
     const classes = useStyles();
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
 
     const sendEmail = (e) => {
@@ -139,7 +144,7 @@ export default function Contact() {
                     >
                         <div className={classes.messageWrapper}>
                             <Typography variant='h4' className={classes.messageHeader} >
-                                Hi There, feel free to contact me!
+                                Hi there, feel free to contact me!
                             </Typography>
                             <Typography variant='body1' className={classes.messageDescription} >
                                 I'm here to help and answer any question you might have.
@@ -170,7 +175,7 @@ export default function Contact() {
                                     <TextField required className={classes.inputMessage} id='personMessage' label='Message' multiline rowsMax={3} variant='outlined' name='message' />
                                 </div>
                                 <div className={classes.inputBtnWrapper}>
-                                    <Button variant='contained' className={classes.inputBtn} color='primary' type='submit' >Submit</Button>
+                                    <Button variant='contained' className={classes.inputBtn} type='submit' >Submit</Button>
                                 </div>
 
                             </div>

@@ -24,6 +24,10 @@
   font-display: swap;
 }
 
+body {
+  background-color: #fcfcfc;
+}
+
 .App {
   position: relative;
 }

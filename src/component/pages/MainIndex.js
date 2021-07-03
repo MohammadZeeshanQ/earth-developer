@@ -1,10 +1,10 @@
 import React from 'react'
-import {makeStyles} from '@material-ui/core/styles';
-import {Typography, Button, Grid} from '@material-ui/core' 
+import { makeStyles } from '@material-ui/core/styles';
+import { Typography, Button, Grid } from '@material-ui/core'
 import EarthVideo from '../../assets/videos/video2.mp4'
 
 const useStyles = makeStyles({
-    root:{
+    root: {
         position: 'relative',
         width: '100vw',
         padding: '15em 0',
@@ -13,14 +13,14 @@ const useStyles = makeStyles({
         justifyContent: 'center',
         alignItems: 'center',
 
-        '@media(max-width: 600px)':{
+        '@media(max-width: 600px)': {
             padding: '16em 0',
         },
     },
-    wrapper:{
+    wrapper: {
         position: 'relative',
     },
-    earthVideo:{
+    earthVideo: {
         position: 'absolute',
         top: '0',
         left: '0',
@@ -29,28 +29,32 @@ const useStyles = makeStyles({
         objectFit: 'cover',
         zIndex: '-3',
     },
-    headingContainer:{
+    headingContainer: {
         textAlign: 'center',
     },
-    headingTextWrapper:{
+    headingTextWrapper: {
         color: '#fcfcfc'
     },
-    headingHeader1:{
+    headingHeader1: {
         fontFamily: 'Nunito-Bold',
-        '@media(max-width: 600px)':{
+        letterSpacing: '1px',
+
+        '@media(max-width: 600px)': {
             fontSize: '3.5em',
         },
     },
-    headingHeader2:{
+    headingHeader2: {
         fontFamily: 'Nunito-Bold',
-        '@media(max-width: 600px)':{
+        letterSpacing: '1px',
+
+        '@media(max-width: 600px)': {
             fontSize: '3.5em',
         },
     },
-    headingDotColor:{
-        color: '#FFDD10 ',
+    headingDotColor: {
+        color: '#FF4F5A',
     },
-    headingBtnWrapper:{
+    headingBtnWrapper: {
 
     },
 });
@@ -69,14 +73,14 @@ export default function MainIndex() {
                         </Typography>
                     </div>
                     <div className={classes.headingBtnWrapper}>
-                        
+
                     </div>
 
                 </div>
             </div>
 
             <video loop={true} autoPlay={true} muted={true} className={classes.earthVideo}>
-                <source src= { EarthVideo } type="video/mp4" />
+                <source src={EarthVideo} type="video/mp4" />
             </video>
         </div>
     )

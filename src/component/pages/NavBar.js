@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Button, IconButton, AppBar, Toolbar, SwipeableDrawer, Divider, List, ListItem } from '@material-ui/core';
+
 import MenuIcon from '@material-ui/icons/Menu';
+import CloseIcon from '@material-ui/icons/Close';
 
 
 const useStyles = makeStyles({
@@ -9,7 +11,11 @@ const useStyles = makeStyles({
     },
     container: {
         height: 64,
-        backgroundColor: '#1c1c1c',
+        backgroundColor: '#fcfcfc',
+
+        '@media (max-width: 600px)': {
+            height: 58,
+        },
     },
     appBarDiv: {
         width: '100%',
@@ -22,7 +28,7 @@ const useStyles = makeStyles({
     },
     logoText: {
         fontFamily: 'Nunito-Bold',
-        color: '#fcfcfc',
+        color: '#1c1c1c',
     },
     tabDiv: {
 
@@ -31,12 +37,12 @@ const useStyles = makeStyles({
         fontFamily: 'Nunito-Reg',
         margin: "0 .1em",
         border: 'none',
-        color: '#fcfcfc',
+        color: '#1c1c1c',
 
         '&:hover': {
-            backgroundColor: '#fcfcfc',
-            transition: '.4s ease all',
-            color: '#000000',
+            backgroundColor: '#FF4F5A',
+            transition: '.3s ease all',
+            color: '#fcfcfc',
         },
     },
     tabHideMobile: {
@@ -86,13 +92,13 @@ export default function NavBar() {
 
     useEffect(() => {
         console.log(`${window.location.href} : Public URL`);
-        console.log('Version 1.05');
+        console.log('Version 1.06');
     }, []);
 
     return (
         <div className={classes.root}>
 
-            <AppBar position='fixed' elevation='2' color='transparent' className={classes.container}>
+            <AppBar position='fixed' elevation='5' color='transparent' className={classes.container}>
 
                 <Toolbar>
                     <div className={classes.appBarDiv}>
@@ -108,8 +114,8 @@ export default function NavBar() {
                         <div className={classes.tabDiv}>
                             {/* Mobile Tab */}
                             <div className={classes.tabHideMobile}>
-                                <IconButton onClick={toggle} >
-                                    <MenuIcon style={{ fontSize: '2em', color: '#fcfcfc' }} />
+                                <IconButton onClick={toggle} size='small'>
+                                    <MenuIcon style={{ fontSize: '2em', color: '#1c1c1c' }} />
                                 </IconButton>
                             </div>
 
@@ -139,6 +145,12 @@ export default function NavBar() {
 
 
                     <List>
+                        <ListItem style={{ justifyContent: 'flex-end', }}>
+                            <IconButton style={{ backgroundColor: '#DCDBDB' }} size='small' onClick={toggle}>
+                                <CloseIcon />
+                            </IconButton>
+                        </ListItem>
+                        <Divider />
                         <ListItem>
                             <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/project' onClick={() => setDrawer(!drawer)}>Projects</Button>
                         </ListItem>

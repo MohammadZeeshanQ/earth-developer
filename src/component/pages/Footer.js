@@ -1,6 +1,6 @@
 import React from 'react'
-import {makeStyles} from '@material-ui/core/styles'
-import {Typography, IconButton} from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles'
+import { Typography, IconButton } from '@material-ui/core'
 
 import FacebookIcon from '../../assets/images/icons/facebook.png'
 import Github from '../../assets/images/icons/github.png'
@@ -8,44 +8,44 @@ import LinkedIn from '../../assets/images/icons/linkedin.png'
 import Instagram from '../../assets/images/icons/instagram.png'
 
 const useStyles = makeStyles({
-    root:{
+    root: {
         backgroundColor: "rgb(57, 61, 72)",
     },
-    wrapper:{
+    wrapper: {
         padding: '5em',
         color: "#fcfcfc",
         textAlign: 'center'
     },
-    socialMediaDiv:{
+    socialMediaDiv: {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
     },
-    socialMediaIcons:{
+    socialMediaIcons: {
         margin: '0.5em',
         width: '1.3em',
 
-        "&:hover":{
+        "&:hover": {
             transform: "scale(1.2)",
             transition: ".3s ease all",
         },
     },
-    madeByDiv:{
+    madeByDiv: {
         marginTop: '2em',
     },
-    madeByLabel:{
+    madeByLabel: {
         fontFamily: 'Nunito-Reg',
     },
-    madeByName:{
+    madeByName: {
         fontFamily: 'Nunito-Reg',
     },
-    copyrightDiv:{
+    copyrightDiv: {
         marginTop: '1em',
     },
-    copyrightLabel:{
+    copyrightLabel: {
         fontFamily: 'Nunito-Reg',
     },
-    copyrightPreservedLabel:{
+    copyrightPreservedLabel: {
         fontFamily: 'Nunito-Reg',
     }
 
@@ -67,15 +67,15 @@ export default function Footer() {
                     </IconButton>
 
                     <IconButton size="small">
-                    <img className={classes.socialMediaIcons} src={Instagram} alt='Instagram' />
+                        <img className={classes.socialMediaIcons} src={Instagram} alt='Instagram' />
                     </IconButton>
 
                     <IconButton size="small">
-                    <img className={classes.socialMediaIcons} src={LinkedIn} alt='LinkedIn' />
+                        <img className={classes.socialMediaIcons} src={LinkedIn} alt='LinkedIn' />
                     </IconButton>
 
                     <IconButton size="small" href='https://github.com/MohammadZeeshanQ'>
-                    <img className={classes.socialMediaIcons} src={Github} alt='Github' />
+                        <img className={classes.socialMediaIcons} src={Github} alt='Github' />
                     </IconButton>
                 </div>
 
@@ -89,8 +89,14 @@ export default function Footer() {
                     <Typography variant='body2' className={classes.copyrightPreservedLabel} >All Rights Reserved.</Typography>
                 </div>
 
+                <div>
+                    <Typography variant='caption'>
+                        Illustration by <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6" style={{ color: '#fcfcfc' }}>Icons 8</a> from <a href="https://icons8.com/illustrations" style={{ color: '#fcfcfc' }}>Ouch!</a>
+                    </Typography>
+                </div>
+
             </div>
-            
+
         </div>
     )
 }

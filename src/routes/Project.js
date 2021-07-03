@@ -1,19 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Button, Grid, Divider, Chip } from '@material-ui/core';
+
+import SoundImage from '../assets/images/projects/soundWeb.png';
+import BagImage from '../assets/images/projects/bagWeb.png';
+import ShoeImage from '../assets/images/projects/shoeWeb.png';
+import FashionImage from '../assets/images/projects/FashionWeb.png';
 
 
 const gridData = [
     {
         'title': 'Covid Vision',
-        'description': 'A web app developed to retrieve information regarding Covid-19 cases',
+        'image': SoundImage,
+        'description': 'Web App developed to retrieve Covid-19 cases information',
         'program': [
             { 'code': 'React.Js', },
             { 'code': 'Material-Ui', },
         ],
     },
     {
-        'title': 'Fashion Landing Website',
+        'title': 'Fashion Website',
+        'image': FashionImage,
         'description': 'Minimalist Landging Website to display Trendy Fashion clothing.',
         'program': [
             { 'code': 'React.Js', },
@@ -21,7 +28,8 @@ const gridData = [
         ],
     },
     {
-        'title': 'Big-Bag Landing Website',
+        'title': 'Big-Bag Website',
+        'image': BagImage,
         'description': 'Website build for marketing new trendy bags for various purpose.',
         'program': [
             { 'code': 'HTML', },
@@ -30,7 +38,8 @@ const gridData = [
         ],
     },
     {
-        'title': '3D Illustration Website',
+        'title': '3D Illustration',
+        'image': SoundImage,
         'description': 'Minimalist Business Website with 3D illustration.',
         'program': [
             { 'code': 'React.Js', },
@@ -38,7 +47,8 @@ const gridData = [
         ],
     },
     {
-        'title': 'Parallax Landing Website',
+        'title': 'Parallax Website',
+        'image': SoundImage,
         'description': 'Website build with Parallax library for object scrolling animation.',
         'program': [
             { 'code': 'HTML', },
@@ -48,7 +58,8 @@ const gridData = [
         ],
     },
     {
-        'title': 'Product Landing Website',
+        'title': 'Product Website',
+        'image': ShoeImage,
         'description': 'Landing Page for a Speaker Product with basic UI',
         'program': [
             { 'code': 'HTML', },
@@ -57,7 +68,8 @@ const gridData = [
         ],
     },
     {
-        'title': 'Mountainer Landing Website',
+        'title': 'Mountainer Website',
+        'image': SoundImage,
         'description': 'Simple Website business website with pricing card.',
         'program': [
             { 'code': 'HTML', },
@@ -65,8 +77,9 @@ const gridData = [
         ],
     },
     {
-        'title': 'Registration Webpages',
-        'description': 'Repository that contains multiple Login and SingIn webpages template.',
+        'title': 'Registration UI',
+        'image': SoundImage,
+        'description': 'Multiple Login and SingIn webpages template.',
         'program': [
             { 'code': 'HTML', },
             { 'code': 'CSS', },
@@ -82,7 +95,7 @@ const useStyles = makeStyles({
         // '@media(max-width: 600px)': {
 
         // },
-        // '@media(min-width: 601px) and (max-width: 900px)': {
+        // '@media(min-width: 601px) and (max-width: 1024px)': {
 
         // },
     },
@@ -92,34 +105,62 @@ const useStyles = makeStyles({
         margin: 'auto',
 
         '@media(max-width: 600px)': {
-
+            width: '90%',
         },
-        '@media(min-width: 601px) and (max-width: 900px)': {
-
+        '@media(min-width: 601px) and (max-width: 1024px)': {
+            width: '90%',
         },
     },
 
     headerContainer: {
-        padding: '8rem 0 4rem 0',
+        paddingTop: '8rem',
         textAlign: 'center',
     },
 
     header: {
-        fontFamily: 'Oxy-Bold',
+        fontFamily: 'Nunito-Bold',
         fontSize: '4rem',
+        letterSpacing: '2px',
+
+        '@media(max-width: 600px)': {
+            fontSize: '2.5rem',
+        },
+
+        '@media(min-width: 601px) and (max-width: 1024px)': {
+            fontSize: '2rem',
+        },
     },
 
     gridContainer: {
+        padding: '5rem 0',
 
+        '@media(max-width: 600px)': {
+            padding: '2rem 0',
+        },
+
+        '@media(min-width: 601px) and (max-width: 1024px)': {
+            padding: '3rem 0',
+        },
     },
 
     gridItem: {
-        border: '1px solid #1c1c1c',
-        margin: '1rem',
+        border: '1px solid #C6C6C6',
+        boxShadow: '5px 5px 20px #DCDBDB',
+        borderRadius: '1rem',
+        margin: '2rem .5rem',
 
         '&:hover': {
             transform: 'scale(1.1)',
-            transition: '.5s ease all',
+            transition: '.4s ease all',
+        },
+
+        '@media(max-width: 600px)': {
+            boxShadow: '2px 3px 10px #DCDBDB',
+
+            '&:hover': {
+                transform: 'scale(1.05)',
+                transition: '.4s ease all',
+            },
         },
     },
 
@@ -128,32 +169,89 @@ const useStyles = makeStyles({
     },
 
     gridImage: {
-
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        borderRadius: '1rem 1rem 0 0',
+        borderBottom: '1px solid #C6C6C6',
     },
 
     gridTextContainer: {
-        padding: '1rem',
+        padding: '2rem 1rem 1rem 1rem',
+
+        '@media(max-width: 600px)': {
+            padding: '.8rem 1rem 1rem 1rem',
+        },
+
+        '@media(min-width: 601px) and (max-width: 1024px)': {
+            padding: '0.5rem 1rem 1rem 1rem',
+        },
     },
 
     title: {
         fontFamily: 'Oxy-Bold',
+        letterSpacing: '1px',
+
+        '@media(max-width: 600px)': {
+            letterSpacing: '1.5px',
+            fontSize: '1.4rem',
+        },
+
+        '@media(min-width: 601px) and (max-width: 1024px)': {
+            fontSize: '1.1rem',
+            letterSpacing: '1.5px'
+        },
     },
 
     description: {
         fontFamily: 'Oxy-Reg',
-        margin: '1rem 0',
+        margin: '1rem 0 1.5rem 0',
+        letterSpacing: '0.6px',
+
+        '@media(max-width: 600px)': {
+            fontSize: '.9rem',
+            margin: '1rem 0 2.5rem 0',
+        },
+
+        '@media(min-width: 601px) and (max-width: 1024px)': {
+            fontSize: '.8rem',
+            letterSpacing: '1px',
+            margin: '.8rem 0 1rem 0',
+
+        },
     },
 
     chipTitle: {
+        backgroundColor: '#FF4F5A',
+        color: '#fcfcfc',
         fontFamily: 'Oxy-Reg',
         letterSpacing: '0.6px',
-        margin: '.3rem .3rem 0 0',
+        margin: '.3rem .4rem 0 0',
+
+        '&:hover': {
+            transform: 'scale(1.1)',
+            transition: '.3s ease all',
+        },
+
+        '@media(max-width: 600px)': {
+
+        },
+
+        '@media(min-width: 601px) and (max-width: 1024px)': {
+            fontSize: '.7rem',
+            margin: '.3rem .2rem 0 0'
+        },
     },
 });
 
 
 export default function Project() {
+
     const classes = useStyles();
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     return (
         <div className={classes.root}>
@@ -161,7 +259,7 @@ export default function Project() {
 
                 <div className={classes.headerContainer}>
                     <Typography className={classes.header} variant='h1'>
-                        Projects
+                        PROJECTS
                     </Typography>
                 </div>
 
@@ -170,21 +268,21 @@ export default function Project() {
                     xs={12}
                     sm={12}
                     md={12}
-                    justify='center'
+                    justify='space-evenly'
                     className={classes.gridContainer}
                 >
                     {
-                        gridData.map(({ title, program, description }, index) =>
+                        gridData.map(({ title, image, program, description }, index) =>
                             <Grid
                                 item
                                 key={index}
                                 xs={12}
-                                sm={3}
+                                sm={4}
                                 md={3}
                                 className={classes.gridItem}
                             >
                                 <div className={classes.gridImageContainer}>
-
+                                    <img className={classes.gridImage} src={image} alt='Project Images' />
                                 </div>
 
                                 <div className={classes.gridTextContainer}>
@@ -198,7 +296,7 @@ export default function Project() {
 
                                     {
                                         program.map((programs, i) =>
-                                            <Chip className={classes.chipTitle} color='secondary' label={programs.code} />
+                                            <Chip className={classes.chipTitle} label={programs.code} />
                                         )
                                     }
 

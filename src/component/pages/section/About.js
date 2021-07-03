@@ -1,6 +1,6 @@
-import React from 'react'
-import {makeStyles} from '@material-ui/core/styles'
-import {Typography, Grid, Button} from '@material-ui/core'
+import React, { useEffect } from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import { Typography, Grid, Button } from '@material-ui/core'
 
 
 import Developer from '../../../assets/images/background/developer.jpg'
@@ -16,23 +16,23 @@ import canva from '../../../assets/images/devIcon/canva.png'
 import shotcut from '../../../assets/images/devIcon/shotcut.png'
 
 const useStyles = makeStyles({
-    root:{
+    root: {
 
     },
-    wrapper:{
+    wrapper: {
         padding: '10em 0 10em 0',
 
-        '@media(max-width: 600px)':{
+        '@media(max-width: 600px)': {
             padding: '8em 0 0 0',
         },
     },
-    gridContainer:{
+    gridContainer: {
 
     },
-    gridItem:{
-        
+    gridItem: {
+
     },
-    gridImage:{
+    gridImage: {
         position: 'relative',
         top: '-30px',
         left: '-100px',
@@ -41,62 +41,62 @@ const useStyles = makeStyles({
         objectFit: 'cover',
         zIndex: '-2',
 
-        '@media(max-width: 600px)':{
+        '@media(max-width: 600px)': {
             top: '0',
             width: '100%',
             left: '0',
         },
     },
-    textContainer:{
+    textContainer: {
 
     },
-    nameWrapper:{
-        '@media(max-width: 600px)':{
+    nameWrapper: {
+        '@media(max-width: 600px)': {
             textAlign: 'center',
             padding: '0 2em',
         },
     },
-    nameHeader:{
+    nameHeader: {
         fontFamily: 'Nunito-Bold',
     },
-    nameDescription:{
+    nameDescription: {
         fontFamily: "Nunito-Reg",
         paddingTop: "1em",
         color: '#848480 ',
     },
-    nameAttributeDiv:{
+    nameAttributeDiv: {
         paddingTop: "1em",
     },
-    nameAttributeText:{
+    nameAttributeText: {
         fontFamily: "Nunito-Reg",
         color: '#848480 ',
     },
-    skillWrapper:{
+    skillWrapper: {
         paddingTop: '4em',
 
-        '@media(max-width: 600px)':{
+        '@media(max-width: 600px)': {
             textAlign: 'center',
         },
     },
-    skillHeader:{
+    skillHeader: {
         fontFamily: 'Nunito-Bold',
     },
-    skillIconWrapper:{
+    skillIconWrapper: {
         padding: '1em 5em 1em 0',
-        '@media(max-width: 600px)':{
+        '@media(max-width: 600px)': {
             padding: '1em 0 0 0',
         },
     },
-    skillIcons:{
+    skillIcons: {
         width: '2.5em',
         margin: '0 1em 1em 0',
 
-        '&:hover':{
+        '&:hover': {
             transform: 'scale(1.4)',
             transition: '.4s ease all',
         },
 
-        '@media(max-width: 600px)':{
+        '@media(max-width: 600px)': {
             width: '4em',
             margin: '1em',
         },
@@ -104,20 +104,26 @@ const useStyles = makeStyles({
 });
 
 const devIconPath = [
-    {"path": html},
-    {"path": css},
-    {"path": js},
-    {"path": react},
-    {"path": mui},
-    {"path": bootstrap},
-    {"path": lr},
-    {"path": gimp},
-    {"path": canva},
-    {"path": shotcut},
+    { "path": html },
+    { "path": css },
+    { "path": js },
+    { "path": react },
+    { "path": mui },
+    { "path": bootstrap },
+    { "path": lr },
+    { "path": gimp },
+    { "path": canva },
+    { "path": shotcut },
 ]
 
 export default function About() {
     const classes = useStyles();
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
+
     return (
         <div className={classes.root}>
             <div className={classes.wrapper}>
@@ -131,59 +137,59 @@ export default function About() {
                 >
 
                     <Grid
-                       item
-                       className={classes.gridItem}
-                       xs={12}
-                       sm={5}
-                       md={5} 
+                        item
+                        className={classes.gridItem}
+                        xs={12}
+                        sm={5}
+                        md={5}
                     >
 
                         <div className={classes.textContainer}>
 
                             <div className={classes.nameWrapper}>
                                 <Typography className={classes.nameHeader} variant='h3' >
-                                    Mohammad Zeeshan
+                                    Hi there!
                                 </Typography>
-                                <Typography className={classes.nameDescription} variant='body1'>
-                                    Hi, my name is Mohammad Zeeshan. I am a Front-End Developer &amp; Web Designer
+                                <Typography className={classes.nameDescription} variant='h6'>
+                                    My name is Mohammad Zeeshan.
                                 </Typography>
 
                                 <div className={classes.nameAttributeDiv}>
                                     <Typography className={classes.nameAttributeText} variant='body1' >
-                                    Web Development
+                                        Front-End Developer
                                     </Typography>
                                     <Typography className={classes.nameAttributeText} variant='body1' >
-                                    UI/UX
+                                        Web Designer
                                     </Typography>
                                     <Typography className={classes.nameAttributeText} variant='body1' >
-                                    Photographer
+                                        UI/UX
                                     </Typography>
                                 </div>
-                               
+
                             </div>
 
                             <div className={classes.skillWrapper}>
                                 <Typography className={classes.skillHeader} variant='h4'>Skills</Typography>
-                                
+
                                 <div className={classes.skillIconWrapper}>
-                                   {devIconPath.map((image) => 
-                                        <img src={image.path} className={classes.skillIcons}/>
+                                    {devIconPath.map((image) =>
+                                        <img src={image.path} className={classes.skillIcons} />
                                     )}
                                 </div>
 
                             </div>
                         </div>
-                        
+
                     </Grid>
 
                     <Grid
-                       item
-                       className={classes.gridItem}
-                       xs={12}
-                       sm={5}
-                       md={5} 
+                        item
+                        className={classes.gridItem}
+                        xs={12}
+                        sm={5}
+                        md={5}
                     >
-                        <img src={Developer} className={classes.gridImage} alt='People jumping'/>
+                        <img src={Developer} className={classes.gridImage} alt='People jumping' />
                     </Grid>
 
                 </Grid>

@@ -1,42 +1,42 @@
 import React from 'react'
-import {makeStyles} from '@material-ui/core/styles'
-import {Typography} from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles'
+import { Typography } from '@material-ui/core'
 
 import MobileBg from '../../assets/images/background/MobileView.png'
 import DesktopBg from '../../assets/images/background/PcVIew.png'
 const useStyles = makeStyles({
-    root:{
+    root: {
         backgroundColor: '#fcfcfc'
-    },  
-    wrapper:{
+    },
+    wrapper: {
         position: 'relative',
     },
-    mobileBg:{
+    mobileBg: {
         display: 'none',
 
-        '@media(max-width: 600px)':{
-            display:'block',
+        '@media(max-width: 600px)': {
+            display: 'block',
             width: '100%',
             height: '100%',
             objectFit: 'cover',
         },
     },
-    desktopBg:{
+    desktopBg: {
         width: '100%',
         height: '100%',
         objectFit: 'cover',
-        '@media(max-width: 600px)':{
+        '@media(max-width: 600px)': {
             display: 'none',
         },
     },
-    textWrapper:{
+    textWrapper: {
         position: 'absolute',
         top: '13%',
         right: '4%',
         color: '#1a1a1a',
         textAlign: 'right',
 
-        '@media(max-width: 600px)':{
+        '@media(max-width: 600px)': {
             position: 'relative',
             top: '0',
             right: '0',
@@ -44,25 +44,26 @@ const useStyles = makeStyles({
             textAlign: 'center',
         },
     },
-    textHeader:{
+    textHeader: {
         fontFamily: 'Nunito-Bold',
         letterSpacing: '2px',
 
-        '@media(min-width: 600px) and (max-width: 900px)':{
+        '@media(min-width: 600px) and (max-width: 900px)': {
             fontSize: '2rem',
-           },
+        },
     },
-    textMessage:{
+    textMessage: {
         fontFamily: 'Nunito-Semi',
         letterSpacing: '2px',
+        color: '#8c8c8c',
 
-        '@media(min-width: 600px) and (max-width: 900px)':{
+        '@media(min-width: 600px) and (max-width: 900px)': {
             fontSize: '1rem',
-           },
+        },
 
-        '@media(max-width: 600px)':{
+        '@media(max-width: 600px)': {
             paddingTop: '1rem',
-           },
+        },
     },
 });
 
@@ -77,10 +78,10 @@ export default function ProjectView() {
                         Responsive Websites
                     </Typography>
                     <Typography variant='h6' className={classes.textMessage}>
-                        Looks the same in all devices.    
+                        Looks the same in all devices.
                     </Typography>
                 </div>
-                
+
                 <img src={DesktopBg} className={classes.desktopBg} alt='Desktop project' />
                 <img src={MobileBg} className={classes.mobileBg} alt='Mobile project' />
 
