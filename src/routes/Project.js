@@ -2,102 +2,12 @@ import React, { useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Button, Grid, Divider, Chip } from '@material-ui/core';
 
-import SoundImage from '../assets/images/projects/soundWeb.png';
-import BagImage from '../assets/images/projects/bagWeb.png';
-import ShoeImage from '../assets/images/projects/shoeWeb.png';
-import FashionImage from '../assets/images/projects/FashionWeb.png';
-
-
-const gridData = [
-    {
-        'title': 'Covid Vision',
-        'image': SoundImage,
-        'description': 'Web App developed to retrieve Covid-19 cases information',
-        'program': [
-            { 'code': 'React.Js', },
-            { 'code': 'Material-Ui', },
-        ],
-    },
-    {
-        'title': 'Fashion Website',
-        'image': FashionImage,
-        'description': 'Minimalist Landging Website to display Trendy Fashion clothing.',
-        'program': [
-            { 'code': 'React.Js', },
-            { 'code': 'Material-Ui', },
-        ],
-    },
-    {
-        'title': 'Big-Bag Website',
-        'image': BagImage,
-        'description': 'Website build for marketing new trendy bags for various purpose.',
-        'program': [
-            { 'code': 'HTML', },
-            { 'code': 'Javascript', },
-            { 'code': 'LESS', }
-        ],
-    },
-    {
-        'title': '3D Illustration',
-        'image': SoundImage,
-        'description': 'Minimalist Business Website with 3D illustration.',
-        'program': [
-            { 'code': 'React.Js', },
-            { 'code': 'Material-Ui', },
-        ],
-    },
-    {
-        'title': 'Parallax Website',
-        'image': SoundImage,
-        'description': 'Website build with Parallax library for object scrolling animation.',
-        'program': [
-            { 'code': 'HTML', },
-            { 'code': 'LESS', },
-            { 'code': 'Javascript', },
-            { 'code': 'Parallax.Js', },
-        ],
-    },
-    {
-        'title': 'Product Website',
-        'image': ShoeImage,
-        'description': 'Landing Page for a Speaker Product with basic UI',
-        'program': [
-            { 'code': 'HTML', },
-            { 'code': 'LESS', },
-            { 'code': 'CSS', },
-        ],
-    },
-    {
-        'title': 'Mountainer Website',
-        'image': SoundImage,
-        'description': 'Simple Website business website with pricing card.',
-        'program': [
-            { 'code': 'HTML', },
-            { 'code': 'Material-Ui', },
-        ],
-    },
-    {
-        'title': 'Registration UI',
-        'image': SoundImage,
-        'description': 'Multiple Login and SingIn webpages template.',
-        'program': [
-            { 'code': 'HTML', },
-            { 'code': 'CSS', },
-            { 'code': 'Material-Ui', },
-        ],
-    },
-
-];
+import { gridData } from '../middleware/ProjectData.js';
 
 
 const useStyles = makeStyles({
     root: {
-        // '@media(max-width: 600px)': {
 
-        // },
-        // '@media(min-width: 601px) and (max-width: 1024px)': {
-
-        // },
     },
 
     wrapper: {

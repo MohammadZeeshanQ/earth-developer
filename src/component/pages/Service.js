@@ -4,8 +4,8 @@ import { Grid, Typography } from '@material-ui/core'
 import Tilt from 'react-tilt'
 
 import imageFrontEnd from '../../assets/images/services/p1.png'
-import imageWebDesign from '../../assets/images/services/p2.png'
-import imageGraphicDesigner from '../../assets/images/services/p3.png'
+import imageWebDesign from '../../assets/images/services/p3.png'
+import imageGraphicDesigner from '../../assets/images/services/p2.png'
 
 const useStyles = makeStyles({
     root: {
