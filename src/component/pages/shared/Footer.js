@@ -5,15 +5,14 @@ import { Typography, IconButton } from '@material-ui/core'
 import FacebookIcon from '../../../assets/images/icons/facebook.png'
 import Github from '../../../assets/images/icons/github.png'
 import LinkedIn from '../../../assets/images/icons/linkedin.png'
-import Instagram from '../../../assets/images/icons/instagram.png'
 
 const useStyles = makeStyles({
     root: {
-        backgroundColor: "rgb(57, 61, 72)",
+        backgroundColor: '#fcfcfc',
     },
     wrapper: {
         padding: '5em',
-        color: "#fcfcfc",
+        color: "#050505",
         textAlign: 'center'
     },
     socialMediaDiv: {
@@ -23,7 +22,7 @@ const useStyles = makeStyles({
     },
     socialMediaIcons: {
         margin: '0.5em',
-        maxWidth: '1.3em',
+        maxWidth: '1.8em',
 
         "&:hover": {
             transform: "scale(1.2)",
@@ -67,10 +66,6 @@ export default function Footer() {
                     </IconButton>
 
                     <IconButton size="small">
-                        <img className={classes.socialMediaIcons} src={Instagram} alt='Instagram' />
-                    </IconButton>
-
-                    <IconButton size="small">
                         <img className={classes.socialMediaIcons} src={LinkedIn} alt='LinkedIn' />
                     </IconButton>
 
@@ -91,7 +86,7 @@ export default function Footer() {
 
                 <div>
                     <Typography variant='caption'>
-                        Illustration by <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6" style={{ color: '#fcfcfc' }}>Icons 8</a> from <a href="https://icons8.com/illustrations" style={{ color: '#fcfcfc' }}>Ouch!</a>
+                        Illustration by <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6" style={{ color: '#FF4F5A' }}>Icons 8</a> from <a href="https://icons8.com/illustrations" style={{ color: '#FF4F5A' }}>Ouch!</a>
                     </Typography>
                 </div>
 
