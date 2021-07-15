@@ -67,8 +67,8 @@ export default function MainIndex() {
                 <div className={classes.headingContainer}>
 
                     <div className={classes.headingTextWrapper}>
-                        <Typography variant='h1' className={classes.headingHeader1}>Welcome to</Typography>
-                        <Typography variant='h1' className={classes.headingHeader2}>Planet Earth
+                        <Typography variant='h1' className={classes.headingHeader1}>Hi, my name</Typography>
+                        <Typography variant='h1' className={classes.headingHeader2}>is ZESHAN
                             <span className={classes.headingDotColor}>.</span>
                         </Typography>
                     </div>

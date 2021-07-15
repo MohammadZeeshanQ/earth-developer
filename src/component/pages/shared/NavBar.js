@@ -9,6 +9,17 @@ import CloseIcon from '@material-ui/icons/Close';
 const useStyles = makeStyles({
     root: {
     },
+    wrapper: {
+        width: '85%',
+        margin: 'auto',
+
+        '@media(max-width: 600px)': {
+            width: '90%',
+        },
+        '@media(min-width: 601px) and (max-width: 1024px)': {
+            width: '90%',
+        },
+    },
     container: {
         height: 64,
         backgroundColor: '#fcfcfc',
@@ -29,15 +40,17 @@ const useStyles = makeStyles({
     logoText: {
         fontFamily: 'Nunito-Bold',
         color: '#1c1c1c',
+        letterSpacing: '2px',
     },
     tabDiv: {
 
     },
     tabBtn: {
-        fontFamily: 'Nunito-Reg',
+        fontFamily: 'Nunito-Semi',
         margin: "0 .1em",
         border: 'none',
         color: '#1c1c1c',
+        letterSpacing: '2px',
 
         '&:hover': {
             backgroundColor: '#FF4F5A',
@@ -71,10 +84,11 @@ const useStyles = makeStyles({
         borderRadius: '3em 0em 0em 3em',
     },
     tabMobileBtn: {
-        fontFamily: 'Nunito-Reg',
+        fontFamily: 'Nunito-Semi',
         color: '#0e0e0e',
         margin: "0 .1em",
         border: 'none',
+        letterSpacing: '2px',
     },
 });
 
@@ -100,13 +114,13 @@ export default function NavBar() {
 
             <AppBar position='fixed' elevation='5' color='transparent' className={classes.container}>
 
-                <Toolbar>
+                <Toolbar className={classes.wrapper}>
                     <div className={classes.appBarDiv}>
 
                         <div className={classes.logoDiv}>
                             <IconButton href='/earth-developer/#/'>
                                 <Typography className={classes.logoText} variant='h6'>
-                                    EARTH
+                                    ZESHAN
                                 </Typography>
                             </IconButton>
                         </div>
