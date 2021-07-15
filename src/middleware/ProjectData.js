@@ -6,7 +6,7 @@ import loginWeb from '../assets/images/projects/loginWeb.png';
 import covidWeb from '../assets/images/projects/covidWeb.png';
 import mountWeb from '../assets/images/projects/mountWeb.png';
 import IllustrationWeb from '../assets/images/projects/3dWeb.png';
-
+import todoList from '../assets/images/projects/todoList.png';
 
 
 export const gridData = [
@@ -18,6 +18,16 @@ export const gridData = [
         'program': [
             { 'code': 'React.Js', },
             { 'code': 'Material-Ui', },
+        ],
+    },
+    {
+        'title': 'Todo List App',
+        'image': todoList,
+        'link': 'https://todo-list-beermossy.netlify.app',
+        'description': 'Basic Todo App, that has Add, Remove and Complete functionalities.',
+        'program': [
+            { 'code': 'React.Js', },
+            { 'code': 'CSS', }
         ],
     },
     {
