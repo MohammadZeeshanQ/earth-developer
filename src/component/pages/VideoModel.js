@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Typography } from '@material-ui/core'
+import { Typography, Grid } from '@material-ui/core'
 
 // Video
 import Video3D from '../../assets/videos/videoPhone.mp4'
@@ -10,7 +10,11 @@ const useStyles = makeStyles({
         padding: '3rem 0 4rem 0',
 
         '@media(max-width: 600px)': {
-            padding: '2rem 0 4rem 0',
+            padding: '3rem 0',
+        },
+
+        '@media(min-width: 600px) and (max-width: 1025px)': {
+            padding: '1rem 0',
         },
     },
 
@@ -28,8 +32,13 @@ const useStyles = makeStyles({
     },
 
     videoContainer: {
-        height: '35rem',
+        height: '30rem',
         textAlign: 'center',
+
+
+        '@media(min-width: 600px) and (max-width: 1025px)': {
+            height: '20rem',
+        },
     },
 
     video: {
@@ -42,34 +51,42 @@ const useStyles = makeStyles({
             objectFit: 'cover',
         },
     },
+    textContainer: {
+        display: 'grid',
+        placeItems: 'center',
+    },
     textWrapper: {
         padding: '2rem 0',
-        textAlign: 'center',
 
         '@media(max-width: 600px)': {
-            padding: '1rem 0',
+            padding: '1rem',
+            // textAlign : 'center',
         },
     },
     textHeader: {
         fontFamily: 'Nunito-Bold',
         letterSpacing: '3px',
+        fontSize: '3rem',
 
         '@media(max-width: 600px)': {
             fontSize: '2.5rem',
         },
 
         '@media(min-width: 600px) and (max-width: 900px)': {
-            fontSize: '2rem',
+            fontSize: '1.5rem',
         },
     },
     textMessage: {
         fontFamily: 'Nunito-Semi',
-        letterSpacing: '2px',
-        color: '#8c8c8c',
-        margin: '1rem',
+        letterSpacing: '3px',
+        lineHeight: '180%',
+        color: '#858585',
+        margin: '2rem 0',
 
         '@media(min-width: 600px) and (max-width: 900px)': {
-            fontSize: '1rem',
+            fontSize: '.7rem',
+            letterSpacing: '2px',
+            lineHeight: '160%',
         },
 
         '@media(max-width: 600px)': {
@@ -86,19 +103,40 @@ export default function VideoModel() {
     return (
         <div className={classes.root}>
             <div className={classes.wrapper}>
-                <div className={classes.textWrapper}>
-                    <Typography variant='h2' className={classes.textHeader}>
-                        Responsive Websites
-                    </Typography>
-                    <Typography variant='h6' className={classes.textMessage}>
-                        Looks the same in all devices.
-                    </Typography>
-                </div>
-                <div className={classes.videoContainer}>
-                    <video className={classes.video} autoPlay muted loop>
-                        <source src={Video3D} type='video/mp4' />
-                    </video>
-                </div>
+
+                <Grid
+                    container
+                >
+                    <Grid
+                        item
+                        xs={12}
+                        sm={6}
+                        md={6}
+                        className={classes.textContainer}
+                    >
+                        <div className={classes.textWrapper}>
+                            <Typography variant='h2' className={classes.textHeader}>
+                                Responsive Websites
+                            </Typography>
+                            <Typography variant='body1' className={classes.textMessage}>
+                                Looks the same in all devices. My primary goal is to provide my clients not only Professional and Elegant but Responsive and dynamic.
+                            </Typography>
+                        </div>
+                    </Grid>
+
+                    <Grid
+                        item
+                        xs={12}
+                        sm={6}
+                        md={6}
+                        className={classes.videoContainer}
+                    >
+                        <video className={classes.video} autoPlay muted loop>
+                            <source src={Video3D} type='video/mp4' />
+                        </video>
+                    </Grid>
+                </Grid>
+
             </div>
         </div>
     )

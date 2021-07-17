@@ -32,6 +32,14 @@ const useStyles = makeStyles({
             transform: "scale(1.2)",
             transition: ".3s ease all",
         },
+
+        '@media(min-width: 600px) and (max-width: 900px)': {
+            maxWidth: '1.5rem'
+        },
+
+        '@media(max-width: 600px)': {
+
+        },
     },
 
     madeByDiv: {

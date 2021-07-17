@@ -24,6 +24,7 @@ const useStyles = makeStyles({
         fontFamily: 'Nunito-Bold',
         textAlign: 'center',
         letterSpacing: '1px',
+        margin: '1rem 0 2rem 0',
 
         '@media(min-width: 720px) and (max-width: 900px)': {
             fontSize: '2em',
@@ -107,7 +108,7 @@ export default function Service() {
         <div className={classes.root}>
             <div className={classes.wrapper}>
                 <Typography variant='h3' className={classes.header}>
-                    What I do
+                    What I Can do?
                 </Typography>
 
                 <Grid
@@ -130,7 +131,6 @@ export default function Service() {
                                 speed={300}
                                 perspective={1000}
                                 scale={1.1}
-                                glare={true}
                             >
 
                                 <div className={classes.itemWrapper} >
