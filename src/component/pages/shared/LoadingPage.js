@@ -12,10 +12,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function LoadingPage() {
-    const classes = useStyles();
-    return (
-        <div className={classes.root}>
-            <CircularProgress color="secondary" style={{fontSize: '10em'}} />
-        </div>
-    )
+  const classes = useStyles();
+  return (
+    <div className={classes.root}>
+      <CircularProgress color="secondary" style={{ fontSize: '10em' }} />
+    </div>
+  )
 }

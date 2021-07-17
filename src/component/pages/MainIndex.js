@@ -16,6 +16,10 @@ const useStyles = makeStyles({
         '@media(max-width: 600px)': {
             padding: '16em 0',
         },
+
+        '@media(min-width: 601px) and (max-width: 1024px)': {
+            padding: '10em 0',
+        },
     },
     wrapper: {
         position: 'relative',
@@ -37,17 +41,25 @@ const useStyles = makeStyles({
     },
     headingHeader1: {
         fontFamily: 'Nunito-Bold',
-        letterSpacing: '1px',
+        letterSpacing: '2px',
 
         '@media(max-width: 600px)': {
+            fontSize: '3em',
+        },
+
+        '@media(min-width: 601px) and (max-width: 1024px)': {
             fontSize: '3em',
         },
     },
     headingHeader2: {
         fontFamily: 'Nunito-Bold',
-        letterSpacing: '1px',
+        letterSpacing: '2px',
 
         '@media(max-width: 600px)': {
+            fontSize: '3em',
+        },
+
+        '@media(min-width: 601px) and (max-width: 1024px)': {
             fontSize: '3em',
         },
     },

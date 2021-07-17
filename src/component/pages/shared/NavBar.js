@@ -63,7 +63,7 @@ const useStyles = makeStyles({
             display: 'block',
         },
 
-        '@media (min-width: 602px)': {
+        '@media (min-width: 1025px)': {
             display: 'none',
         }
     },
@@ -72,7 +72,7 @@ const useStyles = makeStyles({
             display: 'none',
         },
 
-        '@media (min-width: 602px)': {
+        '@media (min-width: 1025px)': {
             display: 'block',
         }
     },
@@ -106,13 +106,13 @@ export default function NavBar() {
 
     useEffect(() => {
         console.log(`${window.location.href} : Public URL`);
-        console.log('Version 1.06');
+        console.log('Version 1.07');
     }, []);
 
     return (
         <div className={classes.root}>
 
-            <AppBar position='fixed' elevation='5' color='transparent' className={classes.container}>
+            <AppBar position='fixed' elevation={1} color='transparent' className={classes.container}>
 
                 <Toolbar className={classes.wrapper}>
                     <div className={classes.appBarDiv}>

@@ -7,19 +7,23 @@ import Github from '../../../assets/images/icons/github.png'
 import LinkedIn from '../../../assets/images/icons/linkedin.png'
 
 const useStyles = makeStyles({
+
     root: {
         backgroundColor: '#fcfcfc',
     },
+
     wrapper: {
         padding: '5em',
         color: "#050505",
         textAlign: 'center'
     },
+
     socialMediaDiv: {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
     },
+
     socialMediaIcons: {
         margin: '0.5em',
         maxWidth: '1.8em',
@@ -29,26 +33,30 @@ const useStyles = makeStyles({
             transition: ".3s ease all",
         },
     },
+
     madeByDiv: {
         marginTop: '2em',
     },
+
     madeByLabel: {
         fontFamily: 'Nunito-Reg',
     },
+
     madeByName: {
         fontFamily: 'Nunito-Reg',
     },
+
     copyrightDiv: {
         marginTop: '1em',
     },
+
     copyrightLabel: {
         fontFamily: 'Nunito-Reg',
     },
+
     copyrightPreservedLabel: {
         fontFamily: 'Nunito-Reg',
     }
-
-
 });
 
 export default function Footer() {
@@ -56,6 +64,7 @@ export default function Footer() {
     const classes = useStyles();
 
     return (
+
         <div className={classes.root}>
 
             <div className={classes.wrapper}>

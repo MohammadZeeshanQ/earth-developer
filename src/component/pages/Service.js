@@ -1,7 +1,8 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Grid, Typography } from '@material-ui/core'
-import Tilt from 'react-tilt'
+// import Tilt from 'react-tilt' Old Library
+import Tilty from 'react-tilty';
 
 import imageFrontEnd from '../../assets/images/services/p1.png'
 import imageWebDesign from '../../assets/images/services/p3.png'
@@ -101,6 +102,7 @@ const imagePath = [
 ];
 export default function Service() {
     const classes = useStyles();
+
     return (
         <div className={classes.root}>
             <div className={classes.wrapper}>
@@ -112,9 +114,6 @@ export default function Service() {
                     container
                     className={classes.gridContainer}
                     justify='space-evenly'
-                    xs={12}
-                    sm={12}
-                    md={12}
                 >
 
                     {imagePath.map((value, index) =>
@@ -126,8 +125,16 @@ export default function Service() {
                             sm={3}
                             md={3}
                         >
-                            <Tilt className="Tilt" options={{ max: 30, speed: 300, prospective: 1000 }}>
+                            <Tilty
+                                max={35}
+                                speed={300}
+                                perspective={1000}
+                                scale={1.1}
+                                glare={true}
+                            >
+
                                 <div className={classes.itemWrapper} >
+
                                     <div className={classes.itemImageWrapper}>
                                         <img className={classes.itemImage} src={value.image} alt={value.alt} />
                                     </div>
@@ -136,8 +143,10 @@ export default function Service() {
                                             {value.name}
                                         </Typography>
                                     </div>
+
                                 </div>
-                            </Tilt>
+
+                            </Tilty>
 
                         </Grid>
                     )}
