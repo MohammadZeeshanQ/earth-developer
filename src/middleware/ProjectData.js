@@ -7,7 +7,7 @@ import covidWeb from '../assets/images/projects/covidWeb.png';
 import mountWeb from '../assets/images/projects/mountWeb.png';
 import IllustrationWeb from '../assets/images/projects/3dWeb.png';
 import todoList from '../assets/images/projects/todoList.png';
-
+import weatherWeb from '../assets/images/projects/weatherWeb.png';
 
 export const gridData = [
     {
@@ -18,6 +18,17 @@ export const gridData = [
         'program': [
             { 'code': 'React.Js', },
             { 'code': 'Material-Ui', },
+        ],
+    },
+    {
+        'title': 'Weather App',
+        'image': weatherWeb,
+        'link': 'https://todo-list-beermossy.netlify.app',
+        'description': 'A weather App built using API calling functions.',
+        'program': [
+            { 'code': 'React.Js', },
+            { 'code': 'Material-Ui', },
+            { 'code': 'CSS', }
         ],
     },
     {
