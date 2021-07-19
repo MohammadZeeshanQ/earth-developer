@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/earth-developer/static/css/main.63154bd1.chunk.css",
-    "main.js": "/earth-developer/static/js/main.9d0363c8.chunk.js",
-    "main.js.map": "/earth-developer/static/js/main.9d0363c8.chunk.js.map",
+    "main.js": "/earth-developer/static/js/main.cfd39a5f.chunk.js",
+    "main.js.map": "/earth-developer/static/js/main.cfd39a5f.chunk.js.map",
     "runtime-main.js": "/earth-developer/static/js/runtime-main.26e1f117.js",
     "runtime-main.js.map": "/earth-developer/static/js/runtime-main.26e1f117.js.map",
     "static/js/2.7c70e848.chunk.js": "/earth-developer/static/js/2.7c70e848.chunk.js",
@@ -31,12 +31,13 @@
     "static/media/soundWeb.66968260.png": "/earth-developer/static/media/soundWeb.66968260.png",
     "static/media/todoList.83d8d791.png": "/earth-developer/static/media/todoList.83d8d791.png",
     "static/media/video2.2e4a24bc.mp4": "/earth-developer/static/media/video2.2e4a24bc.mp4",
-    "static/media/videoPhone.bb325237.mp4": "/earth-developer/static/media/videoPhone.bb325237.mp4"
+    "static/media/videoPhone.bb325237.mp4": "/earth-developer/static/media/videoPhone.bb325237.mp4",
+    "static/media/weatherWeb.a2f602ed.png": "/earth-developer/static/media/weatherWeb.a2f602ed.png"
   },
   "entrypoints": [
     "static/js/runtime-main.26e1f117.js",
     "static/js/2.7c70e848.chunk.js",
     "static/css/main.63154bd1.chunk.css",
-    "static/js/main.9d0363c8.chunk.js"
+    "static/js/main.cfd39a5f.chunk.js"
   ]
 }
