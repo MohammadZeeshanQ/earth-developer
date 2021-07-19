@@ -23,7 +23,7 @@ export const gridData = [
     {
         'title': 'Weather App',
         'image': weatherWeb,
-        'link': 'https://todo-list-beermossy.netlify.app',
+        'link': 'https://weather-app-mozzie.netlify.app',
         'description': 'A weather App built using API calling functions.',
         'program': [
             { 'code': 'React.Js', },
