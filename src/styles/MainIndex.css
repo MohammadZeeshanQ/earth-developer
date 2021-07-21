@@ -1,0 +1,28 @@
+.mainIndex-scrollContainer {
+  position: absolute;
+  bottom: 5%;
+  left: 2%;
+  animation: upDown 2s linear infinite;
+}
+
+.mainIndex-scroll {
+  width: 3rem;
+}
+
+@media screen and (max-width: 1025px) {
+  .mainIndex-scrollContainer {
+    display: none;
+  }
+}
+
+@keyframes upDown {
+  0%,
+  100% {
+    bottom: 5%;
+    left: 2%;
+  }
+  50% {
+    bottom: 8%;
+    left: 2%;
+  }
+}

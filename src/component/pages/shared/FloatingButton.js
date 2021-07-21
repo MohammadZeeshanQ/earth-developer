@@ -11,11 +11,10 @@ const useStyles = makeStyles({
         zIndex: '5',
     },
     button: {
-        backgroundColor: '#FF4F5A',
+        backgroundColor: '#7619FF',
         color: '#fcfcfc',
 
         '&:hover': {
-            backgroundColor: '#FF4F5A',
             transform: 'scale(1.1)',
             transition: '.4s ease all',
         }

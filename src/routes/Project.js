@@ -115,6 +115,7 @@ const useStyles = makeStyles({
 
     description: {
         fontFamily: 'Oxy-Reg',
+        color: '#868686',
         margin: '1rem 0 1.5rem 0',
         letterSpacing: '0.6px',
 
@@ -132,7 +133,7 @@ const useStyles = makeStyles({
     },
 
     chipTitle: {
-        backgroundColor: '#FF4F5A',
+        backgroundColor: '#7619FF',
         color: '#fcfcfc',
         fontFamily: 'Oxy-Reg',
         letterSpacing: '0.6px',
@@ -176,7 +177,7 @@ const useStyles = makeStyles({
         margin: '1rem 0',
 
         '&:hover': {
-            backgroundColor: '#FF4F5A',
+            backgroundColor: '#7619FF',
             color: '#fcfcfc',
             transition: '.4s ease all',
         },

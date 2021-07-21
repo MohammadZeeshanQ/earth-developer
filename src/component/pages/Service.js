@@ -20,7 +20,7 @@ const useStyles = makeStyles({
         },
     },
     header: {
-        color: '#1a1a1a',
+        color: '#7619FF',
         fontFamily: 'Nunito-Bold',
         textAlign: 'center',
         letterSpacing: '1px',
@@ -65,7 +65,7 @@ const useStyles = makeStyles({
         },
 
         '@media(max-width: 600px)': {
-            width: '12em',
+            width: '20em',
         },
     },
     itemHeaderWrapper: {
@@ -105,8 +105,8 @@ export default function Service() {
     const classes = useStyles();
 
     return (
-        <div className={classes.root}>
-            <div className={classes.wrapper}>
+        <div className={classes.root} id="whatICanDo">
+            <div className={classes.wrapper} >
                 <Typography variant='h3' className={classes.header}>
                     What I Can do?
                 </Typography>

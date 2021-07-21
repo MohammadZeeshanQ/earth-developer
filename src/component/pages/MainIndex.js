@@ -1,74 +1,125 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import { Typography } from '@material-ui/core'
-import EarthVideo from '../../assets/videos/video2.mp4'
+import { Typography, Grid, Button } from '@material-ui/core'
+
+// Illustration
+import Person from '../../assets/images/background/person.png'
+
+// icons
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import Scroll from '../../assets/images/icons/scroll.png'
+
+// CSS
+import '../../styles/MainIndex.css';
 
 const useStyles = makeStyles({
     root: {
         position: 'relative',
-        width: '100vw',
-        padding: '15em 0',
-        backgroundColor: 'rgb(15, 17, 23, .5)',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
 
         '@media(max-width: 600px)': {
-            padding: '16em 0',
+
         },
 
         '@media(min-width: 601px) and (max-width: 1024px)': {
-            padding: '10em 0',
+
         },
     },
     wrapper: {
         position: 'relative',
+        width: '80%',
+        margin: 'auto',
+        padding: '6rem 0',
+
+        '@media(max-width: 600px)': {
+            width: '90%',
+            padding: '3rem 0'
+        },
+
+        '@media(min-width: 601px) and (max-width: 1024px)': {
+
+        },
     },
-    earthVideo: {
-        position: 'absolute',
-        top: '0',
-        left: '0',
-        width: '100%',
-        height: '100%',
-        objectFit: 'cover',
-        zIndex: '-3',
-    },
+
     headingContainer: {
-        textAlign: 'center',
-    },
-    headingTextWrapper: {
-        color: '#fcfcfc'
-    },
-    headingHeader1: {
-        fontFamily: 'Nunito-Bold',
-        letterSpacing: '2px',
+        display: 'grid',
+        placeItems: 'center',
 
         '@media(max-width: 600px)': {
-            fontSize: '3em',
+            textAlign: 'center',
+            padding: '5rem 0 4rem 0'
+        },
+    },
+
+    header: {
+        fontFamily: 'Nunito-Bold',
+        letterSpacing: '2px',
+        fontSize: '3.5rem',
+        fontWeight: '800',
+        color: '#7619FF',
+
+        '@media(max-width: 600px)': {
+            fontSize: '3.5em',
         },
 
         '@media(min-width: 601px) and (max-width: 1024px)': {
-            fontSize: '3em',
+            fontSize: '2.5em',
         },
     },
-    headingHeader2: {
-        fontFamily: 'Nunito-Bold',
+
+    description: {
+        margin: '2rem 0',
+        color: '#656565',
         letterSpacing: '2px',
+        fontFamily: 'Nunito-Reg',
 
         '@media(max-width: 600px)': {
-            fontSize: '3em',
+            margin: '3rem 0',
+            fontSize: '1.2rem',
+            lineHeight: '190%',
         },
 
         '@media(min-width: 601px) and (max-width: 1024px)': {
-            fontSize: '3em',
+            fontSize: '.7rem',
+            width: '80%',
         },
-    },
-    headingDotColor: {
-        color: '#FF4F5A',
-    },
-    headingBtnWrapper: {
 
     },
+
+    button: {
+        backgroundColor: '#7619FF',
+        color: '#fcfcfc',
+        padding: '.7rem 1.5rem',
+        fontFamily: 'Nunito-Semi',
+        letterSpacing: '1.5px',
+
+        '&:hover': {
+            backgroundColor: '#AA72FE',
+            color: '#fcfcfc',
+            transform: 'scale(1.05)',
+            transition: 'all .3s ease-in-out'
+        },
+
+        '@media(max-width: 600px)': {
+            padding: '1rem 2rem',
+            letterSpacing: '3px'
+        },
+
+        '@media(min-width: 601px) and (max-width: 1024px)': {
+            fontSize: '.7rem',
+            padding: '.5rem .6rem'
+        },
+
+    },
+
+    imageContainer: {
+    },
+
+    image: {
+        height: '100%',
+        width: '100%',
+        objectFit: 'contain',
+    },
+
 });
 
 export default function MainIndex() {
@@ -76,24 +127,54 @@ export default function MainIndex() {
     return (
         <div className={classes.root}>
             <div className={classes.wrapper}>
-                <div className={classes.headingContainer}>
 
-                    <div className={classes.headingTextWrapper}>
-                        <Typography variant='h1' className={classes.headingHeader1}>Hi, my name</Typography>
-                        <Typography variant='h1' className={classes.headingHeader2}>is ZESHAN
-                            <span className={classes.headingDotColor}>.</span>
-                        </Typography>
-                    </div>
-                    <div className={classes.headingBtnWrapper}>
+                <a className='mainIndex-scrollContainer' href='#whatICanDo'>
+                    <img className='mainIndex-scroll' src={Scroll} alt='Scroll Bar' />
+                </a>
+                <Grid
+                    container
+                >
+                    <Grid
+                        item
+                        xs={12}
+                        sm={7}
+                        md={7}
+                        className={classes.headingContainer}
+                    >
+                        <div>
+                            <Typography className={classes.header} variant='h1'>
+                                Mohammad Zeeshan
+                            </Typography>
 
-                    </div>
+                            <Typography className={classes.description} variant='body1'>
+                                Freelance Front-End Developer, UI/ UX and  Web Designer.
+                            </Typography>
 
-                </div>
+                            <Button
+                                variant='contained'
+                                className={classes.button}
+                                endIcon={
+                                    <ArrowForwardIosIcon
+                                        style={{ marginLeft: '.5rem', fontSize: '1rem' }}
+                                    />
+                                }>
+                                Check Projects
+                            </Button>
+                        </div>
+
+                    </Grid>
+
+                    <Grid
+                        item
+                        xs={12}
+                        sm={5}
+                        md={5}
+                        className={classes.imageContainer}
+                    >
+                        <img src={Person} className={classes.image} alt='3D Illustration' />
+                    </Grid>
+                </Grid>
             </div>
-
-            <video loop={true} autoPlay={true} muted={true} className={classes.earthVideo}>
-                <source src={EarthVideo} type="video/mp4" />
-            </video>
         </div>
     )
 }

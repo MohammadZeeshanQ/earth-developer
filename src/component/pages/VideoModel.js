@@ -23,7 +23,7 @@ const useStyles = makeStyles({
         margin: 'auto',
 
         '@media(max-width: 600px)': {
-            width: '100%',
+            width: '90%',
         },
 
         '@media(min-width: 601px) and (max-width: 1024px)': {
@@ -64,12 +64,14 @@ const useStyles = makeStyles({
         },
     },
     textHeader: {
+        color: '#7619FF',
         fontFamily: 'Nunito-Bold',
         letterSpacing: '3px',
         fontSize: '3rem',
 
         '@media(max-width: 600px)': {
-            fontSize: '2.5rem',
+            fontSize: '2.5em',
+            textAlign: 'center',
         },
 
         '@media(min-width: 600px) and (max-width: 900px)': {
@@ -78,7 +80,7 @@ const useStyles = makeStyles({
     },
     textMessage: {
         fontFamily: 'Nunito-Semi',
-        letterSpacing: '3px',
+        letterSpacing: '2px',
         lineHeight: '180%',
         color: '#858585',
         margin: '2rem 0',
@@ -91,6 +93,7 @@ const useStyles = makeStyles({
 
         '@media(max-width: 600px)': {
             paddingTop: '1rem',
+            fontSize: '1.1rem',
         },
     },
 });

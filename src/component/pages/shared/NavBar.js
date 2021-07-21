@@ -39,8 +39,8 @@ const useStyles = makeStyles({
     },
     logoText: {
         fontFamily: 'Nunito-Bold',
-        color: '#1c1c1c',
-        letterSpacing: '2px',
+        color: '#7619FF',
+        letterSpacing: '3px',
     },
     tabDiv: {
 
@@ -53,7 +53,7 @@ const useStyles = makeStyles({
         letterSpacing: '2px',
 
         '&:hover': {
-            backgroundColor: '#FF4F5A',
+            backgroundColor: '#7619FF',
             transition: '.3s ease all',
             color: '#fcfcfc',
         },
@@ -106,7 +106,7 @@ export default function NavBar() {
 
     useEffect(() => {
         console.log(`${window.location.href} : Public URL`);
-        console.log('Version 1.07');
+        console.log('Version 1.08');
     }, []);
 
     return (

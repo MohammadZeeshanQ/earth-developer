@@ -5,8 +5,7 @@ import { Typography, Button } from '@material-ui/core'
 
 const useStyles = makeStyles({
     root: {
-        backgroundColor: '#000000',
-        backgroundImage: 'linear-gradient(147deg, #2c3e50 0%, #000000 74%)',
+
     },
     wrapper: {
         display: 'flex',
@@ -15,23 +14,25 @@ const useStyles = makeStyles({
         alignContent: 'center',
     },
     messageDiv: {
-        padding: '15em 0',
+        padding: '10em 0',
         textAlign: 'center',
-        color: '#fcfcfc',
+        color: '#050505',
 
         '@media(max-width: 600px)': {
             padding: '12em 2em',
         }
     },
     messageHeader: {
-        fontFamily: 'Oxy-Bold',
+        fontFamily: 'Nunito-Bold',
+        letterSpacing: '2px',
     },
     messageText: {
-        fontFamily: 'Oxy-Reg',
+        fontFamily: 'Nunito-Reg',
+        letterSpacing: '1px',
     },
     redirectBtn: {
-        backgroundColor: '#fbb034',
-        backgroundImage: 'linear-gradient(315deg, #fbb034 0%, #ffdd00 74%)',
+        color: '#fcfcfc',
+        backgroundColor: '#7619FF',
         fontFamily: 'Nunito-Bold',
         marginTop: '2em'
     },

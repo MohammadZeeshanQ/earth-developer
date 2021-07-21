@@ -8,7 +8,37 @@ import emailjs from 'emailjs-com'
 
 const useStyles = makeStyles({
     root: {
+        position: 'relattive',
+    },
+    circleBig: {
+        position: 'absolute',
+        top: '28%',
+        left: '-10%',
+        zIndex: '-3',
+        height: '700px',
+        width: '700px',
+        backgroundColor: '#7619FF',
+        opacity: '.2',
+        borderRadius: '50%',
 
+        '@media (max-width: 1025px)': {
+            display: 'none',
+        },
+    },
+    circleSmall: {
+        position: 'absolute',
+        top: '25%',
+        left: '40%',
+        zIndex: '-2',
+        height: '100px',
+        width: '100px',
+        backgroundColor: '#7619FF',
+        opacity: '.3',
+        borderRadius: '50%',
+
+        '@media (max-width: 1025px)': {
+            display: 'none',
+        },
     },
     wrapper: {
         padding: '10em 0',
@@ -83,7 +113,7 @@ const useStyles = makeStyles({
     inputBtn: {
         fontFamily: 'Oxy-Reg',
         width: '100%',
-        backgroundColor: '#FF4F5A',
+        backgroundColor: '#7619FF',
         color: '#fcfcfc',
         fontSize: '1.05rem',
         padding: '.6rem 0',
@@ -131,6 +161,10 @@ export default function Contact() {
 
     return (
         <div className={classes.root}>
+
+            <div className={classes.circleBig}></div>
+            <div className={classes.circleSmall}></div>
+
             <div className={classes.wrapper}>
                 <Grid
                     container
