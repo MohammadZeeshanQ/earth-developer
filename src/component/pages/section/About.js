@@ -67,7 +67,9 @@ const useStyles = makeStyles({
         },
     },
     textContainer: {
-
+        '@media(max-width: 600px)': {
+            paddingBottom: '5rem'
+        },
     },
     nameWrapper: {
         '@media(max-width: 600px)': {
