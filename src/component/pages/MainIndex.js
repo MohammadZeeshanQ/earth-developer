@@ -15,6 +15,8 @@ import '../../styles/MainIndex.css';
 // Tilt
 import Tilty from 'react-tilty';
 
+
+
 const useStyles = makeStyles({
     root: {
         position: 'relative',
@@ -131,7 +133,7 @@ export default function MainIndex() {
         <div className={classes.root}>
             <div className={classes.wrapper}>
 
-                <a className='mainIndex-scrollContainer' href='#whatICanDo'>
+                <a className='mainIndex-scrollContainer'>
                     <img className='mainIndex-scroll' src={Scroll} alt='Scroll Bar' />
                 </a>
                 <Grid

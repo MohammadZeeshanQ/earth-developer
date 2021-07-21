@@ -21,8 +21,14 @@ const useStyles = makeStyles({
         opacity: '.2',
         borderRadius: '50%',
 
-        '@media (max-width: 1025px)': {
+        '@media (max-width: 600px)': {
             display: 'none',
+        },
+
+        '@media(min-width: 601px) and (max-width: 1024px)': {
+            height: '400px',
+            width: '400px',
+            top: '34%',
         },
     },
     circleSmall: {
@@ -36,8 +42,14 @@ const useStyles = makeStyles({
         opacity: '.3',
         borderRadius: '50%',
 
-        '@media (max-width: 1025px)': {
+        '@media (max-width: 600px)': {
             display: 'none',
+        },
+
+        '@media(min-width: 601px) and (max-width: 1024px)': {
+            height: '100px',
+            width: '100px',
+            top: '30%',
         },
     },
     wrapper: {

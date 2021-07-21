@@ -9,9 +9,21 @@
   width: 3rem;
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 600px) {
   .mainIndex-scrollContainer {
     display: none;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .mainIndex-scroll {
+    width: 2rem;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1025px) {
+  .mainIndex-scrollContainer {
+    left: 6%;
   }
 }
 

@@ -31,9 +31,16 @@ const useStyles = makeStyles({
         opacity: '.2',
         borderRadius: '50%',
 
-        '@media (max-width: 1025px)': {
+        '@media (max-width: 600px)': {
             display: 'none',
         },
+
+        '@media(min-width: 601px) and (max-width: 1024px)': {
+            height: '500px',
+            width: '500px',
+            right: '-8%',
+        },
+
     },
     wrapper: {
         padding: '10em 0 10em 0',
