@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography, Button } from '@material-ui/core'
 
@@ -40,6 +40,12 @@ const useStyles = makeStyles({
 
 export default function ErrorPage() {
     const classes = useStyles();
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
+
     return (
         <div className={classes.root}>
             <div className={classes.wrapper}>
