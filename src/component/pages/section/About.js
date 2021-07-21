@@ -59,11 +59,10 @@ const useStyles = makeStyles({
         width: '100%',
         height: "100%",
         objectFit: 'cover',
+        overflow: 'hidden',
 
         '@media(max-width: 600px)': {
-            top: '0',
-            width: '100%',
-            left: '0',
+            display: 'none',
         },
     },
     textContainer: {

@@ -117,12 +117,13 @@ const useStyles = makeStyles({
     },
 
     imageContainer: {
+        overflow: 'hidden',
     },
 
     image: {
         height: '100%',
         width: '100%',
-        objectFit: 'contain',
+        objectFit: 'cover',
     },
 
 });
@@ -133,9 +134,9 @@ export default function MainIndex() {
         <div className={classes.root}>
             <div className={classes.wrapper}>
 
-                <a className='mainIndex-scrollContainer'>
+                <div className='mainIndex-scrollContainer'>
                     <img className='mainIndex-scroll' src={Scroll} alt='Scroll Bar' />
-                </a>
+                </div>
                 <Grid
                     container
                 >
@@ -157,6 +158,7 @@ export default function MainIndex() {
 
                             <Button
                                 variant='contained'
+                                href='/earth-developer/#/project'
                                 className={classes.button}
                                 endIcon={
                                     <ArrowForwardIosIcon

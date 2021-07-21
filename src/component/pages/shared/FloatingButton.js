@@ -9,6 +9,10 @@ const useStyles = makeStyles({
         right: '1.5%',
         bottom: '5%',
         zIndex: '5',
+
+        '@media(max-width: 600px)': {
+            right: '3%',
+        },
     },
     button: {
         backgroundColor: '#7619FF',
