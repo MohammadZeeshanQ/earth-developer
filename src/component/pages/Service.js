@@ -153,7 +153,6 @@ export default function Service() {
 
 
                 </Grid>
-                <script type="text/javascript" src="vanilla-tilt.js"></script>
             </div>
         </div>
     )

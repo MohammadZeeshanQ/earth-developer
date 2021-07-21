@@ -103,7 +103,7 @@ export default function Footer() {
 
                 <div>
                     <Typography variant='caption'>
-                        Illustration by <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6" style={{ color: '#FF4F5A' }}>Icons 8</a> from <a href="https://icons8.com/illustrations" style={{ color: '#FF4F5A' }}>Ouch!</a>
+                        Illustration by <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6" style={{ color: '#7619FF' }}>Icons 8</a> from <a href="https://icons8.com/illustrations" style={{ color: '#7619FF' }}>Ouch!</a>
                     </Typography>
                 </div>
 

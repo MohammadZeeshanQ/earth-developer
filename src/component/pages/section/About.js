@@ -2,8 +2,9 @@ import React, { useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography, Grid } from '@material-ui/core'
 
+import Tilty from 'react-tilty';
 
-import Developer from '../../../assets/images/background/developer.jpg'
+import Developer from '../../../assets/images/background/developer.png'
 import html from '../../../assets/images/devIcon/html.png'
 import css from '../../../assets/images/devIcon/css.png'
 import js from '../../../assets/images/devIcon/js.png'
@@ -17,7 +18,22 @@ import shotcut from '../../../assets/images/devIcon/shotcut.png'
 
 const useStyles = makeStyles({
     root: {
+        position: 'relative',
+    },
+    circleBig: {
+        position: 'absolute',
+        top: '10%',
+        right: '-5%',
+        zIndex: '-3',
+        height: '600px',
+        width: '600px',
+        backgroundColor: '#7619FF',
+        opacity: '.2',
+        borderRadius: '50%',
 
+        '@media (max-width: 1025px)': {
+            display: 'none',
+        },
     },
     wrapper: {
         padding: '10em 0 10em 0',
@@ -33,13 +49,9 @@ const useStyles = makeStyles({
 
     },
     gridImage: {
-        position: 'relative',
-        top: '-30px',
-        left: '-100px',
-        width: '130%',
+        width: '100%',
         height: "100%",
         objectFit: 'cover',
-        zIndex: '-2',
 
         '@media(max-width: 600px)': {
             top: '0',
@@ -126,6 +138,9 @@ export default function About() {
 
     return (
         <div className={classes.root}>
+
+            <div className={classes.circleBig}></div>
+
             <div className={classes.wrapper}>
                 <Grid
                     container
@@ -189,7 +204,15 @@ export default function About() {
                         sm={5}
                         md={5}
                     >
-                        <img src={Developer} className={classes.gridImage} alt='People jumping' />
+                        <Tilty
+                            max={25}
+                            speed={300}
+                            perspective={1000}
+                            scale={1.1}
+                        >
+                            <img src={Developer} className={classes.gridImage} alt='People jumping' />
+                        </Tilty>
+
                     </Grid>
 
                 </Grid>

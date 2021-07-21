@@ -12,6 +12,9 @@ import Scroll from '../../assets/images/icons/scroll.png'
 // CSS
 import '../../styles/MainIndex.css';
 
+// Tilt
+import Tilty from 'react-tilty';
+
 const useStyles = makeStyles({
     root: {
         position: 'relative',
@@ -143,7 +146,7 @@ export default function MainIndex() {
                     >
                         <div>
                             <Typography className={classes.header} variant='h1'>
-                                Mohammad Zeeshan
+                                Mohammad Zeshan
                             </Typography>
 
                             <Typography className={classes.description} variant='body1'>
@@ -171,7 +174,15 @@ export default function MainIndex() {
                         md={5}
                         className={classes.imageContainer}
                     >
-                        <img src={Person} className={classes.image} alt='3D Illustration' />
+                        <Tilty
+                            max={25}
+                            speed={300}
+                            perspective={1000}
+                            scale={1.1}
+                        >
+                            <img src={Person} className={classes.image} alt='3D Illustration' />
+                        </Tilty>
+
                     </Grid>
                 </Grid>
             </div>
