@@ -2,8 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Button, IconButton, AppBar, Toolbar, SwipeableDrawer, Divider, List, ListItem } from '@material-ui/core';
 
+// Icons
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
+
+// Logo
+import Logo from '../../../assets/images/icons/Logo.png'
 
 
 const useStyles = makeStyles({
@@ -28,23 +32,33 @@ const useStyles = makeStyles({
             height: 58,
         },
     },
+
     appBarDiv: {
         width: '100%',
         display: 'flex',
         alignItems: "center",
     },
+
     logoDiv: {
         flexGrow: 1,
-        textAlign: 'left'
     },
+
+    logoIcon: {
+        width: '2.5rem',
+    },
+
     logoText: {
+        position: 'relative',
+        left: '-.4rem',
         fontFamily: 'Nunito-Bold',
-        color: '#7619FF',
-        letterSpacing: '3px',
+        color: '#151515',
+        letterSpacing: '2px',
     },
+
     tabDiv: {
 
     },
+
     tabBtn: {
         fontFamily: 'Nunito-Semi',
         margin: "0 .1em",
@@ -58,6 +72,7 @@ const useStyles = makeStyles({
             color: '#fcfcfc',
         },
     },
+
     tabHideMobile: {
         '@media (max-width: 600px)': {
             display: 'block',
@@ -67,6 +82,7 @@ const useStyles = makeStyles({
             display: 'none',
         }
     },
+
     tabHideDesktop: {
         '@media (max-width: 4000px)': {
             display: 'none',
@@ -76,13 +92,16 @@ const useStyles = makeStyles({
             display: 'block',
         }
     },
+
     swipeDrawerContainer: {
         backgroundColor: 'rgb(15, 17, 23)',
     },
+
     swipeDrawer: {
         width: 250,
         borderRadius: '3em 0em 0em 3em',
     },
+
     tabMobileBtn: {
         fontFamily: 'Nunito-Semi',
         color: '#0e0e0e',
@@ -112,15 +131,16 @@ export default function NavBar() {
     return (
         <div className={classes.root}>
 
-            <AppBar position='fixed' elevation={1} color='transparent' className={classes.container}>
+            <AppBar position='fixed' elevation={0} className={classes.container}>
 
                 <Toolbar className={classes.wrapper}>
                     <div className={classes.appBarDiv}>
 
                         <div className={classes.logoDiv}>
                             <IconButton href='/earth-developer/#/'>
-                                <Typography className={classes.logoText} variant='h6'>
-                                    ZESHAN
+                                <img src={Logo} className={classes.logoIcon} alt='Mohammad Zeshan' />
+                                <Typography className={classes.logoText} variant='h5'>
+                                    eshan<span style={{ color: '#7619FF' }}>.</span>
                                 </Typography>
                             </IconButton>
                         </div>
