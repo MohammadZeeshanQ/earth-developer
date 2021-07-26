@@ -57,7 +57,7 @@ const useStyles = makeStyles({
         border: '1px solid #C6C6C6',
         boxShadow: '5px 5px 20px #DCDBDB',
         borderRadius: '1rem',
-        margin: '2rem .5rem',
+        margin: '2rem 1rem',
 
         '&:hover': {
             transform: 'scale(1.1)',
@@ -115,7 +115,7 @@ const useStyles = makeStyles({
 
     description: {
         fontFamily: 'Oxy-Reg',
-        color: '#868686',
+        color: '#343434',
         margin: '1rem 0 1.5rem 0',
         letterSpacing: '0.6px',
 
@@ -233,9 +233,6 @@ export default function Project() {
 
                 <Grid
                     container
-                    xs={12}
-                    sm={12}
-                    md={12}
                     justify='space-evenly'
                     className={classes.gridContainer}
                 >
@@ -247,29 +244,30 @@ export default function Project() {
                                 key={index}
                                 xs={12}
                                 sm={4}
-                                md={3}
-                                className={classes.gridItem}
+                                md={4}
                                 onClick={() => dialogData(image, link)}
                             >
-                                <div className={classes.gridImageContainer}>
-                                    <img className={classes.gridImage} src={image} alt='Project Images' />
-                                </div>
+                                <div className={classes.gridItem}>
+                                    <div className={classes.gridImageContainer}>
+                                        <img className={classes.gridImage} src={image} alt='Project Images' />
+                                    </div>
 
-                                <div className={classes.gridTextContainer}>
-                                    <Typography className={classes.title} variant='h6'>
-                                        {title}
-                                    </Typography>
+                                    <div className={classes.gridTextContainer}>
+                                        <Typography className={classes.title} variant='h6'>
+                                            {title}
+                                        </Typography>
 
-                                    <Typography className={classes.description} variant='body2'>
-                                        {description}
-                                    </Typography>
+                                        <Typography className={classes.description} variant='body2'>
+                                            {description}
+                                        </Typography>
 
-                                    {
-                                        program.map((programs, i) =>
-                                            <Chip className={classes.chipTitle} label={programs.code} />
-                                        )
-                                    }
+                                        {
+                                            program.map((programs, i) =>
+                                                <Chip className={classes.chipTitle} label={programs.code} />
+                                            )
+                                        }
 
+                                    </div>
                                 </div>
                             </Grid>
 

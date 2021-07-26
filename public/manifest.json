@@ -1,25 +1,25 @@
 {
-  "short_name": "Planet Earth",
-  "name": "Create React App Sample",
+  "short_name": "Mohammad Zeshan",
+  "name": "Hi, I'm Zeshan. Freelance Front-End Developer, Web Designer and UI/ UX Designer.",
   "icons": [
     {
-      "src": "./earth.png",
+      "src": "./Favicon.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "./earth.png",
+      "src": "./Favicon.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "./earth.png",
+      "src": "./Favicon.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#fcfcfc",
   "background_color": "#ffffff"
 }
