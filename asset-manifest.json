@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/earth-developer/static/css/main.c7db1577.chunk.css",
-    "main.js": "/earth-developer/static/js/main.e706bb06.chunk.js",
-    "main.js.map": "/earth-developer/static/js/main.e706bb06.chunk.js.map",
+    "main.js": "/earth-developer/static/js/main.0961874f.chunk.js",
+    "main.js.map": "/earth-developer/static/js/main.0961874f.chunk.js.map",
     "runtime-main.js": "/earth-developer/static/js/runtime-main.7c6eb366.js",
     "runtime-main.js.map": "/earth-developer/static/js/runtime-main.7c6eb366.js.map",
     "static/js/2.98d78e09.chunk.js": "/earth-developer/static/js/2.98d78e09.chunk.js",
@@ -14,6 +14,7 @@
     "static/js/2.98d78e09.chunk.js.LICENSE.txt": "/earth-developer/static/js/2.98d78e09.chunk.js.LICENSE.txt",
     "static/media/3dWeb.087dd1ea.png": "/earth-developer/static/media/3dWeb.087dd1ea.png",
     "static/media/FashionWeb.034a9573.png": "/earth-developer/static/media/FashionWeb.034a9573.png",
+    "static/media/Logo.f562cbbc.png": "/earth-developer/static/media/Logo.f562cbbc.png",
     "static/media/App.css": "/earth-developer/static/media/Oxygen-Regular.9d375dd5.ttf",
     "static/media/bagWeb.a772cd7f.png": "/earth-developer/static/media/bagWeb.a772cd7f.png",
     "static/media/canva.036af431.png": "/earth-developer/static/media/canva.036af431.png",
@@ -38,6 +39,6 @@
     "static/js/runtime-main.7c6eb366.js",
     "static/js/2.98d78e09.chunk.js",
     "static/css/main.c7db1577.chunk.css",
-    "static/js/main.e706bb06.chunk.js"
+    "static/js/main.0961874f.chunk.js"
   ]
 }
