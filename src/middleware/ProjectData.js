@@ -8,6 +8,8 @@ import mountWeb from '../assets/images/projects/mountWeb.png';
 import IllustrationWeb from '../assets/images/projects/3dWeb.png';
 import todoList from '../assets/images/projects/todoList.png';
 import weatherWeb from '../assets/images/projects/weatherWeb.png';
+import MoveIn from '../assets/images/projects/moveIn.png';
+import NightMode from '../assets/images/projects/nightMode.png';
 
 export const gridData = [
     {
@@ -44,8 +46,28 @@ export const gridData = [
     {
         'title': 'Fashion Website',
         'image': FashionImage,
-        'link': 'https://github.com/MohammadZeeshanQ/minimal-fashion',
+        'link': 'https://fashion-mozzie.netlify.app',
         'description': 'Minimalist Landging Website to display Trendy Fashion clothing.',
+        'program': [
+            { 'code': 'React.Js', },
+            { 'code': 'Material-Ui', },
+        ],
+    },
+    {
+        'title': 'Night Mode UI',
+        'image': NightMode,
+        'link': 'https://night-mode-mozzie.netlify.app',
+        'description': 'UI that support Night Mode and Light Mode upon Toggle.',
+        'program': [
+            { 'code': 'React.Js', },
+            { 'code': 'Material-Ui', },
+        ],
+    },
+    {
+        'title': 'Move In UI',
+        'image': MoveIn,
+        'link': 'https://transporter-movein-mozzie.netlify.app',
+        'description': 'Basic UI for a transportation business with form functions.',
         'program': [
             { 'code': 'React.Js', },
             { 'code': 'Material-Ui', },
@@ -65,7 +87,7 @@ export const gridData = [
     {
         'title': '3D Illustration',
         'image': IllustrationWeb,
-        'link': 'https://github.com/MohammadZeeshanQ/astronaut-landing-page',
+        'link': 'https://3d-ui-mozzie.netlify.app',
         'description': 'Minimalist Business Website with 3D illustration.',
         'program': [
             { 'code': 'React.Js', },
