@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/earth-developer/static/css/main.c7db1577.chunk.css",
-    "main.js": "/earth-developer/static/js/main.0961874f.chunk.js",
-    "main.js.map": "/earth-developer/static/js/main.0961874f.chunk.js.map",
+    "main.js": "/earth-developer/static/js/main.f92ebe2c.chunk.js",
+    "main.js.map": "/earth-developer/static/js/main.f92ebe2c.chunk.js.map",
     "runtime-main.js": "/earth-developer/static/js/runtime-main.7c6eb366.js",
     "runtime-main.js.map": "/earth-developer/static/js/runtime-main.7c6eb366.js.map",
     "static/js/2.98d78e09.chunk.js": "/earth-developer/static/js/2.98d78e09.chunk.js",
@@ -25,6 +25,8 @@
     "static/media/js.1e88dab3.png": "/earth-developer/static/media/js.1e88dab3.png",
     "static/media/loginWeb.beba7e49.png": "/earth-developer/static/media/loginWeb.beba7e49.png",
     "static/media/mountWeb.40621747.png": "/earth-developer/static/media/mountWeb.40621747.png",
+    "static/media/moveIn.2843af77.png": "/earth-developer/static/media/moveIn.2843af77.png",
+    "static/media/nightMode.8c5a48ad.png": "/earth-developer/static/media/nightMode.8c5a48ad.png",
     "static/media/p1.806ed138.png": "/earth-developer/static/media/p1.806ed138.png",
     "static/media/p2.ac965065.png": "/earth-developer/static/media/p2.ac965065.png",
     "static/media/p3.935f0899.png": "/earth-developer/static/media/p3.935f0899.png",
@@ -39,6 +41,6 @@
     "static/js/runtime-main.7c6eb366.js",
     "static/js/2.98d78e09.chunk.js",
     "static/css/main.c7db1577.chunk.css",
-    "static/js/main.0961874f.chunk.js"
+    "static/js/main.f92ebe2c.chunk.js"
   ]
 }
