@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/earth-developer/static/css/main.c7db1577.chunk.css",
-    "main.js": "/earth-developer/static/js/main.f92ebe2c.chunk.js",
-    "main.js.map": "/earth-developer/static/js/main.f92ebe2c.chunk.js.map",
+    "main.js": "/earth-developer/static/js/main.c0bf7562.chunk.js",
+    "main.js.map": "/earth-developer/static/js/main.c0bf7562.chunk.js.map",
     "runtime-main.js": "/earth-developer/static/js/runtime-main.7c6eb366.js",
     "runtime-main.js.map": "/earth-developer/static/js/runtime-main.7c6eb366.js.map",
     "static/js/2.98d78e09.chunk.js": "/earth-developer/static/js/2.98d78e09.chunk.js",
@@ -17,12 +17,11 @@
     "static/media/Logo.f562cbbc.png": "/earth-developer/static/media/Logo.f562cbbc.png",
     "static/media/App.css": "/earth-developer/static/media/Oxygen-Regular.9d375dd5.ttf",
     "static/media/bagWeb.a772cd7f.png": "/earth-developer/static/media/bagWeb.a772cd7f.png",
-    "static/media/canva.036af431.png": "/earth-developer/static/media/canva.036af431.png",
     "static/media/covidWeb.1029808f.png": "/earth-developer/static/media/covidWeb.1029808f.png",
     "static/media/developer.78523b9f.png": "/earth-developer/static/media/developer.78523b9f.png",
     "static/media/earthWeb.87baa736.png": "/earth-developer/static/media/earthWeb.87baa736.png",
-    "static/media/gimp.c30d8cee.png": "/earth-developer/static/media/gimp.c30d8cee.png",
-    "static/media/js.1e88dab3.png": "/earth-developer/static/media/js.1e88dab3.png",
+    "static/media/gimp.8a2c0b39.png": "/earth-developer/static/media/gimp.8a2c0b39.png",
+    "static/media/less.d0b1c59b.png": "/earth-developer/static/media/less.d0b1c59b.png",
     "static/media/loginWeb.beba7e49.png": "/earth-developer/static/media/loginWeb.beba7e49.png",
     "static/media/mountWeb.40621747.png": "/earth-developer/static/media/mountWeb.40621747.png",
     "static/media/moveIn.2843af77.png": "/earth-developer/static/media/moveIn.2843af77.png",
@@ -31,7 +30,8 @@
     "static/media/p2.ac965065.png": "/earth-developer/static/media/p2.ac965065.png",
     "static/media/p3.935f0899.png": "/earth-developer/static/media/p3.935f0899.png",
     "static/media/person.67236b03.png": "/earth-developer/static/media/person.67236b03.png",
-    "static/media/react.48c9743e.png": "/earth-developer/static/media/react.48c9743e.png",
+    "static/media/react.a13b5378.png": "/earth-developer/static/media/react.a13b5378.png",
+    "static/media/seo.53efee6a.png": "/earth-developer/static/media/seo.53efee6a.png",
     "static/media/soundWeb.66968260.png": "/earth-developer/static/media/soundWeb.66968260.png",
     "static/media/todoList.83d8d791.png": "/earth-developer/static/media/todoList.83d8d791.png",
     "static/media/videoPhone.bb325237.mp4": "/earth-developer/static/media/videoPhone.bb325237.mp4",
@@ -41,6 +41,6 @@
     "static/js/runtime-main.7c6eb366.js",
     "static/js/2.98d78e09.chunk.js",
     "static/css/main.c7db1577.chunk.css",
-    "static/js/main.f92ebe2c.chunk.js"
+    "static/js/main.c0bf7562.chunk.js"
   ]
 }
