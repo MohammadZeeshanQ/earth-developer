@@ -29,12 +29,19 @@ const useStyles = makeStyles({
         },
 
         '@media(min-width: 601px) and (max-width: 1024px)': {
-            height: '200px',
-            width: '200px',
-            right: '-8%',
-            top: '6%',
+            display: 'none',
         },
 
+    },
+
+    gridItemText: {
+
+    },
+
+    gridItemImage: {
+        '@media(min-width: 601px) and (max-width: 1024px)': {
+            display: 'none',
+        },
     },
 
     wrapper: {
@@ -42,6 +49,10 @@ const useStyles = makeStyles({
 
         '@media(max-width: 600px)': {
             padding: '8em 0 0 0',
+        },
+
+        '@media(min-width: 601px) and (max-width: 1024px)': {
+            padding: '10rem 0 0 0',
         },
     },
 
@@ -141,6 +152,10 @@ const useStyles = makeStyles({
         '@media(max-width: 600px)': {
             margin: '1rem 0',
         },
+
+        '@media(min-width: 601px) and (max-width: 900px)': {
+            padding: '1rem 0',
+        }
     },
 
     skillTitle: {
@@ -206,9 +221,9 @@ export default function About() {
 
                     <Grid
                         item
-                        className={classes.gridItem}
+                        className={classes.gridItemText}
                         xs={12}
-                        sm={5}
+                        sm={9}
                         md={5}
                     >
 
@@ -290,7 +305,7 @@ export default function About() {
                         item
                         className={classes.gridItemImage}
                         xs={false}
-                        sm={4}
+                        sm={false}
                         md={4}
                     >
                         <Tilty

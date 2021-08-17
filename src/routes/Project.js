@@ -243,7 +243,7 @@ export default function Project() {
                                 item
                                 key={index}
                                 xs={12}
-                                sm={4}
+                                sm={6}
                                 md={4}
                                 onClick={() => dialogData(image, link)}
                             >
@@ -263,7 +263,7 @@ export default function Project() {
 
                                         {
                                             program.map((programs, i) =>
-                                                <Chip className={classes.chipTitle} label={programs.code} />
+                                                <Chip key={i} className={classes.chipTitle} label={programs.code} />
                                             )
                                         }
 

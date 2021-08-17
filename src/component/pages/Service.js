@@ -60,7 +60,7 @@ const useStyles = makeStyles({
     itemImage: {
         width: '18em',
 
-        '@media(min-width: 720px) and (max-width: 900px)': {
+        '@media(min-width: 601px) and (max-width: 900px)': {
             width: '10em',
         },
 
@@ -78,7 +78,7 @@ const useStyles = makeStyles({
         marginTop: '1rem',
         letterSpacing: '1px',
 
-        '@media(min-width: 720px) and (max-width: 900px)': {
+        '@media(min-width: 601px) and (max-width: 900px)': {
             fontSize: '1em',
         },
     },
