@@ -125,7 +125,7 @@ export default function NavBar() {
 
     useEffect(() => {
         console.log(`${window.location.href} : Public URL`);
-        console.log('Version 1.10');
+        console.log('Version 1.11');
     }, []);
 
     return (

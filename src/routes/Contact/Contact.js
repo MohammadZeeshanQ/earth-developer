@@ -181,9 +181,6 @@ export default function Contact() {
                 <Grid
                     container
                     justify='space-around'
-                    xs={12}
-                    sm={12}
-                    md={12}
                 >
                     <Grid
                         item
