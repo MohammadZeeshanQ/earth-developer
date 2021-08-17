@@ -12,6 +12,7 @@ const useStyles = makeStyles({
     root: {
         position: 'relative',
     },
+
     circleBig: {
         position: 'absolute',
         top: '10%',
@@ -28,9 +29,10 @@ const useStyles = makeStyles({
         },
 
         '@media(min-width: 601px) and (max-width: 1024px)': {
-            height: '500px',
-            width: '500px',
+            height: '200px',
+            width: '200px',
             right: '-8%',
+            top: '6%',
         },
 
     },
@@ -43,19 +45,10 @@ const useStyles = makeStyles({
         },
     },
 
-    gridContainer: {
-
-    },
-
-    gridItem: {
-
-    },
-
     gridImage: {
         width: '100%',
         height: "100%",
         objectFit: 'cover',
-        overflow: 'hidden',
 
         '@media(max-width: 600px)': {
             display: 'none',
@@ -90,8 +83,13 @@ const useStyles = makeStyles({
     },
 
     nameAttributeText: {
-        fontFamily: "Nunito-Reg",
-        color: '#848480 ',
+        fontFamily: "Nunito-Semi",
+        color: '#7619FF',
+
+
+        '@media(max-width: 600px)': {
+            margin: '1rem'
+        },
     },
 
     skillWrapper: {
@@ -106,15 +104,6 @@ const useStyles = makeStyles({
         fontFamily: 'Nunito-Bold',
     },
 
-    skillIconWrapper: {
-        padding: '1em 5em 1em 0',
-
-        '@media(max-width: 600px)': {
-            padding: '1em 0 0 0',
-        },
-    },
-
-    // Check top
     skillContainer: {
         margin: '2rem 0',
     },
@@ -123,7 +112,15 @@ const useStyles = makeStyles({
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'center',
-        margin: '1rem 0',
+        margin: '2rem 0',
+
+        '@media(min-width: 601px) and (max-width: 900px)': {
+            justifyContent: 'flex-start',
+        },
+
+        '@media(max-width: 600px)': {
+            justifyContent: 'space-evenly',
+        },
     },
 
     skillBox: {
@@ -142,7 +139,7 @@ const useStyles = makeStyles({
         },
 
         '@media(max-width: 600px)': {
-
+            margin: '1rem 0',
         },
     },
 
@@ -159,6 +156,7 @@ const useStyles = makeStyles({
 
     skillIcon: {
         width: '3rem',
+
     },
 });
 
@@ -203,10 +201,7 @@ export default function About() {
                 <Grid
                     container
                     className={classes.gridContainer}
-                    justify='center'
-                    xs={12}
-                    sm={12}
-                    md={12}
+                    justify='space-evenly'
                 >
 
                     <Grid
@@ -224,18 +219,14 @@ export default function About() {
                                     Hi there!
                                 </Typography>
                                 <Typography className={classes.nameDescription} variant='h6'>
-                                    My name is Mohammad Zeeshan.
+                                    My name is <span style={{ fontFamily: 'Nunito-Bold', color: '#7619FF' }}>Mohammad Zeeshan</span>. I create <span style={{ fontFamily: 'Nunito-Bold', color: '#7619FF' }}>Beautiful</span> and <span style={{ fontFamily: 'Nunito-Bold', color: '#7619FF' }}>Elegant</span> Websites for small businesses.
                                 </Typography>
 
                                 <div className={classes.nameAttributeDiv}>
-                                    <Typography className={classes.nameAttributeText} variant='body1' >
-                                        Front-End Developer
-                                    </Typography>
-                                    <Typography className={classes.nameAttributeText} variant='body1' >
-                                        Web Designer
-                                    </Typography>
-                                    <Typography className={classes.nameAttributeText} variant='body1' >
-                                        UI/UX
+                                    <Typography className={classes.nameAttributeText} variant='h6' >
+                                        <li>Front-End Developer</li>
+                                        <li>Web Designer</li>
+                                        <li>UI/UX Designer</li>
                                     </Typography>
                                 </div>
 
@@ -246,7 +237,6 @@ export default function About() {
                                 <div className={classes.skillHeaderWrapper}>
                                     <Typography className={classes.skillHeader} variant='h4'>Skills</Typography>
                                 </div>
-
 
                                 {dataMap.map((item, index) =>
                                     <div key={index} className={classes.skillContainer}>
@@ -259,9 +249,19 @@ export default function About() {
                                             </Typography>
                                         </div>
 
-                                        <div className={classes.skillLogoWrapper} >
+                                        <Grid
+                                            container
+                                            className={classes.skillLogoWrapper}
+                                        >
                                             {item.name.map((item, i) =>
-                                                <div className={classes.skillBox} key={i}>
+                                                <Grid
+                                                    item
+                                                    xs={4}
+                                                    sm={2}
+                                                    md={2}
+                                                    className={classes.skillBox}
+                                                    key={i}
+                                                >
                                                     <img
                                                         src={item.img}
                                                         className={classes.skillIcon}
@@ -275,9 +275,9 @@ export default function About() {
                                                     >
                                                         {item.name}
                                                     </Typography>
-                                                </div>
+                                                </Grid>
                                             )}
-                                        </div>
+                                        </Grid>
                                         <Divider />
                                     </div>
                                 )}
@@ -288,10 +288,10 @@ export default function About() {
 
                     <Grid
                         item
-                        className={classes.gridItem}
-                        xs={12}
-                        sm={5}
-                        md={5}
+                        className={classes.gridItemImage}
+                        xs={false}
+                        sm={4}
+                        md={4}
                     >
                         <Tilty
                             max={25}
