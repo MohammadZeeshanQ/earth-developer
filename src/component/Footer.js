@@ -3,10 +3,10 @@ import { makeStyles } from '@material-ui/core/styles'
 import { Typography, IconButton } from '@material-ui/core'
 
 // Logo
-import Logo from '../../../assets/images/icons/Logo.png'
-import FacebookIcon from '../../../assets/images/icons/facebook.png'
-import Github from '../../../assets/images/icons/github.png'
-import LinkedIn from '../../../assets/images/icons/linkedin.png'
+import Logo from '../assets/images/icons/Logo.png'
+import FacebookIcon from '../assets/images/icons/facebook.png'
+import Github from '../assets/images/icons/github.png'
+import LinkedIn from '../assets/images/icons/linkedin.png'
 
 const useStyles = makeStyles({
 

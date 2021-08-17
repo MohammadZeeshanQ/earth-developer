@@ -7,7 +7,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 
 // Logo
-import Logo from '../../../assets/images/icons/Logo.png'
+import Logo from '../assets/images/icons/Logo.png'
 
 
 const useStyles = makeStyles({

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Grid, Chip, Dialog, DialogTitle, DialogContent, DialogActions, Button, IconButton, } from '@material-ui/core';
-import { gridData } from '../middleware/ProjectData.js';
+import { gridData } from '../../middleware/ProjectData.js';
 import CloseIcon from '@material-ui/icons/Close';
 
 

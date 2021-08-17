@@ -1,6 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Grid, Button } from '@material-ui/core'
+import Typical from 'react-typical'
 
 // Illustration
 import Person from '../../assets/images/background/person.png'
@@ -58,7 +59,7 @@ const useStyles = makeStyles({
     header: {
         fontFamily: 'Nunito-Bold',
         letterSpacing: '2px',
-        fontSize: '3.5rem',
+        fontSize: '4rem',
         fontWeight: '800',
         color: '#7619FF',
 
@@ -72,20 +73,20 @@ const useStyles = makeStyles({
     },
 
     description: {
-        margin: '2rem 0',
+        margin: '3rem 0',
         color: '#656565',
         letterSpacing: '2px',
         fontFamily: 'Nunito-Reg',
 
         '@media(max-width: 600px)': {
-            margin: '3rem 0',
-            fontSize: '1.2rem',
+            margin: '4rem 0',
+            fontSize: '1.3rem',
             lineHeight: '190%',
         },
 
         '@media(min-width: 601px) and (max-width: 1024px)': {
-            fontSize: '.7rem',
-            width: '80%',
+            fontSize: '1rem',
+            width: '90%',
         },
 
     },
@@ -149,11 +150,20 @@ export default function MainIndex() {
                     >
                         <div>
                             <Typography className={classes.header} variant='h1'>
-                                Mohammad Zeshan
+                                Hi, I'm Zeshan.
                             </Typography>
 
-                            <Typography className={classes.description} variant='body1'>
-                                Freelance Front-End Developer, UI/ UX and  Web Designer.
+                            <Typography className={classes.description} variant='h5'>
+                                <Typical
+                                    steps={[
+                                        "I am a", 1000,
+                                        `I am a Front-End Developer.`, 1500,
+                                        "I am a UI/UX Designer.", 1500,
+                                        "I am a Web Designer.", 1500,
+                                    ]}
+                                    loop={Infinity}
+                                    wrapper="b"
+                                />
                             </Typography>
 
                             <Button

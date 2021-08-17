@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { makeStyles } from "@material-ui/core/styles";
-import MainIndex from './pages/MainIndex.js';
-import Service from './pages/Service.js';
-import VideoShow from './pages/VideoModel.js';
+import MainIndex from './MainIndex.js';
+import Service from './Service.js';
+import VideoShow from './VideoModel.js';
 
 const useStyles = makeStyles({
     root: {

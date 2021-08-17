@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography, Grid, Divider } from '@material-ui/core'
-import { HtmlData, CssData, JsData, GitData, OtherData } from '../../../middleware/AboutData.js';
+import { HtmlData, CssData, JsData, GitData, OtherData } from '../../middleware/AboutData.js';
 
 import Tilty from 'react-tilty';
 
-import Developer from '../../../assets/images/background/developer.png'
+import Developer from '../../assets/images/background/developer.png'
 
 
 const useStyles = makeStyles({

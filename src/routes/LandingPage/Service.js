@@ -26,7 +26,7 @@ const useStyles = makeStyles({
         letterSpacing: '1px',
         margin: '1rem 0 2rem 0',
 
-        '@media(min-width: 720px) and (max-width: 900px)': {
+        '@media(min-width: 601px) and (max-width: 900px)': {
             fontSize: '2em',
         },
 
@@ -108,7 +108,7 @@ export default function Service() {
         <div className={classes.root} id="whatICanDo">
             <div className={classes.wrapper} >
                 <Typography variant='h3' className={classes.header}>
-                    What I Can do?
+                    What I Love to do?
                 </Typography>
 
                 <Grid
