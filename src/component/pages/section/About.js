@@ -1,20 +1,12 @@
 import React, { useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Typography, Grid } from '@material-ui/core'
+import { Typography, Grid, Divider } from '@material-ui/core'
+import { HtmlData, CssData, JsData, GitData, OtherData } from '../../../middleware/AboutData.js';
 
 import Tilty from 'react-tilty';
 
 import Developer from '../../../assets/images/background/developer.png'
-import html from '../../../assets/images/devIcon/html.png'
-import css from '../../../assets/images/devIcon/css.png'
-import js from '../../../assets/images/devIcon/js.png'
-import react from '../../../assets/images/devIcon/react.png'
-import mui from '../../../assets/images/devIcon/mui.png'
-import bootstrap from '../../../assets/images/devIcon/bootstrap.png'
-import lr from '../../../assets/images/devIcon/lr.png'
-import gimp from '../../../assets/images/devIcon/gimp.png'
-import canva from '../../../assets/images/devIcon/canva.png'
-import shotcut from '../../../assets/images/devIcon/shotcut.png'
+
 
 const useStyles = makeStyles({
     root: {
@@ -25,8 +17,8 @@ const useStyles = makeStyles({
         top: '10%',
         right: '-5%',
         zIndex: '-3',
-        height: '600px',
-        width: '600px',
+        height: '400px',
+        width: '400px',
         backgroundColor: '#7619FF',
         opacity: '.2',
         borderRadius: '50%',
@@ -42,19 +34,23 @@ const useStyles = makeStyles({
         },
 
     },
+
     wrapper: {
-        padding: '10em 0 10em 0',
+        padding: '10em 0',
 
         '@media(max-width: 600px)': {
             padding: '8em 0 0 0',
         },
     },
+
     gridContainer: {
 
     },
+
     gridItem: {
 
     },
+
     gridImage: {
         width: '100%',
         height: "100%",
@@ -65,32 +61,39 @@ const useStyles = makeStyles({
             display: 'none',
         },
     },
+
     textContainer: {
         '@media(max-width: 600px)': {
             paddingBottom: '5rem'
         },
     },
+
     nameWrapper: {
         '@media(max-width: 600px)': {
             textAlign: 'center',
             padding: '0 2em',
         },
     },
+
     nameHeader: {
         fontFamily: 'Nunito-Bold',
     },
+
     nameDescription: {
         fontFamily: "Nunito-Reg",
         paddingTop: "1em",
         color: '#848480 ',
     },
+
     nameAttributeDiv: {
         paddingTop: "1em",
     },
+
     nameAttributeText: {
         fontFamily: "Nunito-Reg",
         color: '#848480 ',
     },
+
     skillWrapper: {
         paddingTop: '4em',
 
@@ -98,50 +101,97 @@ const useStyles = makeStyles({
             textAlign: 'center',
         },
     },
+
     skillHeader: {
         fontFamily: 'Nunito-Bold',
     },
+
     skillIconWrapper: {
         padding: '1em 5em 1em 0',
+
         '@media(max-width: 600px)': {
             padding: '1em 0 0 0',
         },
     },
-    skillIcons: {
-        width: '2.5em',
-        margin: '0 1em 1em 0',
+
+    // Check top
+    skillContainer: {
+        margin: '2rem 0',
+    },
+
+    skillLogoWrapper: {
+        display: 'flex',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        margin: '1rem 0',
+    },
+
+    skillBox: {
+        textAlign: 'center',
+        padding: '1rem 2rem',
+        borderRadius: '1rem',
 
         '&:hover': {
-            transform: 'scale(1.4)',
-            transition: '.4s ease all',
+            backgroundColor: '#F3E6FF',
+            transform: 'scale(1.1)',
+            transition: ' all .3s ease-in-out',
+
+            '& $skillLabel': {
+                color: '#151515',
+            }
         },
 
         '@media(max-width: 600px)': {
-            width: '4em',
-            margin: '1em',
+
         },
+    },
+
+    skillTitle: {
+        fontFamily: 'Oxy-Bold',
+        color: '#151515',
+    },
+
+    skillLabel: {
+        marginTop: '.5rem',
+        fontFamily: 'Nunito-Reg',
+        color: '#959595'
+    },
+
+    skillIcon: {
+        width: '3rem',
     },
 });
 
-const devIconPath = [
-    { "path": html },
-    { "path": css },
-    { "path": js },
-    { "path": react },
-    { "path": mui },
-    { "path": bootstrap },
-    { "path": lr },
-    { "path": gimp },
-    { "path": canva },
-    { "path": shotcut },
-]
 
 export default function About() {
     const classes = useStyles();
 
     useEffect(() => {
         window.scrollTo(0, 0)
-    }, [])
+    }, []);
+
+    const dataMap = [
+        {
+            'name': HtmlData,
+            'sectionName': 'HTML',
+        },
+        {
+            'name': CssData,
+            'sectionName': 'CSS',
+        },
+        {
+            'name': JsData,
+            'sectionName': 'Javascript',
+        },
+        {
+            'name': GitData,
+            'sectionName': 'Git',
+        },
+        {
+            'name': OtherData,
+            'sectionName': 'Others',
+        },
+    ]
 
 
     return (
@@ -192,14 +242,45 @@ export default function About() {
                             </div>
 
                             <div className={classes.skillWrapper}>
-                                <Typography className={classes.skillHeader} variant='h4'>Skills</Typography>
 
-                                <div className={classes.skillIconWrapper}>
-                                    {devIconPath.map((image) =>
-                                        <img src={image.path} className={classes.skillIcons} alt='Skills' />
-                                    )}
+                                <div className={classes.skillHeaderWrapper}>
+                                    <Typography className={classes.skillHeader} variant='h4'>Skills</Typography>
                                 </div>
 
+
+                                {dataMap.map((item, index) =>
+                                    <div key={index} className={classes.skillContainer}>
+                                        <div>
+                                            <Typography
+                                                className={classes.skillTitle}
+                                                variant='h6'
+                                            >
+                                                {item.sectionName}
+                                            </Typography>
+                                        </div>
+
+                                        <div className={classes.skillLogoWrapper} >
+                                            {item.name.map((item, i) =>
+                                                <div className={classes.skillBox} key={i}>
+                                                    <img
+                                                        src={item.img}
+                                                        className={classes.skillIcon}
+                                                        alt={item.name}
+                                                        width='100%'
+                                                        height='100%'
+                                                    />
+                                                    <Typography
+                                                        className={classes.skillLabel}
+                                                        variant='body2'
+                                                    >
+                                                        {item.name}
+                                                    </Typography>
+                                                </div>
+                                            )}
+                                        </div>
+                                        <Divider />
+                                    </div>
+                                )}
                             </div>
                         </div>
 
