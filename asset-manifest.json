@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/earth-developer/static/css/main.c7db1577.chunk.css",
-    "main.js": "/earth-developer/static/js/main.c0bf7562.chunk.js",
-    "main.js.map": "/earth-developer/static/js/main.c0bf7562.chunk.js.map",
-    "runtime-main.js": "/earth-developer/static/js/runtime-main.7c6eb366.js",
-    "runtime-main.js.map": "/earth-developer/static/js/runtime-main.7c6eb366.js.map",
-    "static/js/2.98d78e09.chunk.js": "/earth-developer/static/js/2.98d78e09.chunk.js",
-    "static/js/2.98d78e09.chunk.js.map": "/earth-developer/static/js/2.98d78e09.chunk.js.map",
-    "static/js/3.989d4641.chunk.js": "/earth-developer/static/js/3.989d4641.chunk.js",
-    "static/js/3.989d4641.chunk.js.map": "/earth-developer/static/js/3.989d4641.chunk.js.map",
+    "main.js": "/earth-developer/static/js/main.ec092c81.chunk.js",
+    "main.js.map": "/earth-developer/static/js/main.ec092c81.chunk.js.map",
+    "runtime-main.js": "/earth-developer/static/js/runtime-main.43b2934a.js",
+    "runtime-main.js.map": "/earth-developer/static/js/runtime-main.43b2934a.js.map",
+    "static/js/2.7b47c5e8.chunk.js": "/earth-developer/static/js/2.7b47c5e8.chunk.js",
+    "static/js/2.7b47c5e8.chunk.js.map": "/earth-developer/static/js/2.7b47c5e8.chunk.js.map",
+    "static/js/3.bb43955c.chunk.js": "/earth-developer/static/js/3.bb43955c.chunk.js",
+    "static/js/3.bb43955c.chunk.js.map": "/earth-developer/static/js/3.bb43955c.chunk.js.map",
     "index.html": "/earth-developer/index.html",
     "static/css/main.c7db1577.chunk.css.map": "/earth-developer/static/css/main.c7db1577.chunk.css.map",
-    "static/js/2.98d78e09.chunk.js.LICENSE.txt": "/earth-developer/static/js/2.98d78e09.chunk.js.LICENSE.txt",
+    "static/js/2.7b47c5e8.chunk.js.LICENSE.txt": "/earth-developer/static/js/2.7b47c5e8.chunk.js.LICENSE.txt",
     "static/media/3dWeb.087dd1ea.png": "/earth-developer/static/media/3dWeb.087dd1ea.png",
     "static/media/FashionWeb.034a9573.png": "/earth-developer/static/media/FashionWeb.034a9573.png",
     "static/media/Logo.f562cbbc.png": "/earth-developer/static/media/Logo.f562cbbc.png",
@@ -38,9 +38,9 @@
     "static/media/weatherWeb.a2f602ed.png": "/earth-developer/static/media/weatherWeb.a2f602ed.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.7c6eb366.js",
-    "static/js/2.98d78e09.chunk.js",
+    "static/js/runtime-main.43b2934a.js",
+    "static/js/2.7b47c5e8.chunk.js",
     "static/css/main.c7db1577.chunk.css",
-    "static/js/main.c0bf7562.chunk.js"
+    "static/js/main.ec092c81.chunk.js"
   ]
 }
