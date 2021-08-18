@@ -95,7 +95,7 @@ const useStyles = makeStyles({
         backgroundColor: '#7619FF',
         color: '#fcfcfc',
         padding: '.7rem 1.5rem',
-        fontFamily: 'Nunito-Semi',
+        fontFamily: 'Nunito-Reg',
         letterSpacing: '1.5px',
 
         '&:hover': {
@@ -114,7 +114,6 @@ const useStyles = makeStyles({
             fontSize: '.7rem',
             padding: '.5rem .6rem'
         },
-
     },
 
     imageContainer: {

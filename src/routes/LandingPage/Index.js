@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { makeStyles } from "@material-ui/core/styles";
 import MainIndex from './MainIndex.js';
 import Service from './Service.js';
+import Stuff from './Stuff';
 import VideoShow from './VideoModel.js';
 
 const useStyles = makeStyles({
@@ -22,6 +23,7 @@ export default function Index() {
         <div className={classes.root}>
             <MainIndex />
             <Service />
+            <Stuff />
             <VideoShow />
         </div>
     )

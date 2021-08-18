@@ -60,7 +60,6 @@ const useStyles = makeStyles({
 
         '@media(max-width: 600px)': {
             padding: '1rem',
-            // textAlign : 'center',
         },
     },
     textHeader: {
