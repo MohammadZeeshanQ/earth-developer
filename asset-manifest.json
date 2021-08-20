@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/earth-developer/static/css/main.c7db1577.chunk.css",
-    "main.js": "/earth-developer/static/js/main.ec092c81.chunk.js",
-    "main.js.map": "/earth-developer/static/js/main.ec092c81.chunk.js.map",
+    "main.js": "/earth-developer/static/js/main.deeb86ae.chunk.js",
+    "main.js.map": "/earth-developer/static/js/main.deeb86ae.chunk.js.map",
     "runtime-main.js": "/earth-developer/static/js/runtime-main.43b2934a.js",
     "runtime-main.js.map": "/earth-developer/static/js/runtime-main.43b2934a.js.map",
-    "static/js/2.7b47c5e8.chunk.js": "/earth-developer/static/js/2.7b47c5e8.chunk.js",
-    "static/js/2.7b47c5e8.chunk.js.map": "/earth-developer/static/js/2.7b47c5e8.chunk.js.map",
+    "static/js/2.5fc95379.chunk.js": "/earth-developer/static/js/2.5fc95379.chunk.js",
+    "static/js/2.5fc95379.chunk.js.map": "/earth-developer/static/js/2.5fc95379.chunk.js.map",
     "static/js/3.bb43955c.chunk.js": "/earth-developer/static/js/3.bb43955c.chunk.js",
     "static/js/3.bb43955c.chunk.js.map": "/earth-developer/static/js/3.bb43955c.chunk.js.map",
     "index.html": "/earth-developer/index.html",
     "static/css/main.c7db1577.chunk.css.map": "/earth-developer/static/css/main.c7db1577.chunk.css.map",
-    "static/js/2.7b47c5e8.chunk.js.LICENSE.txt": "/earth-developer/static/js/2.7b47c5e8.chunk.js.LICENSE.txt",
+    "static/js/2.5fc95379.chunk.js.LICENSE.txt": "/earth-developer/static/js/2.5fc95379.chunk.js.LICENSE.txt",
     "static/media/3dWeb.087dd1ea.png": "/earth-developer/static/media/3dWeb.087dd1ea.png",
     "static/media/FashionWeb.034a9573.png": "/earth-developer/static/media/FashionWeb.034a9573.png",
     "static/media/Logo.f562cbbc.png": "/earth-developer/static/media/Logo.f562cbbc.png",
@@ -20,7 +20,9 @@
     "static/media/covidWeb.1029808f.png": "/earth-developer/static/media/covidWeb.1029808f.png",
     "static/media/developer.78523b9f.png": "/earth-developer/static/media/developer.78523b9f.png",
     "static/media/earthWeb.87baa736.png": "/earth-developer/static/media/earthWeb.87baa736.png",
+    "static/media/frontDeveloper.9657fb7c.png": "/earth-developer/static/media/frontDeveloper.9657fb7c.png",
     "static/media/gimp.8a2c0b39.png": "/earth-developer/static/media/gimp.8a2c0b39.png",
+    "static/media/graphicDesigner.8303db11.png": "/earth-developer/static/media/graphicDesigner.8303db11.png",
     "static/media/less.d0b1c59b.png": "/earth-developer/static/media/less.d0b1c59b.png",
     "static/media/loginWeb.beba7e49.png": "/earth-developer/static/media/loginWeb.beba7e49.png",
     "static/media/mountWeb.40621747.png": "/earth-developer/static/media/mountWeb.40621747.png",
@@ -35,12 +37,13 @@
     "static/media/soundWeb.66968260.png": "/earth-developer/static/media/soundWeb.66968260.png",
     "static/media/todoList.83d8d791.png": "/earth-developer/static/media/todoList.83d8d791.png",
     "static/media/videoPhone.bb325237.mp4": "/earth-developer/static/media/videoPhone.bb325237.mp4",
-    "static/media/weatherWeb.a2f602ed.png": "/earth-developer/static/media/weatherWeb.a2f602ed.png"
+    "static/media/weatherWeb.a2f602ed.png": "/earth-developer/static/media/weatherWeb.a2f602ed.png",
+    "static/media/webDesigner.d3613ff0.png": "/earth-developer/static/media/webDesigner.d3613ff0.png"
   },
   "entrypoints": [
     "static/js/runtime-main.43b2934a.js",
-    "static/js/2.7b47c5e8.chunk.js",
+    "static/js/2.5fc95379.chunk.js",
     "static/css/main.c7db1577.chunk.css",
-    "static/js/main.ec092c81.chunk.js"
+    "static/js/main.deeb86ae.chunk.js"
   ]
 }
