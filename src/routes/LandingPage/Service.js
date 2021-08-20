@@ -13,15 +13,21 @@ const useStyles = makeStyles({
         backgroundColor: '#fcfcfc',
     },
     wrapper: {
-        padding: '4em 0',
+        width: '80%',
+        margin: 'auto',
 
         '@media(max-width: 600px)': {
+            width: '90%',
             padding: '4em 0 1rem 0',
+        },
+
+        '@media(min-width: 601px) and (max-width: 1024px)': {
+
         },
     },
     header: {
-        color: '#7619FF',
-        fontFamily: 'Nunito-Bold',
+        color: '#1a1a1a',
+        fontFamily: 'Oxy-Bold',
         textAlign: 'center',
         letterSpacing: '1px',
         margin: '1rem 0 2rem 0',
@@ -111,7 +117,7 @@ export default function Service() {
                     What I Love to do?
                 </Typography>
 
-                <Grid
+                {/* <Grid
                     container
                     className={classes.gridContainer}
                     justify='space-evenly'
@@ -152,7 +158,7 @@ export default function Service() {
                     )}
 
 
-                </Grid>
+                </Grid> */}
             </div>
         </div>
     )

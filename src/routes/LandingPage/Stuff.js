@@ -1,13 +1,27 @@
 import React from 'react'
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Typography, Button } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 
-// icons
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+// Component 
+import PurpleButton from '../../component/PurpleButton';
+
+// images
+import FrontDeveloper from '../../assets/images/services/frontDeveloper.png'
+import WebDesigner from '../../assets/images/services/webDesigner.png'
+import GraphicDesigner from '../../assets/images/services/graphicDesigner.png'
+
+// import Tilt from 'react-tilt' Old Library
+import Tilty from 'react-tilty';
+
+
 
 const useStyles = makeStyles({
     root: {
-        border: '1px red solid',
+        padding: '2rem 0',
+
+        '@media(min-width: 601px) and (max-width: 1024px)': {
+            padding: '0',
+        },
     },
 
     wrapper: {
@@ -15,7 +29,7 @@ const useStyles = makeStyles({
         margin: 'auto',
 
         '@media(max-width: 600px)': {
-            width: '90%',
+            width: '95%',
         },
 
         '@media(min-width: 601px) and (max-width: 1024px)': {
@@ -23,27 +37,55 @@ const useStyles = makeStyles({
         },
     },
 
+    gridContainer: {
+        margin: '5rem 0',
+        padding: '2rem 0',
+
+        '@media(max-width: 600px)': {
+            margin: '0 0 5rem 0',
+        },
+    },
+
+
+    imageWrapper: {
+
+    },
+
+    image: {
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+    },
+
+    gridItemText: {
+
+    },
+
     textWrapper: {
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'center',
-        border: '1px green solid',
         padding: '1rem',
 
         '@media(max-width: 600px)': {
             textAlign: 'center',
+            padding: '1rem 0',
         },
 
+        '@media(min-width: 601px) and (max-width: 1024px)': {
+            padding: '0 2rem 0 3rem',
+        },
     },
 
     textHeader: {
         color: '#7619FF',
-        fontFamily: 'Nunito-Bold',
+        fontFamily: 'Oxy-Bold',
         letterSpacing: '3px',
         fontSize: '2.5rem',
 
         '@media(max-width: 600px)': {
-            fontSize: '2.5em',
+            fontSize: '1.8em',
+            marginTop: '2rem',
         },
 
         '@media(min-width: 600px) and (max-width: 900px)': {
@@ -69,32 +111,6 @@ const useStyles = makeStyles({
             fontSize: '1.1rem',
         },
     },
-
-    button: {
-        backgroundColor: '#7619FF',
-        color: '#fcfcfc',
-        padding: '.6rem 1rem',
-        fontFamily: 'Nunito-Reg',
-        letterSpacing: '1.5px',
-
-        '&:hover': {
-            backgroundColor: '#AA72FE',
-            color: '#fcfcfc',
-            transform: 'scale(1.05)',
-            transition: 'all .3s ease-in-out'
-        },
-
-        '@media(max-width: 600px)': {
-            padding: '1rem',
-            letterSpacing: '3px',
-        },
-
-        '@media(min-width: 601px) and (max-width: 1024px)': {
-            fontSize: '.5rem',
-            padding: '.5rem'
-        },
-    },
-
 });
 
 export default function Stuff() {
@@ -104,26 +120,20 @@ export default function Stuff() {
         {
             'title': 'Front-End Developer',
             'description': 'Rich appearance and Interactive website for better experience.',
-            'image': '',
+            'image': FrontDeveloper,
             'layoutDirection': 'row',
         },
         {
             'title': 'Web Designer',
             'description': 'Elegant yet eye catching layout designs. Modern UI with high level of Information',
-            'image': '',
+            'image': WebDesigner,
             'layoutDirection': 'row-reverse',
-        },
-        {
-            'title': 'Responsive Website',
-            'description': 'Designed to be dynamic and to support large number to screen aspect ratio. Looks the same in all devices.',
-            'image': '',
-            'layoutDirection': 'row',
         },
         {
             'title': 'Graphic Designer',
             'description': " Visual Graphics and Vector helps to attract people's attention.",
-            'image': '',
-            'layoutDirection': 'row-reverse',
+            'image': GraphicDesigner,
+            'layoutDirection': 'row',
         },
 
     ];
@@ -137,24 +147,38 @@ export default function Stuff() {
                         container
                         key={index}
                         direction={item.layoutDirection}
+                        className={classes.gridContainer}
                     >
                         <Grid
 
                             className={classes.gridItemImage}
                             xs={12}
-                            sm={6}
-                            md={6}
+                            sm={5}
+                            md={5}
                         >
                             <div className={classes.imageWrapper}>
-                                <img scr={item.image} className={classes.gridImage} alt={item.title} />
+                                <Tilty
+                                    max={25}
+                                    speed={300}
+                                    perspective={1000}
+                                    scale={1.1}
+                                >
+                                    <img
+                                        src={item.image}
+                                        className={classes.image}
+                                        alt={item.title}
+                                        width='650px'
+                                        height='400px'
+                                    />
+                                </Tilty>
                             </div>
                         </Grid>
 
                         <Grid
                             className={classes.gridItemText}
                             xs={12}
-                            sm={6}
-                            md={6}
+                            sm={7}
+                            md={7}
                         >
                             <div className={classes.textWrapper}>
                                 <div>
@@ -164,16 +188,11 @@ export default function Stuff() {
                                     <Typography variant='body1' className={classes.textDescription}>
                                         {item.description}
                                     </Typography>
-                                    <Button
-                                        className={classes.button}
-                                        endIcon={
-                                            <ArrowForwardIosIcon
-                                                style={{ marginLeft: '.5rem', fontSize: '1rem' }}
-                                            />
-                                        }
+                                    <PurpleButton
+                                        href='/earth-developer/#/project'
                                     >
                                         Explore More
-                                    </Button>
+                                    </PurpleButton>
                                 </div>
                             </div>
                         </Grid>

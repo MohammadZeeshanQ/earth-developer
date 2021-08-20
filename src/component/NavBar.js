@@ -13,6 +13,7 @@ import Logo from '../assets/images/icons/Logo.png'
 const useStyles = makeStyles({
     root: {
     },
+
     wrapper: {
         width: '85%',
         margin: 'auto',
@@ -24,6 +25,7 @@ const useStyles = makeStyles({
             width: '90%',
         },
     },
+
     container: {
         height: 64,
         backgroundColor: '#fcfcfc',
@@ -93,8 +95,9 @@ const useStyles = makeStyles({
         }
     },
 
-    swipeDrawerContainer: {
-        backgroundColor: 'rgb(15, 17, 23)',
+    paper: {
+        backgroundColor: '#7619FF',
+        borderRadius: '4rem 0 0 4rem',
     },
 
     swipeDrawer: {
@@ -104,10 +107,14 @@ const useStyles = makeStyles({
 
     tabMobileBtn: {
         fontFamily: 'Nunito-Semi',
-        color: '#0e0e0e',
+        color: '#fcfcfc',
         margin: "0 .1em",
         border: 'none',
         letterSpacing: '2px',
+    },
+
+    divider: {
+        backgroundColor: '#fcfcfc',
     },
 });
 
@@ -149,7 +156,7 @@ export default function NavBar() {
                             {/* Mobile Tab */}
                             <div className={classes.tabHideMobile}>
                                 <IconButton onClick={toggle} size='small'>
-                                    <MenuIcon style={{ fontSize: '2em', color: '#1c1c1c' }} />
+                                    <MenuIcon style={{ fontSize: '2em', color: '#7619FF' }} />
                                 </IconButton>
                             </div>
 
@@ -168,7 +175,7 @@ export default function NavBar() {
             </AppBar>
 
             <SwipeableDrawer
-                className={classes.swipeDrawerContainer}
+                classes={{ paper: classes.paper }}
                 anchor='right'
                 open={drawer}
                 onOpen={toggle}
@@ -180,23 +187,23 @@ export default function NavBar() {
 
                     <List>
                         <ListItem style={{ justifyContent: 'flex-end', }}>
-                            <IconButton style={{ backgroundColor: '#DCDBDB' }} size='small' onClick={toggle}>
+                            <IconButton style={{ backgroundColor: '#7619FF', color: '#fcfcfc', border: '1px #fcfcfc solid' }} size='small' onClick={toggle}>
                                 <CloseIcon />
                             </IconButton>
                         </ListItem>
-                        <Divider />
+
                         <ListItem>
                             <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/project' onClick={() => setDrawer(!drawer)}>Projects</Button>
                         </ListItem>
-                        <Divider />
+                        <Divider className={classes.divider} />
                         <ListItem>
                             <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/about' onClick={() => setDrawer(!drawer)}>About</Button>
                         </ListItem>
-                        <Divider />
+                        <Divider className={classes.divider} />
                         <ListItem>
                             <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/contact' onClick={() => setDrawer(!drawer)}>Contact</Button>
                         </ListItem>
-                        <Divider />
+                        <Divider className={classes.divider} />
                     </List>
                 </div>
             </SwipeableDrawer>
