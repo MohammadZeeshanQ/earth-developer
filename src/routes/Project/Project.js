@@ -155,13 +155,13 @@ const useStyles = makeStyles({
     },
 
     dialogImage: {
-        width: '100%',
+        width: '80%',
         height: '100%',
-        objectFit: 'cover',
-        borderRadius: '1rem 1rem 0 0',
+        border: '1px solid #9c9c9c',
+        borderRadius: '1rem',
 
         '@media(max-width: 600px)': {
-            objectFit: 'contain'
+            width: '90%',
         },
 
         '@media(min-width: 601px) and (max-width: 1024px)': {
@@ -170,16 +170,14 @@ const useStyles = makeStyles({
     },
 
     dialogButton: {
-        border: '1px solid #636363',
-        color: '#636363',
+        backgroundColor: '#7619FF',
+        color: '#fcfcfc',
         fontFamily: 'Oxy-Reg',
         letterSpacing: '0.6px',
         margin: '1rem 0',
 
         '&:hover': {
-            backgroundColor: '#7619FF',
-            color: '#fcfcfc',
-            transition: '.4s ease all',
+            color: '#050505',
         },
 
         '@media(max-width: 600px)': {
@@ -189,7 +187,8 @@ const useStyles = makeStyles({
 
     dialogTitle: {
         display: 'flex',
-        justifyContent: 'flex-end',
+        flexGrow: 1,
+        alignItems: 'center',
     },
 });
 
@@ -200,6 +199,7 @@ export default function Project() {
     const [dialog, setDialog] = useState(false);
     const [pictureIndex, setPictureIndex] = useState([])
     const [dialogLink, setDialongLink] = useState('');
+    const [name, setName] = useState('');
 
 
     const toggleDialog = () => {
@@ -207,10 +207,11 @@ export default function Project() {
     };
 
 
-    const dialogData = (image, link) => {
+    const dialogData = (image, link, title) => {
         toggleDialog();
         setPictureIndex(image);
         setDialongLink(link);
+        setName(title);
     };
 
 
@@ -245,7 +246,7 @@ export default function Project() {
                                 xs={12}
                                 sm={6}
                                 md={4}
-                                onClick={() => dialogData(image, link)}
+                                onClick={() => dialogData(image, link, title)}
                             >
                                 <div className={classes.gridItem}>
                                     <div className={classes.gridImageContainer}>
@@ -278,16 +279,26 @@ export default function Project() {
 
                 <Dialog
                     maxWidth='md'
+                    fullWidth={true}
                     open={dialog}
                     onClose={toggleDialog}
                 >
-                    <DialogTitle className={classes.dialogTitle}>
-                        <IconButton onClick={toggleDialog} size='small'>
-                            <CloseIcon style={{ color: '#636363' }} />
-                        </IconButton>
+                    <DialogTitle >
+                        <div className={classes.dialogTitle}>
+                            <div style={{ flexGrow: 1, }}>
+                                <span variant='h6' style={{ fontFamily: 'Oxy-Bold', }}>
+                                    {name}
+                                </span>
+                            </div>
+                            <div>
+                                <IconButton onClick={toggleDialog} size='small'>
+                                    <CloseIcon style={{ color: '#636363' }} />
+                                </IconButton>
+                            </div>
+                        </div>
                     </DialogTitle>
 
-                    <DialogContent>
+                    <DialogContent style={{ textAlign: 'center' }}>
                         <img src={pictureIndex} className={classes.dialogImage} alt='Projects' />
                     </DialogContent>
 
@@ -295,7 +306,7 @@ export default function Project() {
                         <Button
                             className={classes.dialogButton}
                             href={dialogLink}
-                            variant='outlined'
+                            variant='contained'
                         >
                             Source Code
                         </Button>

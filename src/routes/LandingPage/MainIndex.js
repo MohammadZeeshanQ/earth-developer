@@ -155,10 +155,10 @@ export default function MainIndex() {
                             <Typography className={classes.description} variant='h5'>
                                 <Typical
                                     steps={[
-                                        "I am a", 1000,
-                                        `I am a Front-End Developer.`, 1500,
-                                        "I am a UI/UX Designer.", 1500,
-                                        "I am a Web Designer.", 1500,
+                                        "I'm a", 1000,
+                                        `I'm a Front-End Developer.`, 1500,
+                                        "I'm a UI/UX Designer.", 1500,
+                                        "I'm a Web Designer.", 1500,
                                     ]}
                                     loop={Infinity}
                                     wrapper="b"

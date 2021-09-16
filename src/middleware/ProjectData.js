@@ -10,6 +10,7 @@ import todoList from '../assets/images/projects/todoList.png';
 import weatherWeb from '../assets/images/projects/weatherWeb.png';
 import MoveIn from '../assets/images/projects/moveIn.png';
 import NightMode from '../assets/images/projects/nightMode.png';
+import PokemonApp from '../assets/images/projects/pokemonApp.png';
 
 export const gridData = [
     {
@@ -17,6 +18,16 @@ export const gridData = [
         'image': covidWeb,
         'link': 'https://covid-vision.netlify.app/',
         'description': 'Web App developed to retrieve Covid-19 cases information',
+        'program': [
+            { 'code': 'React.Js', },
+            { 'code': 'Material-Ui', },
+        ],
+    },
+    {
+        'title': 'Pokemon Web App',
+        'image': PokemonApp,
+        'link': 'https://pokemon-app-mozzie.netlify.app/',
+        'description': 'Web App that retrieve data from Pokemon API and its information',
         'program': [
             { 'code': 'React.Js', },
             { 'code': 'Material-Ui', },
