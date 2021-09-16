@@ -308,7 +308,7 @@ export default function Project() {
                             href={dialogLink}
                             variant='contained'
                         >
-                            Source Code
+                            Explore More
                         </Button>
                     </DialogActions>
                 </Dialog>
