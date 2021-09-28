@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, createRef } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Button, IconButton, AppBar, Toolbar, SwipeableDrawer, Divider, List, ListItem } from '@material-ui/core';
 
@@ -66,7 +66,7 @@ const useStyles = makeStyles({
         margin: "0 .1em",
         border: 'none',
         color: '#1c1c1c',
-        letterSpacing: '2px',
+        letterSpacing: '1px',
 
         '&:hover': {
             backgroundColor: '#7619FF',
@@ -110,7 +110,9 @@ const useStyles = makeStyles({
         color: '#fcfcfc',
         margin: "0 .1em",
         border: 'none',
-        letterSpacing: '2px',
+        letterSpacing: '1px',
+        width: '100%',
+        justifyContent: 'flex-start',
     },
 
     divider: {
@@ -123,16 +125,16 @@ const useStyles = makeStyles({
 export default function NavBar() {
 
     const classes = useStyles();
+    const drawerRef = createRef();
     const [drawer, setDrawer] = useState(false);
 
     const toggle = () => {
         setDrawer(!drawer);
     }
 
-
     useEffect(() => {
         console.log(`${window.location.href} : Public URL`);
-        console.log('Version 1.11');
+        console.log('Version 1.12');
     }, []);
 
     return (
@@ -162,7 +164,8 @@ export default function NavBar() {
 
                             {/* Desktop Tab */}
                             <div className={classes.tabHideDesktop}>
-                                <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/project'>Projects</Button>
+                                <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/web-app'>WEB APP</Button>
+                                <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/ui-ux'>UI/ UX</Button>
                                 <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/about'>About</Button>
                                 <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/contact'>Contact</Button>
                             </div>
@@ -172,41 +175,43 @@ export default function NavBar() {
                     </div>
                 </Toolbar>
 
+                <SwipeableDrawer
+                    ref={drawerRef}
+                    classes={{ paper: classes.paper }}
+                    anchor='right'
+                    open={drawer}
+                    onOpen={toggle}
+                    onClose={toggle}
+                >
+                    <div className={classes.swipeDrawer}>
+                        <List>
+                            <ListItem style={{ justifyContent: 'flex-end', }}>
+                                <IconButton style={{ backgroundColor: '#7619FF', color: '#fcfcfc', border: '1px #fcfcfc solid' }} size='small' onClick={toggle}>
+                                    <CloseIcon />
+                                </IconButton>
+                            </ListItem>
+
+                            <ListItem>
+                                <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/web-app' onClick={() => setDrawer(!drawer)}>WEB APP</Button>
+                            </ListItem>
+                            <Divider className={classes.divider} />
+                            <ListItem>
+                                <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/ui-ux' onClick={() => setDrawer(!drawer)}>UI/ UX</Button>
+                            </ListItem>
+                            <Divider className={classes.divider} />
+                            <ListItem>
+                                <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/about' onClick={() => setDrawer(!drawer)}>About</Button>
+                            </ListItem>
+                            <Divider className={classes.divider} />
+                            <ListItem>
+                                <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/contact' onClick={() => setDrawer(!drawer)}>Contact</Button>
+                            </ListItem>
+                            <Divider className={classes.divider} />
+                        </List>
+                    </div>
+                </SwipeableDrawer>
+
             </AppBar>
-
-            <SwipeableDrawer
-                classes={{ paper: classes.paper }}
-                anchor='right'
-                open={drawer}
-                onOpen={toggle}
-                onClose={toggle}
-            >
-                <div className={classes.swipeDrawer}>
-
-
-
-                    <List>
-                        <ListItem style={{ justifyContent: 'flex-end', }}>
-                            <IconButton style={{ backgroundColor: '#7619FF', color: '#fcfcfc', border: '1px #fcfcfc solid' }} size='small' onClick={toggle}>
-                                <CloseIcon />
-                            </IconButton>
-                        </ListItem>
-
-                        <ListItem>
-                            <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/project' onClick={() => setDrawer(!drawer)}>Projects</Button>
-                        </ListItem>
-                        <Divider className={classes.divider} />
-                        <ListItem>
-                            <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/about' onClick={() => setDrawer(!drawer)}>About</Button>
-                        </ListItem>
-                        <Divider className={classes.divider} />
-                        <ListItem>
-                            <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/contact' onClick={() => setDrawer(!drawer)}>Contact</Button>
-                        </ListItem>
-                        <Divider className={classes.divider} />
-                    </List>
-                </div>
-            </SwipeableDrawer>
 
         </div>
     )

@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Typography } from '@material-ui/core';
 
 // Component 
-import PurpleButton from '../../component/PurpleButton';
+import PurpleButton from '../../components/PurpleButton';
 
 // images
 import FrontDeveloper from '../../assets/images/services/frontDeveloper.png'
@@ -150,7 +150,7 @@ export default function Stuff() {
                         className={classes.gridContainer}
                     >
                         <Grid
-
+                            item
                             className={classes.gridItemImage}
                             xs={12}
                             sm={5}
@@ -175,6 +175,7 @@ export default function Stuff() {
                         </Grid>
 
                         <Grid
+                            item
                             className={classes.gridItemText}
                             xs={12}
                             sm={7}

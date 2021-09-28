@@ -2,16 +2,17 @@ import React, { Suspense } from 'react';
 import { Route, Switch } from "react-router-dom";
 
 // Component
-import NavBar from './component/NavBar'
-import FloatingButton from './component/FloatingButton.js'
-import SideBavBar from './component/SideNavBar'
-import ErrorPage from './component/ErrorPage'
-import LoadingPage from './component/LoadingPage'
-import Footer from './component/Footer'
+import NavBar from './components/NavBar'
+import FloatingButton from './components/FloatingButton.js'
+import SideBavBar from './components/SideNavBar'
+import ErrorPage from './components/ErrorPage'
+import LoadingPage from './components/LoadingPage'
+import Footer from './components/Footer'
 
 // Routes
 import Index from "./routes/LandingPage/Index.js";
-import ProjectPage from './routes/Project/Project.js'
+import WebAppPage from './routes/Project/WebAppProject.js'
+import UiPage from './routes/Project/UiProject'
 import AboutPage from './routes/About/About'
 import ContactPage from './routes/Contact/Contact'
 
@@ -29,7 +30,8 @@ function App() {
       <Suspense fallback={LoadingPage}>
         <Switch>
           <Route exact path="/" component={Index} />
-          <Route path="/project" component={ProjectPage} />
+          <Route path="/web-app" component={WebAppPage} />
+          <Route exact path="/ui-ux" component={UiPage} />
           <Route exact path="/about" component={AboutPage} />
           <Route path="/contact" component={ContactPage} />
           <Route path="*" component={ErrorPage} />
