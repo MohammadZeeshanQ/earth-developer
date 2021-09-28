@@ -23,6 +23,7 @@ const useStyles = makeStyles({
         backgroundColor: '#7619FF',
         opacity: '.2',
         borderRadius: '50%',
+        filter: 'blur(20px)',
 
         '@media (max-width: 600px)': {
             display: 'none',
@@ -31,7 +32,6 @@ const useStyles = makeStyles({
         '@media(min-width: 601px) and (max-width: 1024px)': {
             display: 'none',
         },
-
     },
 
     gridItemText: {
