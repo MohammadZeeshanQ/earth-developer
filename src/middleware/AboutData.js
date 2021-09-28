@@ -16,6 +16,7 @@ import FigmaLogo from '../assets/images/devIcon/figma.png';
 import CanvaLogo from '../assets/images/devIcon/canva.png';
 import ShotLogo from '../assets/images/devIcon/shotcut.png';
 import SeoLogo from '../assets/images/devIcon/seo.png';
+import StyledLogo from '../assets/images/devIcon/styled.png';
 
 
 // exported Data
@@ -42,6 +43,10 @@ export const CssData = [
     {
         'name': 'SASS',
         'img': SassLogo,
+    },
+    {
+        'name': 'Styled-Component',
+        'img': StyledLogo,
     },
     {
         'name': 'Bootstrap',

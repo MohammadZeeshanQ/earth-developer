@@ -136,7 +136,7 @@ const useStyles = makeStyles({
 
     skillBox: {
         textAlign: 'center',
-        padding: '1rem 2rem',
+        padding: '1rem 0',
         borderRadius: '1rem',
 
         '&:hover': {
@@ -166,7 +166,7 @@ const useStyles = makeStyles({
     skillLabel: {
         marginTop: '.5rem',
         fontFamily: 'Nunito-Reg',
-        color: '#959595'
+        color: '#383838'
     },
 
     skillIcon: {
