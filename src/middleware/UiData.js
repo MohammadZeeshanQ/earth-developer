@@ -8,8 +8,44 @@ import IllustrationWeb from '../assets/images/projects/3dWeb.png';
 import MoveIn from '../assets/images/projects/moveIn.png';
 import NightMode from '../assets/images/projects/nightMode.png';
 import ProductLotion from '../assets/images/projects/ProductLotion.png';
+import BusinessGrow from '../assets/images/projects/BusinessGrow.png';
+import BusinessDrawings from '../assets/images/projects/BusinessDrawings.png';
+import BusinessJatour from '../assets/images/projects/BusinessJatour.png';
 
 export const UiProjectData = [
+    {
+        'title': 'Business: Drawings',
+        'image': BusinessDrawings,
+        'link': 'https://business-drawings-mozzie.netlify.app/',
+        'description': 'Manochrome Landing Page built using Styled-Component and Material-Ui',
+        'program': [
+            { 'code': 'React.Js', },
+            { 'code': 'Styled-component', },
+            { 'code': 'Material-Ui', },
+        ],
+    },
+    {
+        'title': 'Business: Grow',
+        'image': BusinessGrow,
+        'link': 'https://business-grow-mozzie.netlify.app/',
+        'description': 'Landing Page designed using Styled-Component and Material-Ui',
+        'program': [
+            { 'code': 'React.Js', },
+            { 'code': 'Styled-component', },
+            { 'code': 'Material-Ui', },
+        ],
+    },
+    {
+        'title': 'Business: JapTour',
+        'image': BusinessJatour,
+        'link': 'https://location-japan-mozzie.netlify.app/',
+        'description': 'Business Landing PageUI designed using Styled-Component and Material-Ui',
+        'program': [
+            { 'code': 'React.Js', },
+            { 'code': 'Styled-component', },
+            { 'code': 'Material-Ui', },
+        ],
+    },
     {
         'title': 'Product: Lotion',
         'image': ProductLotion,
