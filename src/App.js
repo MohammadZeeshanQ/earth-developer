@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 
 // Css
 import './App.css';
+import Index from "./routes/LandingPage/Index.js";
 
 // Component
 import NavBar from './components/NavBar'
@@ -13,12 +14,12 @@ import LoadingPage from './components/LoadingPage'
 import Footer from './components/Footer'
 
 // Routes
-const Index = lazy(() => import('./routes/LandingPage/Index.js'));
+// const Index = lazy(() => import('./routes/LandingPage/Index.js'));
 const WebAppPage = lazy(() => import('./routes/Project/WebAppProject.js'));
 const UiPage = lazy(() => import('./routes/Project/UiProject'));
 const AboutPage = lazy(() => import('./routes/About/About'));
 const ContactPage = lazy(() => import('./routes/Contact/Contact'));
-// import Index from "./routes/LandingPage/Index.js";
+
 // import WebAppPage from './routes/Project/WebAppProject.js'
 // import UiPage from './routes/Project/UiProject'
 // import AboutPage from './routes/About/About'
