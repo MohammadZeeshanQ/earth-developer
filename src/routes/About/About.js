@@ -13,27 +13,6 @@ const useStyles = makeStyles({
         position: 'relative',
     },
 
-    circleBig: {
-        position: 'absolute',
-        top: '10%',
-        right: '-5%',
-        zIndex: '-3',
-        height: '400px',
-        width: '400px',
-        backgroundColor: '#7619FF',
-        opacity: '.2',
-        borderRadius: '50%',
-        filter: 'blur(20px)',
-
-        '@media (max-width: 600px)': {
-            display: 'none',
-        },
-
-        '@media(min-width: 601px) and (max-width: 1024px)': {
-            display: 'none',
-        },
-    },
-
     gridItemText: {
 
     },
@@ -209,8 +188,6 @@ export default function About() {
 
     return (
         <div className={classes.root}>
-
-            <div className={classes.circleBig}></div>
 
             <div className={classes.wrapper}>
                 <Grid

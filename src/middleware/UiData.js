@@ -8,9 +8,9 @@ import IllustrationWeb from '../assets/images/projects/3dWeb.png';
 import MoveIn from '../assets/images/projects/moveIn.png';
 import NightMode from '../assets/images/projects/nightMode.png';
 import ProductLotion from '../assets/images/projects/ProductLotion.png';
-import BusinessGrow from '../assets/images/projects/BusinessGrow.png';
-import BusinessDrawings from '../assets/images/projects/BusinessDrawings.png';
-import BusinessJatour from '../assets/images/projects/BusinessJatour.png';
+import BusinessGrow from '../assets/images/projects/businessGrow.png';
+import BusinessDrawings from '../assets/images/projects/BusinessDrawing.png';
+import BusinessJatour from '../assets/images/projects/businessJaptour.png';
 
 export const UiProjectData = [
     {

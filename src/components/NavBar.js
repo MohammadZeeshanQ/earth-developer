@@ -63,6 +63,7 @@ const useStyles = makeStyles({
 
     tabBtn: {
         fontFamily: 'Nunito-Semi',
+        textTransform: 'none',
         margin: "0 .1em",
         border: 'none',
         color: '#1c1c1c',
@@ -164,8 +165,8 @@ export default function NavBar() {
 
                             {/* Desktop Tab */}
                             <div className={classes.tabHideDesktop}>
-                                <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/web-app'>WEB APP</Button>
-                                <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/ui-ux'>UI/ UX</Button>
+                                <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/web-app'>Web App</Button>
+                                <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/ui-ux'>Ui/ Ux</Button>
                                 <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/about'>About</Button>
                                 <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/contact'>Contact</Button>
                             </div>
@@ -192,11 +193,11 @@ export default function NavBar() {
                             </ListItem>
 
                             <ListItem>
-                                <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/web-app' onClick={() => setDrawer(!drawer)}>WEB APP</Button>
+                                <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/web-app' onClick={() => setDrawer(!drawer)}>Web App</Button>
                             </ListItem>
                             <Divider className={classes.divider} />
                             <ListItem>
-                                <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/ui-ux' onClick={() => setDrawer(!drawer)}>UI/ UX</Button>
+                                <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/ui-ux' onClick={() => setDrawer(!drawer)}>Ui/ Ux</Button>
                             </ListItem>
                             <Divider className={classes.divider} />
                             <ListItem>

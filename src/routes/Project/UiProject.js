@@ -11,7 +11,7 @@ const useStyles = makeStyles({
     },
 
     wrapper: {
-        width: '80%',
+        width: '85%',
         margin: 'auto',
 
         '@media(max-width: 600px)': {
@@ -28,7 +28,7 @@ const useStyles = makeStyles({
     },
 
     header: {
-        fontFamily: 'Nunito-Bold',
+        fontFamily: 'Oxy-Bold',
         fontSize: '4rem',
         letterSpacing: '2px',
 
@@ -61,7 +61,7 @@ const useStyles = makeStyles({
 
         '&:hover': {
             transform: 'scale(1.1)',
-            transition: '.4s ease all',
+            transition: 'all .3s linear',
         },
 
         '@media(max-width: 600px)': {
@@ -69,7 +69,7 @@ const useStyles = makeStyles({
 
             '&:hover': {
                 transform: 'scale(1.05)',
-                transition: '.4s ease all',
+                transition: 'all .3s linear',
             },
         },
     },
@@ -99,7 +99,8 @@ const useStyles = makeStyles({
     },
 
     title: {
-        fontFamily: 'Oxy-Bold',
+        color: '#7619FF',
+        fontFamily: 'Nunito-Bold',
         letterSpacing: '1px',
 
         '@media(max-width: 600px)': {
@@ -114,9 +115,9 @@ const useStyles = makeStyles({
     },
 
     description: {
-        fontFamily: 'Oxy-Reg',
+        fontFamily: 'Nunito-Reg',
         color: '#343434',
-        margin: '1rem 0 1.5rem 0',
+        margin: '1rem 0 2rem 0',
         letterSpacing: '0.6px',
 
         '@media(max-width: 600px)': {
@@ -133,15 +134,18 @@ const useStyles = makeStyles({
     },
 
     chipTitle: {
-        backgroundColor: '#7619FF',
-        color: '#fcfcfc',
+        border: '1px solid #7619FF',
+        color: '#7619FF',
         fontFamily: 'Oxy-Reg',
         letterSpacing: '0.6px',
-        margin: '.3rem .4rem 0 0',
+        margin: '.3rem .2rem 0 0',
+        fontSize: '.6rem',
 
         '&:hover': {
-            transform: 'scale(1.1)',
-            transition: '.3s ease all',
+            transform: 'scale(1.05)',
+            background: '#AB72FF',
+            color: '#fcfcfc',
+            transition: 'all .3s linear',
         },
 
         '@media(max-width: 600px)': {
@@ -172,6 +176,7 @@ const useStyles = makeStyles({
     dialogButton: {
         backgroundColor: '#7619FF',
         color: '#fcfcfc',
+        textTransform: 'none',
         fontFamily: 'Oxy-Reg',
         letterSpacing: '0.6px',
         margin: '1rem 0',
@@ -262,7 +267,7 @@ export default function UiProject() {
 
                                         {
                                             program.map((programs, i) =>
-                                                <Chip key={i} className={classes.chipTitle} label={programs.code} />
+                                                <Chip key={i} className={classes.chipTitle} label={programs.code} variant='ourlined' />
                                             )
                                         }
 
