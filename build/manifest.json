@@ -1,25 +1,25 @@
 {
-  "short_name": "Mohammad Zeshan",
-  "name": "Hi, I'm Zeshan. Freelance Front-End Developer, Web Designer and UI/ UX Designer.",
-  "icons": [
-    {
-      "src": "/Favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "/Favicon.ico",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "/Favicon.ico",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": "https://mohammadzeeshanq.github.io/earth-developer/#/",
-  "display": "standalone",
-  "theme_color": "#fcfcfc",
-  "background_color": "#ffffff"
+	"short_name": "Mohammad Zeshan",
+	"name": "Hi, I'm Zeshan. Freelance Front-End Developer, Web Designer and UI/ UX Designer.",
+	"icons": [
+		{
+			"src": "favicon.ico",
+			"sizes": "64x64 32x32 24x24 16x16",
+			"type": "image/x-icon"
+		},
+		{
+			"src": "favicon.ico",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "favicon.ico",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"start_url": "https://mohammadzeeshanq.github.io/earth-developer/#/",
+	"display": "standalone",
+	"theme_color": "#fcfcfc",
+	"background_color": "#ffffff"
 }
