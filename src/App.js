@@ -1,9 +1,8 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense } from 'react';
 import { Route, Switch } from "react-router-dom";
 
 // Css
 import './App.css';
-
 
 // Component
 import NavBar from './components/NavBar'
@@ -20,9 +19,7 @@ import UiPage from './routes/Project/UiProject'
 import AboutPage from './routes/About/About'
 import ContactPage from './routes/Contact/Contact'
 
-
 function App() {
-
   return (
     <div className="App">
       <NavBar />
@@ -38,7 +35,6 @@ function App() {
           <Route path="*" component={ErrorPage} />
         </Switch>
       </Suspense>
-
       <Footer />
     </div>
   );
