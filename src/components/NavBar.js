@@ -1,219 +1,248 @@
-import React, { useEffect, useState, createRef } from 'react'
-import { makeStyles } from '@material-ui/core/styles';
-import { Typography, Button, IconButton, AppBar, Toolbar, SwipeableDrawer, Divider, List, ListItem } from '@material-ui/core';
+import React, { useEffect, useState, createRef } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import {
+	Typography,
+	Button,
+	IconButton,
+	AppBar,
+	Toolbar,
+	SwipeableDrawer,
+	Divider,
+	List,
+	ListItem,
+} from "@material-ui/core";
 
 // Icons
-import MenuIcon from '@material-ui/icons/Menu';
-import CloseIcon from '@material-ui/icons/Close';
+import MenuIcon from "@material-ui/icons/Menu";
+import CloseIcon from "@material-ui/icons/Close";
 
 // Logo
-import Logo from '../assets/images/icons/Logo.png'
-
+import Logo from "../assets/images/icons/Logo.png";
 
 const useStyles = makeStyles({
-    root: {
-    },
+	root: {},
 
-    wrapper: {
-        width: '85%',
-        margin: 'auto',
+	wrapper: {
+		width: "85%",
+		margin: "auto",
 
-        '@media(max-width: 600px)': {
-            width: '90%',
-        },
-        '@media(min-width: 601px) and (max-width: 1024px)': {
-            width: '90%',
-        },
-    },
+		"@media(max-width: 600px)": {
+			width: "90%",
+		},
+		"@media(min-width: 601px) and (max-width: 1024px)": {
+			width: "90%",
+		},
+	},
 
-    container: {
-        height: 64,
-        backgroundColor: '#fcfcfc',
+	container: {
+		height: 64,
+		backgroundColor: "#fcfcfc",
 
-        '@media (max-width: 600px)': {
-            height: 58,
-        },
-    },
+		"@media (max-width: 600px)": {
+			height: 58,
+		},
+	},
 
-    appBarDiv: {
-        width: '100%',
-        display: 'flex',
-        alignItems: "center",
-    },
+	appBarDiv: {
+		width: "100%",
+		display: "flex",
+		alignItems: "center",
+	},
 
-    logoDiv: {
-        flexGrow: 1,
-    },
+	logoDiv: {
+		flexGrow: 1,
+	},
 
-    logoIcon: {
-        width: '2.5rem',
-    },
+	logoIcon: {
+		width: "2.5rem",
+	},
 
-    logoText: {
-        position: 'relative',
-        left: '-.4rem',
-        fontFamily: 'Nunito-Bold',
-        color: '#151515',
-        letterSpacing: '2px',
-    },
+	logoText: {
+		position: "relative",
+		left: "-.4rem",
+		fontFamily: "Nunito-Bold",
+		color: "#151515",
+		letterSpacing: "2px",
+	},
 
-    tabDiv: {
+	tabDiv: {},
 
-    },
+	tabBtn: {
+		fontFamily: "Nunito-Semi",
+		textTransform: "none",
+		margin: "0 .1em",
+		border: "none",
+		color: "#1c1c1c",
+		letterSpacing: "1px",
 
-    tabBtn: {
-        fontFamily: 'Nunito-Semi',
-        textTransform: 'none',
-        margin: "0 .1em",
-        border: 'none',
-        color: '#1c1c1c',
-        letterSpacing: '1px',
+		"&:hover": {
+			backgroundColor: "#7619FF",
+			transition: ".3s ease all",
+			color: "#fcfcfc",
+		},
+	},
 
-        '&:hover': {
-            backgroundColor: '#7619FF',
-            transition: '.3s ease all',
-            color: '#fcfcfc',
-        },
-    },
+	tabHideMobile: {
+		"@media (max-width: 600px)": {
+			display: "block",
+		},
 
-    tabHideMobile: {
-        '@media (max-width: 600px)': {
-            display: 'block',
-        },
+		"@media (min-width: 1025px)": {
+			display: "none",
+		},
+	},
 
-        '@media (min-width: 1025px)': {
-            display: 'none',
-        }
-    },
+	tabHideDesktop: {
+		"@media (max-width: 4000px)": {
+			display: "none",
+		},
 
-    tabHideDesktop: {
-        '@media (max-width: 4000px)': {
-            display: 'none',
-        },
+		"@media (min-width: 1025px)": {
+			display: "block",
+		},
+	},
 
-        '@media (min-width: 1025px)': {
-            display: 'block',
-        }
-    },
+	paper: {
+		backgroundColor: "#7619FF",
+		borderRadius: "4rem 0 0 4rem",
+	},
 
-    paper: {
-        backgroundColor: '#7619FF',
-        borderRadius: '4rem 0 0 4rem',
-    },
+	swipeDrawer: {
+		width: 250,
+		borderRadius: "3em 0em 0em 3em",
+	},
 
-    swipeDrawer: {
-        width: 250,
-        borderRadius: '3em 0em 0em 3em',
-    },
+	tabMobileBtn: {
+		fontFamily: "Nunito-Semi",
+		color: "#fcfcfc",
+		margin: "0 .1em",
+		border: "none",
+		letterSpacing: "1px",
+		width: "100%",
+		justifyContent: "flex-start",
+	},
 
-    tabMobileBtn: {
-        fontFamily: 'Nunito-Semi',
-        color: '#fcfcfc',
-        margin: "0 .1em",
-        border: 'none',
-        letterSpacing: '1px',
-        width: '100%',
-        justifyContent: 'flex-start',
-    },
-
-    divider: {
-        backgroundColor: '#fcfcfc',
-    },
+	divider: {
+		backgroundColor: "#fcfcfc",
+	},
 });
 
-
-
 export default function NavBar() {
+	const classes = useStyles();
+	const drawerRef = createRef();
+	const [drawer, setDrawer] = useState(false);
 
-    const classes = useStyles();
-    const drawerRef = createRef();
-    const [drawer, setDrawer] = useState(false);
+	const toggle = () => {
+		setDrawer(!drawer);
+	};
 
-    const toggle = () => {
-        setDrawer(!drawer);
-    }
+	useEffect(() => {
+		console.log(`${window.location.href} : Public URL`);
+		console.log("Version 1.12");
+	}, []);
 
-    useEffect(() => {
-        console.log(`${window.location.href} : Public URL`);
-        console.log('Version 1.12');
-    }, []);
+	return (
+		<div className={classes.root}>
+			<AppBar position='fixed' elevation={0} className={classes.container}>
+				<Toolbar className={classes.wrapper}>
+					<div className={classes.appBarDiv}>
+						<div className={classes.logoDiv}>
+							<IconButton href='/earth-developer/#/'>
+								<img src={Logo} className={classes.logoIcon} alt='Mohammad Zeshan' />
+								<Typography className={classes.logoText} variant='h5'>
+									eshan<span style={{ color: "#7619FF" }}>.</span>
+								</Typography>
+							</IconButton>
+						</div>
 
-    return (
-        <div className={classes.root}>
+						<div className={classes.tabDiv}>
+							{/* Mobile Tab */}
+							<div className={classes.tabHideMobile}>
+								<IconButton onClick={toggle} size='small'>
+									<MenuIcon style={{ fontSize: "2em", color: "#7619FF" }} />
+								</IconButton>
+							</div>
 
-            <AppBar position='fixed' elevation={0} className={classes.container}>
+							{/* Desktop Tab */}
+							<div className={classes.tabHideDesktop}>
+								<Button
+									variant='outlined'
+									className={classes.tabBtn}
+									href='/earth-developer/#/portfolio'
+								>
+									Portfolio
+								</Button>
+								<Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/about'>
+									About
+								</Button>
+								<Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/contact'>
+									Contact
+								</Button>
+							</div>
+						</div>
+					</div>
+				</Toolbar>
 
-                <Toolbar className={classes.wrapper}>
-                    <div className={classes.appBarDiv}>
-
-                        <div className={classes.logoDiv}>
-                            <IconButton href='/earth-developer/#/'>
-                                <img src={Logo} className={classes.logoIcon} alt='Mohammad Zeshan' />
-                                <Typography className={classes.logoText} variant='h5'>
-                                    eshan<span style={{ color: '#7619FF' }}>.</span>
-                                </Typography>
-                            </IconButton>
-                        </div>
-
-                        <div className={classes.tabDiv}>
-                            {/* Mobile Tab */}
-                            <div className={classes.tabHideMobile}>
-                                <IconButton onClick={toggle} size='small'>
-                                    <MenuIcon style={{ fontSize: '2em', color: '#7619FF' }} />
-                                </IconButton>
-                            </div>
-
-                            {/* Desktop Tab */}
-                            <div className={classes.tabHideDesktop}>
-                                <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/web-app'>Web App</Button>
-                                <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/ui-ux'>Ui/ Ux</Button>
-                                <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/about'>About</Button>
-                                <Button variant='outlined' className={classes.tabBtn} href='/earth-developer/#/contact'>Contact</Button>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </Toolbar>
-
-                <SwipeableDrawer
-                    ref={drawerRef}
-                    classes={{ paper: classes.paper }}
-                    anchor='right'
-                    open={drawer}
-                    onOpen={toggle}
-                    onClose={toggle}
-                >
-                    <div className={classes.swipeDrawer}>
-                        <List>
-                            <ListItem style={{ justifyContent: 'flex-end', }}>
-                                <IconButton style={{ backgroundColor: '#7619FF', color: '#fcfcfc', border: '1px #fcfcfc solid' }} size='small' onClick={toggle}>
-                                    <CloseIcon />
-                                </IconButton>
-                            </ListItem>
-
-                            <ListItem>
-                                <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/web-app' onClick={() => setDrawer(!drawer)}>Web App</Button>
-                            </ListItem>
-                            <Divider className={classes.divider} />
-                            <ListItem>
-                                <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/ui-ux' onClick={() => setDrawer(!drawer)}>Ui/ Ux</Button>
-                            </ListItem>
-                            <Divider className={classes.divider} />
-                            <ListItem>
-                                <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/about' onClick={() => setDrawer(!drawer)}>About</Button>
-                            </ListItem>
-                            <Divider className={classes.divider} />
-                            <ListItem>
-                                <Button variant='outlined' className={classes.tabMobileBtn} href='/earth-developer/#/contact' onClick={() => setDrawer(!drawer)}>Contact</Button>
-                            </ListItem>
-                            <Divider className={classes.divider} />
-                        </List>
-                    </div>
-                </SwipeableDrawer>
-
-            </AppBar>
-
-        </div>
-    )
+				<SwipeableDrawer
+					ref={drawerRef}
+					classes={{ paper: classes.paper }}
+					anchor='right'
+					open={drawer}
+					onOpen={toggle}
+					onClose={toggle}
+				>
+					<div className={classes.swipeDrawer}>
+						<List>
+							<ListItem style={{ justifyContent: "flex-end" }}>
+								<IconButton
+									style={{
+										backgroundColor: "#7619FF",
+										color: "#fcfcfc",
+										border: "1px #fcfcfc solid",
+									}}
+									size='small'
+									onClick={toggle}
+								>
+									<CloseIcon />
+								</IconButton>
+							</ListItem>
+							<ListItem>
+								<Button
+									variant='outlined'
+									className={classes.tabMobileBtn}
+									href='/earth-developer/#/portfolio'
+									onClick={() => setDrawer(!drawer)}
+								>
+									Portfolio
+								</Button>
+							</ListItem>
+							<Divider className={classes.divider} />
+							<ListItem>
+								<Button
+									variant='outlined'
+									className={classes.tabMobileBtn}
+									href='/earth-developer/#/about'
+									onClick={() => setDrawer(!drawer)}
+								>
+									About
+								</Button>
+							</ListItem>
+							<Divider className={classes.divider} />
+							<ListItem>
+								<Button
+									variant='outlined'
+									className={classes.tabMobileBtn}
+									href='/earth-developer/#/contact'
+									onClick={() => setDrawer(!drawer)}
+								>
+									Contact
+								</Button>
+							</ListItem>
+							<Divider className={classes.divider} />
+						</List>
+					</div>
+				</SwipeableDrawer>
+			</AppBar>
+		</div>
+	);
 }
