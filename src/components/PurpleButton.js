@@ -9,7 +9,8 @@ const useStyles = makeStyles({
 		backgroundColor: "#7619FF",
 		color: "#fcfcfc",
 		padding: ".6rem 1rem",
-		fontFamily: "Nunito-Reg",
+		fontFamily: "Oxy-Bold",
+		textTransform: "none",
 		letterSpacing: "1.5px",
 
 		"&:hover": {

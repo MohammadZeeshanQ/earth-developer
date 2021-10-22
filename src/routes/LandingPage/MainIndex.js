@@ -26,7 +26,7 @@ const useStyles = makeStyles({
 	},
 	wrapper: {
 		position: "relative",
-		width: "80%",
+		width: "83%",
 		margin: "auto",
 		padding: "6rem 0",
 
@@ -40,7 +40,7 @@ const useStyles = makeStyles({
 
 	headingContainer: {
 		display: "grid",
-		placeItems: "center",
+		alignItems: "center",
 
 		"@media(max-width: 600px)": {
 			textAlign: "center",
@@ -65,7 +65,7 @@ const useStyles = makeStyles({
 	},
 
 	description: {
-		margin: "3rem 0",
+		margin: "2rem 0 4rem 0",
 		color: "#656565",
 		letterSpacing: "2px",
 		fontFamily: "Nunito-Reg",
@@ -86,8 +86,9 @@ const useStyles = makeStyles({
 		backgroundColor: "#7619FF",
 		color: "#fcfcfc",
 		padding: ".7rem 1.5rem",
-		fontFamily: "Nunito-Reg",
+		fontFamily: "Nunito-Bold",
 		letterSpacing: "1.5px",
+		textTransform: "none",
 
 		"&:hover": {
 			backgroundColor: "#AA72FE",

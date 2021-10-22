@@ -23,11 +23,11 @@ const useStyles = makeStyles({
 	},
 
 	wrapper: {
-		width: "80%",
+		width: "83%",
 		margin: "auto",
 
 		"@media(max-width: 600px)": {
-			width: "95%",
+			width: "90%",
 		},
 
 		"@media(min-width: 601px) and (max-width: 1024px)": {
@@ -79,6 +79,7 @@ const useStyles = makeStyles({
 		"@media(max-width: 600px)": {
 			fontSize: "1.8em",
 			marginTop: "2rem",
+			lineHeight: "160%",
 		},
 
 		"@media(min-width: 600px) and (max-width: 900px)": {
@@ -87,7 +88,7 @@ const useStyles = makeStyles({
 	},
 
 	textDescription: {
-		fontFamily: "Oxy-Reg",
+		fontFamily: "Nunito-Reg",
 		letterSpacing: "1px",
 		lineHeight: "180%",
 		color: "#535353",
@@ -95,7 +96,7 @@ const useStyles = makeStyles({
 
 		"@media(min-width: 600px) and (max-width: 900px)": {
 			fontSize: ".7rem",
-			letterSpacing: "2px",
+			letterSpacing: "1px",
 			lineHeight: "160%",
 		},
 
@@ -112,19 +113,19 @@ export default function Stuff() {
 	const gridData = [
 		{
 			title: "Front-End Developer",
-			description: "Rich appearance and Interactive website for better experience.",
+			description: "Rich appearance and Interactive website for better experience. I ensure the performance scores remains high while the render duration is low.",
 			image: FrontDeveloper,
 			layoutDirection: "row",
 		},
 		{
-			title: "Web Designer",
-			description: "Elegant yet eye catching layout designs. Modern UI with high level of Information",
+			title: "Web Designing",
+			description: "Elegant yet eye catching layout designs. Modern User Interface to match the trends and maintaining the User Experience as well.",
 			image: WebDesigner,
 			layoutDirection: "row-reverse",
 		},
 		{
 			title: "Graphic Designer",
-			description: " Visual Graphics and Vector helps to attract people's attention.",
+			description: "Icons, Logo, Images Manipulation and etc Visual Elements designed by me, to  add meaning and support the development of the User Interface.",
 			image: GraphicDesigner,
 			layoutDirection: "row",
 		},
