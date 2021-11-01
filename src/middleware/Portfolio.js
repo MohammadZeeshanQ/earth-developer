@@ -20,9 +20,17 @@ import BusinessDrawings from "../assets/images/projects/BusinessDrawing.png";
 import BusinessJatour from "../assets/images/projects/businessJaptour.png";
 import BusinessHouse from '../assets/images/projects/businessHouse.png';
 import BusinessCoffee from '../assets/images/projects/businessCoffee.png';
+import BusinessDiet from '../assets/images/projects/businessDiet.png';
 
 // Landing Page Data object
 export const UiProject = [
+	{
+		title: "Diet Plus Workout ",
+		image: BusinessDiet,
+		link: "business-diet-mozzie.netlify.app",
+		description: "Colourful and Modern Landing Page with Dynamic transition effect",
+		program: [{ code: "React.Js" }, { code: "Styled-component" }, { code: "Material-Ui" }],
+	},
 	{
 		title: "Business: Drawings",
 		image: BusinessDrawings,
