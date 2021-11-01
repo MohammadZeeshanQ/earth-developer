@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/earth-developer/static/css/main.381f8477.chunk.css",
-    "main.js": "/earth-developer/static/js/main.3fdf004b.chunk.js",
-    "main.js.map": "/earth-developer/static/js/main.3fdf004b.chunk.js.map",
+    "main.js": "/earth-developer/static/js/main.5b8bfab0.chunk.js",
+    "main.js.map": "/earth-developer/static/js/main.5b8bfab0.chunk.js.map",
     "runtime-main.js": "/earth-developer/static/js/runtime-main.075aa1c1.js",
     "runtime-main.js.map": "/earth-developer/static/js/runtime-main.075aa1c1.js.map",
     "static/js/2.28b1d623.chunk.js": "/earth-developer/static/js/2.28b1d623.chunk.js",
@@ -20,6 +20,7 @@
     "static/media/ProductLotion.f4ad5b52.png": "/earth-developer/static/media/ProductLotion.f4ad5b52.png",
     "static/media/bagWeb.a772cd7f.png": "/earth-developer/static/media/bagWeb.a772cd7f.png",
     "static/media/businessCoffee.67d05ded.png": "/earth-developer/static/media/businessCoffee.67d05ded.png",
+    "static/media/businessDiet.e94ae4d1.png": "/earth-developer/static/media/businessDiet.e94ae4d1.png",
     "static/media/businessGrow.05f91857.png": "/earth-developer/static/media/businessGrow.05f91857.png",
     "static/media/businessHouse.0dd99b00.png": "/earth-developer/static/media/businessHouse.0dd99b00.png",
     "static/media/businessJaptour.515deffe.png": "/earth-developer/static/media/businessJaptour.515deffe.png",
@@ -49,6 +50,6 @@
     "static/js/runtime-main.075aa1c1.js",
     "static/js/2.28b1d623.chunk.js",
     "static/css/main.381f8477.chunk.css",
-    "static/js/main.3fdf004b.chunk.js"
+    "static/js/main.5b8bfab0.chunk.js"
   ]
 }
