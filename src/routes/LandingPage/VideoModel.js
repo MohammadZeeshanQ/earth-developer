@@ -22,7 +22,7 @@ const useStyles = makeStyles({
 	},
 
 	wrapper: {
-		width: "80%",
+		width: "83%",
 		margin: "auto",
 
 		"@media(max-width: 600px)": {
@@ -68,13 +68,14 @@ const useStyles = makeStyles({
 
 	textHeader: {
 		color: "#7619FF",
-		fontFamily: "Nunito-Bold",
+		fontFamily: "Oxy-Bold",
 		letterSpacing: "3px",
 		fontSize: "3rem",
 
 		"@media(max-width: 600px)": {
 			fontSize: "1.8em",
 			marginTop: "2rem",
+			lineHeight: "160%",
 		},
 
 		"@media(min-width: 600px) and (max-width: 900px)": {
@@ -83,7 +84,7 @@ const useStyles = makeStyles({
 	},
 
 	textMessage: {
-		fontFamily: "Oxy-Reg",
+		fontFamily: "Nunito-Reg",
 		letterSpacing: "1px",
 		lineHeight: "180%",
 		color: "#535353",
@@ -91,7 +92,7 @@ const useStyles = makeStyles({
 
 		"@media(min-width: 600px) and (max-width: 900px)": {
 			fontSize: ".7rem",
-			letterSpacing: "2px",
+			letterSpacing: "1px",
 			lineHeight: "160%",
 		},
 
@@ -105,7 +106,8 @@ const useStyles = makeStyles({
 		backgroundColor: "#7619FF",
 		color: "#fcfcfc",
 		padding: ".6rem 1rem",
-		fontFamily: "Nunito-Reg",
+		fontFamily: "Nunito-Bold",
+		textTransform: "none",
 		letterSpacing: "1.5px",
 
 		"&:hover": {
@@ -146,8 +148,8 @@ export default function VideoModel() {
 								Responsive Websites
 							</Typography>
 							<Typography variant='body1' className={classes.textMessage}>
-								Designed to be dynamic and to support large number to screen aspect ratio. Looks the
-								same in all devices.
+								I design User Interface to be dynamic and to be adaptive based on various screen sizes and aspect ratio.
+								Your Website will look the great in any device you your people will use.
 							</Typography>
 
 							<PurpleButton href='/earth-developer/#/portfolio'>Explore More</PurpleButton>

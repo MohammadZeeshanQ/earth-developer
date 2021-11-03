@@ -19,9 +19,19 @@ import ProductLotion from "../assets/images/projects/ProductLotion.png";
 import BusinessGrow from "../assets/images/projects/businessGrow.png";
 import BusinessDrawings from "../assets/images/projects/BusinessDrawing.png";
 import BusinessJatour from "../assets/images/projects/businessJaptour.png";
+import BusinessHouse from '../assets/images/projects/businessHouse.png';
+import BusinessCoffee from '../assets/images/projects/businessCoffee.png';
+import BusinessDiet from '../assets/images/projects/businessDiet.png';
 
 // Landing Page Data object
 export const UiProject = [
+	{
+		title: "Diet Plus Workout ",
+		image: BusinessDiet,
+		link: "business-diet-mozzie.netlify.app",
+		description: "Colourful and Modern Landing Page with Dynamic transition effect",
+		program: [{ code: "React.Js" }, { code: "Styled-component" }, { code: "Material-Ui" }],
+	},
 	{
 		title: "Business: Drawings",
 		image: BusinessDrawings,
@@ -33,6 +43,20 @@ export const UiProject = [
 		title: "Business: Grow",
 		image: BusinessGrow,
 		link: "https://business-grow-mozzie.netlify.app/",
+		description: "Landing Page designed using Styled-Component and Material-Ui",
+		program: [{ code: "React.Js" }, { code: "Styled-component" }, { code: "Material-Ui" }],
+	},
+	{
+		title: "Business: Housing",
+		image: BusinessHouse,
+		link: "https://business-house-mozzie.netlify.app/",
+		description: "Manochrome Landing Page built using Styled-Component and Material-Ui",
+		program: [{ code: "React.Js" }, { code: "Styled-component" }, { code: "Material-Ui" }],
+	},
+	{
+		title: "Business: Coffee",
+		image: BusinessCoffee,
+		link: "https://business-coffee-mozzie.netlify.app/",
 		description: "Landing Page designed using Styled-Component and Material-Ui",
 		program: [{ code: "React.Js" }, { code: "Styled-component" }, { code: "Material-Ui" }],
 	},
