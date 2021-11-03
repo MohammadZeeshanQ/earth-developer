@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/earth-developer/static/css/main.381f8477.chunk.css",
-    "main.js": "/earth-developer/static/js/main.5b8bfab0.chunk.js",
-    "main.js.map": "/earth-developer/static/js/main.5b8bfab0.chunk.js.map",
+    "main.js": "/earth-developer/static/js/main.9b4f8191.chunk.js",
+    "main.js.map": "/earth-developer/static/js/main.9b4f8191.chunk.js.map",
     "runtime-main.js": "/earth-developer/static/js/runtime-main.075aa1c1.js",
     "runtime-main.js.map": "/earth-developer/static/js/runtime-main.075aa1c1.js.map",
-    "static/js/2.28b1d623.chunk.js": "/earth-developer/static/js/2.28b1d623.chunk.js",
-    "static/js/2.28b1d623.chunk.js.map": "/earth-developer/static/js/2.28b1d623.chunk.js.map",
+    "static/js/2.3e3ccaa8.chunk.js": "/earth-developer/static/js/2.3e3ccaa8.chunk.js",
+    "static/js/2.3e3ccaa8.chunk.js.map": "/earth-developer/static/js/2.3e3ccaa8.chunk.js.map",
     "static/js/3.e382bc29.chunk.js": "/earth-developer/static/js/3.e382bc29.chunk.js",
     "static/js/3.e382bc29.chunk.js.map": "/earth-developer/static/js/3.e382bc29.chunk.js.map",
     "index.html": "/earth-developer/index.html",
     "static/css/main.381f8477.chunk.css.map": "/earth-developer/static/css/main.381f8477.chunk.css.map",
-    "static/js/2.28b1d623.chunk.js.LICENSE.txt": "/earth-developer/static/js/2.28b1d623.chunk.js.LICENSE.txt",
+    "static/js/2.3e3ccaa8.chunk.js.LICENSE.txt": "/earth-developer/static/js/2.3e3ccaa8.chunk.js.LICENSE.txt",
     "static/media/3dWeb.087dd1ea.png": "/earth-developer/static/media/3dWeb.087dd1ea.png",
     "static/media/BusinessDrawing.c9476a33.png": "/earth-developer/static/media/BusinessDrawing.c9476a33.png",
     "static/media/FashionWeb.034a9573.png": "/earth-developer/static/media/FashionWeb.034a9573.png",
@@ -30,6 +30,7 @@
     "static/media/frontDeveloper.9657fb7c.png": "/earth-developer/static/media/frontDeveloper.9657fb7c.png",
     "static/media/gimp.8a2c0b39.png": "/earth-developer/static/media/gimp.8a2c0b39.png",
     "static/media/graphicDesigner.8303db11.png": "/earth-developer/static/media/graphicDesigner.8303db11.png",
+    "static/media/jokesApp.54ba77f6.png": "/earth-developer/static/media/jokesApp.54ba77f6.png",
     "static/media/less.d0b1c59b.png": "/earth-developer/static/media/less.d0b1c59b.png",
     "static/media/loginWeb.beba7e49.png": "/earth-developer/static/media/loginWeb.beba7e49.png",
     "static/media/mountWeb.40621747.png": "/earth-developer/static/media/mountWeb.40621747.png",
@@ -48,8 +49,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.075aa1c1.js",
-    "static/js/2.28b1d623.chunk.js",
+    "static/js/2.3e3ccaa8.chunk.js",
     "static/css/main.381f8477.chunk.css",
-    "static/js/main.5b8bfab0.chunk.js"
+    "static/js/main.9b4f8191.chunk.js"
   ]
 }
