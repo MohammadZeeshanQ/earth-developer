@@ -3,6 +3,7 @@ import covidWeb from "../assets/images/projects/covidWeb.png";
 import todoList from "../assets/images/projects/todoList.png";
 import weatherWeb from "../assets/images/projects/weatherWeb.png";
 import PokemonApp from "../assets/images/projects/pokemonApp.png";
+import JokesApp from "../assets/images/projects/jokesApp.png";
 
 // Landing Page Image Path
 import SoundImage from "../assets/images/projects/soundWeb.png";
@@ -116,6 +117,13 @@ export const UiProject = [
 
 // Web App Data Object
 export const WebAppProject = [
+	{
+		title: "Random Jokes",
+		image: JokesApp,
+		link: "https://jokes-app-mozzie.netlify.app",
+		description: "Random mixed genre jokes generated through an API call",
+		program: [{ code: "React.Js" }, { code: "Styled-component" }],
+	},
 	{
 		title: "Covid Vision",
 		image: covidWeb,
