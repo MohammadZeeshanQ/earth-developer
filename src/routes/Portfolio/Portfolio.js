@@ -48,14 +48,18 @@ const useStyles = makeStyles({
 
 	gridImage: {
 		width: "100%",
-		height: "100%",
+		height: "12rem",
 		objectFit: "cover",
 		borderRadius: "1rem 1rem 0 0",
 		borderBottom: "1px solid #C6C6C6",
+
+		"@media(min-width: 601px) and (max-width: 1024px)": {
+			height: "10rem",
+		},
 	},
 
 	gridTextContainer: {
-		padding: "2rem 1rem 1rem 1rem",
+		padding: "1rem",
 
 		"@media(max-width: 600px)": {
 			padding: ".8rem 1rem 1rem 1rem",
@@ -67,7 +71,7 @@ const useStyles = makeStyles({
 	},
 
 	title: {
-		color: "#7619FF",
+		color: "#6E2ECB",
 		fontFamily: "Nunito-Bold",
 		letterSpacing: "1px",
 
@@ -101,8 +105,8 @@ const useStyles = makeStyles({
 	},
 
 	chipTitle: {
-		border: "1px solid #7619FF",
-		color: "#7619FF",
+		border: "1px solid #6E2ECB",
+		color: "#6E2ECB",
 		fontFamily: "Oxy-Reg",
 		letterSpacing: "0.6px",
 		margin: ".3rem .2rem 0 0",
@@ -256,7 +260,7 @@ export default function Portfolio({ projectOption }) {
 					</DialogContent>
 
 					<DialogActions>
-						<Button className={classes.dialogButton} href={dialogLink} variant='contained'>
+						<Button className={classes.dialogButton} href={dialogLink} target='_blank' rel="noopener noreferrer" variant='contained'>
 							Explore More
 						</Button>
 					</DialogActions>
