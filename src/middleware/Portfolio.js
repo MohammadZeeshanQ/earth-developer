@@ -152,7 +152,7 @@ export const WebAppProject = [
 	{
 		title: "Chuck Norris Jokes",
 		image: ChuckNorrisApp,
-		link: "https://jokes-app-mozzie.netlify.app",
+		link: "https://chuckjokes-app-mozzie.netlify.app/",
 		description: "Chuck Norris Jokes mixed genre jokes generated through an API call",
 		program: [{ code: "Next.js" }, { code: "CSS" }],
 	},
