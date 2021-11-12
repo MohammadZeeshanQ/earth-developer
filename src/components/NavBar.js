@@ -1,4 +1,5 @@
 import React, { useEffect, useState, createRef } from "react";
+import styled from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";
 import {
 	Typography,
@@ -10,6 +11,7 @@ import {
 	Divider,
 	List,
 	ListItem,
+	Switch,
 } from "@material-ui/core";
 
 // Icons
@@ -19,6 +21,7 @@ import CloseIcon from "@material-ui/icons/Close";
 // Logo
 import Logo from "../assets/images/icons/Logo.png";
 
+// Material version: 4 (styles)
 const useStyles = makeStyles({
 	root: {},
 
@@ -65,19 +68,23 @@ const useStyles = makeStyles({
 		letterSpacing: "2px",
 	},
 
-	tabDiv: {},
+	tabDiv: {
+		"@media (min-width: 1025px)": {
+			flexGrow: 1,
+		},
+	},
 
 	tabBtn: {
-		fontFamily: "Nunito-Semi",
+		fontFamily: "Nunito-Bold",
 		textTransform: "none",
 		margin: "0 .1em",
 		border: "none",
 		color: "#1c1c1c",
-		letterSpacing: "1px",
+		letterSpacing: "1.5px",
 
 		"&:hover": {
 			backgroundColor: "#7619FF",
-			transition: ".3s ease all",
+			transition: ".3s ease linear",
 			color: "#fcfcfc",
 		},
 	},
@@ -125,9 +132,18 @@ const useStyles = makeStyles({
 	divider: {
 		backgroundColor: "#fcfcfc",
 	},
+
+	switchWrapper: {
+		display: "flex",
+		alignItems: "center",
+
+		"@media (max-width: 1025px)": {
+			display: "none",
+		},
+	},
 });
 
-export default function NavBar() {
+export default function NavBar({ nightMode, setNightMode }) {
 	const classes = useStyles();
 	const drawerRef = createRef();
 	const [drawer, setDrawer] = useState(false);
@@ -136,9 +152,35 @@ export default function NavBar() {
 		setDrawer(!drawer);
 	};
 
+	const toggleNightMode = () => {
+		setNightMode(!nightMode);
+	};
+
 	useEffect(() => {
-		console.log("Version 1.13");
+		console.log("Version 2.0");
 	}, []);
+
+	// styled Component
+	const NightModeIcon = styled.span`
+		font-size: 1.2rem;
+		color: ${(props) => (nightMode ? "var(--lightPurple)" : "var(--darkPurple)")};
+	`;
+
+	const NightModeIconLarge = styled.span`
+		font-size: 1.4rem;
+		color: ${(props) => (nightMode ? "var(--lightPurple)" : "var(--darkPurple)")};
+	`;
+
+	// Switch Custom Styled
+	// Continue HERE
+	const MaterialUISwitch = styled(Switch)(() => ({
+		"&.Mui-checked": {
+			backgroundColor: `${nightMode}` ? "var(--lightPurple)" : "var(--darkPurple)",
+		},
+		"& .MuiSwitch-track": {
+			backgroundColor: `${nightMode}` ? "var(--lightPurple)" : "var(--darkPurple)",
+		},
+	}));
 
 	return (
 		<div className={classes.root}>
@@ -179,9 +221,17 @@ export default function NavBar() {
 								</Button>
 							</div>
 						</div>
+
+						{/* Nightmode Switch */}
+						<div className={classes.switchWrapper}>
+							<NightModeIconLarge>&#9728;</NightModeIconLarge>
+							<MaterialUISwitch onChange={toggleNightMode} />
+							<NightModeIcon>&#9788;</NightModeIcon>
+						</div>
 					</div>
 				</Toolbar>
 
+				{/* Mobile Drawer */}
 				<SwipeableDrawer
 					ref={drawerRef}
 					classes={{ paper: classes.paper }}

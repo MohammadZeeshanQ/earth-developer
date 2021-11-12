@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 
 // Component
@@ -19,9 +19,11 @@ import ContactPage from "./routes/Contact/Contact";
 import "./App.css";
 
 function App() {
+	const [nightMode, setNightMode] = useState(false);
+
 	return (
 		<div className='App'>
-			<NavBar />
+			<NavBar nightMode={nightMode} setNightMode={setNightMode} />
 			<SideBavBar />
 			<FloatingButton />
 			<Suspense fallback={LoadingPage}>

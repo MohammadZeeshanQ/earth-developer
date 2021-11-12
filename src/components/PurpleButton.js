@@ -6,6 +6,7 @@ import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
 const useStyles = makeStyles({
 	button: {
+		fontSize: "var(--pcTextSize)",
 		backgroundColor: "#7619FF",
 		color: "#fcfcfc",
 		padding: ".6rem 1rem",
@@ -22,11 +23,12 @@ const useStyles = makeStyles({
 
 		"@media(max-width: 600px)": {
 			padding: "1rem",
+			fontSize: "var(--mobileTextSize)",
 			letterSpacing: "3px",
 		},
 
 		"@media(min-width: 601px) and (max-width: 1024px)": {
-			fontSize: ".5rem",
+			fontSize: "var(--tabTextSize)",
 			padding: ".5rem",
 		},
 	},

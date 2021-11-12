@@ -20,9 +20,9 @@ import ProductLotion from "../assets/images/projects/ProductLotion.png";
 import BusinessGrow from "../assets/images/projects/businessGrow.png";
 import BusinessDrawings from "../assets/images/projects/BusinessDrawing.png";
 import BusinessJatour from "../assets/images/projects/businessJaptour.png";
-import BusinessHouse from '../assets/images/projects/businessHouse.png';
-import BusinessCoffee from '../assets/images/projects/businessCoffee.png';
-import BusinessDiet from '../assets/images/projects/businessDiet.png';
+import BusinessHouse from "../assets/images/projects/businessHouse.png";
+import BusinessCoffee from "../assets/images/projects/businessCoffee.png";
+import BusinessDiet from "../assets/images/projects/businessDiet.png";
 
 // Landing Page Data object
 export const UiProject = [
