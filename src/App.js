@@ -2,7 +2,7 @@ import React, { Suspense, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 
 // Component
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavigationBar";
 import FloatingButton from "./components/FloatingButton.js";
 import SideBavBar from "./components/SideNavBar";
 import ErrorPage from "./components/ErrorPage";

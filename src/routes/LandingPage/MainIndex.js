@@ -19,7 +19,6 @@ import Tilty from "react-tilty";
 const useStyles = makeStyles({
 	root: {
 		position: "relative",
-
 		"@media(max-width: 600px)": {},
 
 		"@media(min-width: 601px) and (max-width: 1024px)": {},
@@ -133,7 +132,6 @@ export default function MainIndex() {
 							<Typography className={classes.header} variant='h1'>
 								Hi, I'm Zeshan.
 							</Typography>
-
 							<Typography className={classes.description} variant='h5'>
 								<Typical
 									steps={[

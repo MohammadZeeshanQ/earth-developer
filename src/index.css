@@ -5,9 +5,14 @@
 	--darkBg: #373737;
 	--mobileTextSize: 0.8rem;
 	--tabTextSize: 0.6rem;
-	--pcTextSize: 0.8rem;
+	--pcTextSize: 0.85rem;
 }
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 body {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
