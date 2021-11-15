@@ -6,29 +6,7 @@ import { Typography } from "@mui/material";
 import Portfolio from "./Portfolio.js";
 import ButtonList from "./ButtonContainer.js";
 
-// style
-const Container = styled.section`
-	padding: 6em 0;
-`;
-
-const Wrapper = styled.div`
-	width: 80%;
-	margin: auto;
-
-	@media (max-width: 600px) {
-		width: 90%;
-	}
-`;
-
-const ButtonContainer = styled.div`
-	text-align: center;
-`;
-
-const ButtonWrapper = styled.div`
-	margin: 2rem 0;
-`;
-
-export default function Index() {
+export default function Index({ nightMode }) {
 	const [projectOption, setProjectOption] = useState("Web App");
 	const [selected, setSelected] = useState("Web App");
 
@@ -51,23 +29,43 @@ export default function Index() {
 		},
 	];
 
+	// style component
+	const Container = styled.section`
+		padding: 6em 0;
+	`;
+
+	const Wrapper = styled.div`
+		width: 80%;
+		margin: auto;
+
+		@media (max-width: 600px) {
+			width: 90%;
+		}
+	`;
+
+	const Header = styled.h2`
+		font: 2.8rem Nunito-Bold;
+		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
+		letter-spacing: 2px;
+	`;
+	const ButtonContainer = styled.div`
+		text-align: center;
+	`;
+
+	const ButtonWrapper = styled.div`
+		margin: 2rem 0;
+	`;
+
 	return (
 		<Container>
 			<Wrapper>
 				<ButtonContainer>
-					<Typography
-						variant='h3'
-						sx={{
-							fontFamily: "Nunito-Bold",
-							letterSpacing: "1px",
-						}}
-					>
-						Portfolio
-					</Typography>
+					<Header>Portfolio</Header>
 					<ButtonWrapper>
 						{buttonData.map((item, index) => (
 							<ButtonList
 								key={index}
+								nightMode={nightMode}
 								title={item.name}
 								setProjectOption={setProjectOption}
 								setSelected={setSelected}
@@ -80,7 +78,7 @@ export default function Index() {
 						))}
 					</ButtonWrapper>
 				</ButtonContainer>
-				<Portfolio projectOption={projectOption} />
+				<Portfolio nightMode={nightMode} projectOption={projectOption} />
 			</Wrapper>
 		</Container>
 	);

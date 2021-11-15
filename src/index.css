@@ -1,11 +1,27 @@
 :root {
-	--lightPurple: #934aff;
+	--lightPurple: #e4d2ff;
 	--darkPurple: #7619ff;
+	--darkDescriptionColor: #777777;
+	--ligthDescriptionColor: #adadad;
 	--lightBg: #fcfcfc;
-	--darkBg: #373737;
+	--darkBg: #444444;
 	--mobileTextSize: 0.8rem;
 	--tabTextSize: 0.6rem;
-	--pcTextSize: 0.85rem;
+	--pcTextSize: 1rem;
+	--pcTextSizeButton: 0.9rem;
+	--darkThemeHeader: #ffff33;
+	--lightThemeHeader: #7619ff;
+}
+
+::-moz-selection {
+	/* Code for Firefox */
+	color: var(--lightBg);
+	background: var(--darkPurple);
+}
+
+::selection {
+	color: var(--lightBg);
+	background: var(--darkPurple);
 }
 
 * {
@@ -13,6 +29,7 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
 body {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
@@ -20,6 +37,9 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	overflow-x: hidden;
+}
+a {
+	text-decoration: none;
 }
 
 code {

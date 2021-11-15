@@ -1,14 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function ButtonContainer({ active, title, setProjectOption, setSelected }) {
+export default function ButtonContainer({ active, title, setProjectOption, setSelected, nightMode }) {
 	const projectHandler = (type) => {
 		setProjectOption(type);
 	};
 
 	const ButtonTemplate = styled.button`
-		background-color: ${active ? "#7619ff" : "#fcfcfc"};
-		color: ${active ? "#fcfcfc" : "#7619ff"};
+		background-color: ${(active && !nightMode) || (!active && nightMode)
+			? "var(--lightThemeHeader)"
+			: "var(--lightBg)"};
+		color: ${(active && !nightMode) || (!active && nightMode) ? "#fcfcfc" : "#7619ff"};
 		border: 1px #7619ff solid;
 		cursor: pointer;
 		border-radius: 0.3rem;

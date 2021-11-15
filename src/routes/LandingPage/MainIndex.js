@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Grid, Button } from "@material-ui/core";
 import Typical from "react-typical";
@@ -118,8 +119,40 @@ const useStyles = makeStyles({
 	},
 });
 
-export default function MainIndex() {
+export default function MainIndex({ nightMode }) {
 	const classes = useStyles();
+
+	// styled component
+	const Header = styled.h1`
+		font: 4rem Nunito-Bold;
+		letter-spacing: 1px;
+		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
+
+		@media (max-width: 600px) {
+			font-size: 3.5rem;
+		}
+		@media (min-width: 601px) and (max-width: 1024px) {
+			font-size: 2.5rem;
+		}
+	`;
+
+	const Description = styled.p`
+		font: 1.4rem Nunito-Reg;
+		color: ${nightMode ? "var(--ligthDescriptionColor)" : "var(--darkDescriptionColor)"};
+		margin: 1rem 0 4rem 0;
+		letter-spacing: 1px;
+
+		@media (max-width: 600px) {
+			font-size: 1.2rem;
+			margin: 4rem 0;
+			line-height: 190%;
+		}
+		@media (min-width: 601px) and (max-width: 1024px) {
+			font-size: 1rem;
+			width: 90%;
+		}
+	`;
+
 	return (
 		<div className={classes.root}>
 			<div className={classes.wrapper}>
@@ -129,10 +162,8 @@ export default function MainIndex() {
 				<Grid container>
 					<Grid item xs={12} sm={7} md={7} className={classes.headingContainer}>
 						<div>
-							<Typography className={classes.header} variant='h1'>
-								Hi, I'm Zeshan.
-							</Typography>
-							<Typography className={classes.description} variant='h5'>
+							<Header>Hi, I'm Zeshan.</Header>
+							<Description>
 								<Typical
 									steps={[
 										"I'm a",
@@ -147,7 +178,7 @@ export default function MainIndex() {
 									loop={Infinity}
 									wrapper='b'
 								/>
-							</Typography>
+							</Description>
 
 							<Button
 								variant='contained'

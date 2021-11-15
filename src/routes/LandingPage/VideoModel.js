@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Grid } from "@material-ui/core";
 
@@ -129,8 +130,42 @@ const useStyles = makeStyles({
 	},
 });
 
-export default function VideoModel() {
+export default function VideoModel({ nightMode }) {
 	const classes = useStyles();
+
+	// styled component
+	const Header = styled.h2`
+		font: 2rem Nunito-Bold;
+		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
+		letter-spacing: 1px;
+
+		@media (max-width: 600px) {
+			font-size: 1.6rem;
+			margin-top: 2rem;
+			line-height: 160%;
+		}
+		@media (min-width: 601px) and (max-width: 1024px) {
+			font-size: 1.5rem;
+		}
+	`;
+
+	const Description = styled.p`
+		font: var(--pcTextSize) Nunito-Reg;
+		color: ${nightMode ? "var(--ligthDescriptionColor)" : "var(--darkDescriptionColor)"};
+		letter-spacing: 0.5px;
+		line-height: 180%;
+		margin: 1rem 0 3rem 0;
+
+		@media (max-width: 600px) {
+			font-size: var(--mobileTextSize);
+			margin-top: 2rem;
+			line-height: 160%;
+		}
+		@media (min-width: 601px) and (max-width: 1024px) {
+			padding-top: 1rem;
+			font-size: var(--tabTextSize);
+		}
+	`;
 
 	return (
 		<div className={classes.root}>
@@ -144,15 +179,16 @@ export default function VideoModel() {
 
 					<Grid item xs={12} sm={6} md={6} className={classes.textContainer}>
 						<div className={classes.textWrapper}>
-							<Typography variant='h2' className={classes.textHeader}>
-								Responsive Websites
-							</Typography>
-							<Typography variant='body1' className={classes.textMessage}>
-								I design User Interface to be dynamic and to be adaptive based on various screen sizes and aspect ratio.
-								Your Website will look the great in any device you your people will use.
-							</Typography>
+							<Header>Responsive Websites</Header>
+							<Description>
+								I design User Interface to be dynamic and to be adaptive based on various screen sizes
+								and aspect ratio. Your Website will look the great in any device you your people will
+								use.
+							</Description>
 
-							<PurpleButton href='/earth-developer/#/portfolio'>Explore More</PurpleButton>
+							<PurpleButton nightMode={nightMode} href='/earth-developer/#/portfolio'>
+								Explore More
+							</PurpleButton>
 						</div>
 					</Grid>
 				</Grid>

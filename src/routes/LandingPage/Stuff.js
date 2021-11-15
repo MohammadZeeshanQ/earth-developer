@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Typography } from "@material-ui/core";
 
@@ -107,29 +108,66 @@ const useStyles = makeStyles({
 	},
 });
 
-export default function Stuff() {
+export default function Stuff({ nightMode }) {
 	const classes = useStyles();
 
 	const gridData = [
 		{
-			title: "Front-End Developer",
-			description: "Rich appearance and Interactive website for better experience. I ensure the performance scores remains high while the render duration is low.",
+			title: "Front-End Development",
+			description:
+				"Rich appearance and Interactive website for better experience. I ensure the performance scores remains high while the render duration is low.",
 			image: FrontDeveloper,
 			layoutDirection: "row",
 		},
 		{
 			title: "Web Designing",
-			description: "Elegant yet eye catching layout designs. Modern User Interface to match the trends and maintaining the User Experience as well.",
+			description:
+				"Elegant yet eye catching layout designs. Modern User Interface to match the trends and maintaining the User Experience as well.",
 			image: WebDesigner,
 			layoutDirection: "row-reverse",
 		},
 		{
 			title: "Graphic Designer",
-			description: "Icons, Logo, Images Manipulation and etc Visual Elements designed by me, to  add meaning and support the development of the User Interface.",
+			description:
+				"Icons, Logo, Images Manipulation and etc Visual Elements designed by me, to  add meaning and support the development of the User Interface.",
 			image: GraphicDesigner,
 			layoutDirection: "row",
 		},
 	];
+
+	// styled component
+	const Header = styled.h2`
+		font: 2.3rem Nunito-Bold;
+		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
+		letter-spacing: 1px;
+
+		@media (max-width: 600px) {
+			font-size: 1.6rem;
+			margin-top: 2rem;
+			line-height: 160%;
+		}
+		@media (min-width: 601px) and (max-width: 1024px) {
+			font-size: 1.5rem;
+		}
+	`;
+
+	const Description = styled.p`
+		font: var(--pcTextSize) Nunito-Reg;
+		color: ${nightMode ? "var(--ligthDescriptionColor)" : "var(--darkDescriptionColor)"};
+		letter-spacing: 0.5px;
+		line-height: 180%;
+		margin: 1rem 0 3rem 0;
+
+		@media (max-width: 600px) {
+			font-size: var(--mobileTextSize);
+			margin-top: 2rem;
+			line-height: 160%;
+		}
+		@media (min-width: 601px) and (max-width: 1024px) {
+			padding-top: 1rem;
+			font-size: var(--tabTextSize);
+		}
+	`;
 
 	return (
 		<div className={classes.root}>
@@ -153,13 +191,11 @@ export default function Stuff() {
 						<Grid item className={classes.gridItemText} xs={12} sm={7} md={7}>
 							<div className={classes.textWrapper}>
 								<div>
-									<Typography variant='h2' className={classes.textHeader}>
-										{item.title}
-									</Typography>
-									<Typography variant='body1' className={classes.textDescription}>
-										{item.description}
-									</Typography>
-									<PurpleButton href='/earth-developer/#/portfolio'>Explore More</PurpleButton>
+									<Header>{item.title}</Header>
+									<Description>{item.description}</Description>
+									<PurpleButton nightMode={nightMode} href='/earth-developer/#/portfolio'>
+										Explore More
+									</PurpleButton>
 								</div>
 							</div>
 						</Grid>

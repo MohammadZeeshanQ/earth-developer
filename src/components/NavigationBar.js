@@ -36,11 +36,11 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 		},
 		{
 			name: "About",
-			link: "/earth-developer/#/portfolio",
+			link: "/earth-developer/#/about",
 		},
 		{
 			name: "Contact",
-			link: "/earth-developer/#/portfolio",
+			link: "/earth-developer/#/contact",
 		},
 	];
 
@@ -96,11 +96,11 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 
 	const TabButton = styled.button`
 		background-color: transparent;
-		font: var(--pcTextSize) Nunito-Semi;
+		font: var(--pcTextSize) Nunito-Reg;
 		color: ${(props) => (nightMode ? "var(--lightBg)" : "var(--darkBg)")};
 		border: none;
 		border-radius: 0.3rem;
-		letter-spacing: 1.5px;
+		letter-spacing: 0.5px;
 		cursor: pointer;
 		margin: 0 0.2rem;
 		padding: 0.5rem 1rem;
@@ -163,7 +163,7 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 
 	const DrawerCustom = styled(SwipeableDrawer)`
 		& .MuiDrawer-paper {
-			background-color: ${(props) => (nightMode ? "var(--darkBg)" : "var(--lightPurple)")};
+			background-color: ${(props) => (nightMode ? "var(--darkBg)" : "var(--darkPurple)")};
 			border-radius: 3rem 0 0 3rem;
 		}
 	`;
@@ -182,9 +182,11 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 
 					{/* DesktopTab Box */}
 					<DesktopTabBox>
-						<TabButton href='/earth-developer/#/portfolio'>Portfolio</TabButton>
-						<TabButton href='/earth-developer/#/about'>About</TabButton>
-						<TabButton href='/earth-developer/#/contact'>Contact</TabButton>
+						{mobileMenuData.map((item, index) => (
+							<a key={index} href={item.link}>
+								<TabButton>{item.name}</TabButton>
+							</a>
+						))}
 					</DesktopTabBox>
 
 					{/* Mobile Menu Box */}
@@ -221,10 +223,10 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 						</ListItem>
 						{/* Mobile Menus */}
 						{mobileMenuData.map((item, index) => (
-							<ListItem>
-								<MobileMenuButton key={index} Link={item.link}>
-									{item.name}
-								</MobileMenuButton>
+							<ListItem key={index}>
+								<a href={item.link}>
+									<MobileMenuButton Link={item.link}>{item.name}</MobileMenuButton>
+								</a>
 								<Divider />
 							</ListItem>
 						))}

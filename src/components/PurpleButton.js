@@ -1,49 +1,56 @@
 import React from "react";
-import { Button, makeStyles } from "@material-ui/core";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 // icons
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
-const useStyles = makeStyles({
-	button: {
-		fontSize: "var(--pcTextSize)",
-		backgroundColor: "#7619FF",
-		color: "#fcfcfc",
-		padding: ".6rem 1rem",
-		fontFamily: "Oxy-Bold",
-		textTransform: "none",
-		letterSpacing: "1.5px",
+export default function PurpleButton({ children, href, nightMode }) {
+	const Button = styled.button`
+		position: relative;
+		background-color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
+		font: var(--pcTextSizeButton) Nunito-Reg;
+		color: ${nightMode ? "var(--darkBg)" : "var(--lightBg)"};
+		border: none;
+		border-radius: 0.3rem;
+		letter-spacing: 0.5px;
+		cursor: pointer;
+		margin: 0 0.2rem;
+		padding: 0.7rem 1.5rem;
 
-		"&:hover": {
-			backgroundColor: "#AA72FE",
-			color: "#fcfcfc",
-			transform: "scale(1.05)",
-			transition: "all .3s ease-in-out",
-		},
+		&:hover {
+			transform: translateY(-0.3rem) scale(1.02);
+			transition: all 0.35s ease;
+		}
 
-		"@media(max-width: 600px)": {
-			padding: "1rem",
-			fontSize: "var(--mobileTextSize)",
-			letterSpacing: "3px",
-		},
+		&::after {
+			content: "";
+			position: absolute;
+			border-radius: 0.3rem;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0;
+			box-shadow: 4px 6px 15px #adadad;
+			transition: all 0.35s ease;
+		}
 
-		"@media(min-width: 601px) and (max-width: 1024px)": {
-			fontSize: "var(--tabTextSize)",
-			padding: ".5rem",
-		},
-	},
-});
+		&:hover::after {
+			opacity: 1;
+		}
 
-export default function PurpleButton({ children, href }) {
-	const classes = useStyles();
+		@media (max-width: 600px) {
+			font-size: var(--mobileTextSize);
+		}
+		@media (min-width: 601px) and (max-width: 1024px) {
+			font-size: var(--tabTextSize);
+		}
+	`;
 
 	return (
-		<Button
-			className={classes.button}
-			href={href}
-			endIcon={<ArrowForwardIosIcon style={{ marginLeft: ".5rem", fontSize: "1rem" }} />}
-		>
-			{children}
-		</Button>
+		<a href={href}>
+			<Button>{children}</Button>
+		</a>
 	);
 }

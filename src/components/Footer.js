@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, IconButton } from "@material-ui/core";
 
@@ -83,18 +84,39 @@ const useStyles = makeStyles({
 	},
 });
 
-export default function Footer() {
+export default function Footer({ nightMode }) {
 	const classes = useStyles();
 
+	// styled Component
+	const Container = styled.footer`
+		background-color: ${nightMode ? "var(--darkBg)" : "var(--ligthBg)"};
+	`;
+
+	const LogoIcon = styled.img`
+		width: 2.5rem;
+	`;
+
+	const LogoText = styled.h3`
+		font-family: Nunito-Bold;
+		color: ${(props) => (nightMode ? "var(--lightBg)" : "var(--darkBg)")};
+		position: relative;
+		left: -0.4rem;
+		letter-spacing: 1px;
+	`;
+
+	const DetailText = styled.p`
+		font: var(--pxTextSize) Nunito-Light;
+		color: ${(props) => (nightMode ? "var(--lightBg)" : "var(--darkBg)")};
+		letter-spacing: 0.5px;
+	`;
+
 	return (
-		<div className={classes.root}>
+		<Container>
 			<div className={classes.wrapper}>
 				<div className={classes.logoDiv}>
-					<IconButton href='/earth-developer/#/'>
-						<img src={Logo} className={classes.logoIcon} alt='Mohammad Zeshan' />
-						<Typography className={classes.logoText} variant='h5'>
-							eshan<span style={{ color: "#7619FF" }}>.</span>
-						</Typography>
+					<IconButton size='small' href='/earth-developer/#/'>
+						<LogoIcon src={Logo} alt='Mohammad Zeshan' />
+						<LogoText>eshan.</LogoText>
 					</IconButton>
 				</div>
 
@@ -113,23 +135,19 @@ export default function Footer() {
 				</div>
 
 				<div className={classes.madeByDiv}>
-					<Typography variant='body1' className={classes.madeByLabel}>
-						Made by:
-					</Typography>
-					<Typography variant='body1' className={classes.madeByName}>
+					<DetailText>
+						Made by: <br />
 						Mohammad Zeeshan
-					</Typography>
+					</DetailText>
 				</div>
 
 				<div className={classes.copyrightDiv}>
-					<Typography variant='body2' className={classes.copyrightLabel}>
+					<DetailText>
 						&#169; Copyrights.
-					</Typography>
-					<Typography variant='body2' className={classes.copyrightPreservedLabel}>
-						All Rights Reserved.
-					</Typography>
+						<br /> All Rights Reserved.
+					</DetailText>
 				</div>
 			</div>
-		</div>
+		</Container>
 	);
 }

@@ -8,7 +8,7 @@ const useStyles = makeStyles({
 	root: {},
 });
 
-export default function Index() {
+export default function Index({ nightMode }) {
 	const classes = useStyles();
 
 	useEffect(() => {
@@ -17,9 +17,9 @@ export default function Index() {
 
 	return (
 		<div className={classes.root}>
-			<MainIndex />
-			<Stuff />
-			<VideoShow />
+			<MainIndex nightMode={nightMode} />
+			<Stuff nightMode={nightMode} />
+			<VideoShow nightMode={nightMode} />
 		</div>
 	);
 }

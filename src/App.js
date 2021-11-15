@@ -1,5 +1,6 @@
 import React, { Suspense, useState } from "react";
 import { Route, Switch } from "react-router-dom";
+import styled from "styled-components";
 
 // Component
 import NavBar from "./components/NavigationBar";
@@ -21,23 +22,36 @@ import "./App.css";
 function App() {
 	const [nightMode, setNightMode] = useState(false);
 
+	// styled components
+	const Container = styled.div`
+		position: relative;
+		background-color: ${nightMode ? "var(--darkBg)" : "var(--lightBg)"};
+	`;
+
 	return (
-		<div className='App'>
+		<Container>
 			<NavBar nightMode={nightMode} setNightMode={setNightMode} />
 			<SideBavBar />
 			<FloatingButton />
 			<Suspense fallback={LoadingPage}>
 				<Switch>
-					<Route exact path='/' component={Index} />
-					<Route exact path='/portfolio' component={PortfolioPage} />
-					<Route exact path='/about' component={AboutPage} />
-					<Route path='/contact' component={ContactPage} />
+					<Route exact path='/'>
+						<Index nightMode={nightMode} />
+					</Route>
+					<Route exact path='/portfolio'>
+						<PortfolioPage nightMode={nightMode} />
+					</Route>
+					<Route exact path='/about'>
+						<AboutPage nightMode={nightMode} />
+					</Route>
+					<Route path='/contact'>
+						<ContactPage nightMode={nightMode} />
+					</Route>
 					<Route path='*' component={ErrorPage} />
 				</Switch>
 			</Suspense>
-
-			<Footer />
-		</div>
+			<Footer nightMode={nightMode} />
+		</Container>
 	);
 }
 

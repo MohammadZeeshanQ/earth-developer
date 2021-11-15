@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import styled from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";
 import {
 	Typography,
@@ -10,7 +11,7 @@ import {
 	DialogActions,
 	Button,
 	IconButton,
-} from "@material-ui/core";
+} from "@mui/material";
 
 // icons
 import CloseIcon from "@material-ui/icons/Close";
@@ -164,7 +165,7 @@ const useStyles = makeStyles({
 	},
 });
 
-export default function Portfolio({ projectOption }) {
+export default function Portfolio({ projectOption, nightMode }) {
 	const classes = useStyles();
 	const [displayTitle, setDisplayTitle] = useState(WebAppProject);
 	const [dialog, setDialog] = useState(false);
@@ -205,6 +206,35 @@ export default function Portfolio({ projectOption }) {
 		}
 	};
 
+	// color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
+
+	// styled-components
+	const Title = styled.h6`
+		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
+		font: 1.25rem Nunito-Bold;
+		letter-spacing: 1px;
+
+		@media (max-width: 600px) {
+			font-size: 1.4rem;
+		}
+	`;
+
+	const Description = styled.p`
+		color: ${nightMode ? "var(--ligthDescriptionColor)" : "var(--darkDescriptionColor)"};
+		font: 0.8rem Nunito-Reg;
+		letter-spacing: 0.5px;
+		margin: 1rem 0 2rem 0;
+
+		@media (max-width: 600px) {
+			font-size: 0.9rem;
+		}
+		@media (min-width: 601px) and (max-width: 1024px) {
+			font-size: 0.65;
+		}
+	`;
+
+	// make a custom Chip
+
 	return (
 		<div>
 			<div>
@@ -217,22 +247,13 @@ export default function Portfolio({ projectOption }) {
 								</div>
 
 								<div className={classes.gridTextContainer}>
-									<Typography className={classes.title} variant='h6'>
-										{title}
-									</Typography>
+									<Title>{title}</Title>
 
-									<Typography className={classes.description} variant='body2'>
-										{description}
-									</Typography>
+									<Description>{description}</Description>
 
-									{program.map((programs, i) => (
-										<Chip
-											key={i}
-											className={classes.chipTitle}
-											label={programs.code}
-											variant='outlined'
-										/>
-									))}
+									{/* {program.map((programs, index) => (
+										<ChipCustom key={index} variant='outlined' label={programs.code} />
+									))} */}
 								</div>
 							</div>
 						</Grid>
@@ -260,7 +281,13 @@ export default function Portfolio({ projectOption }) {
 					</DialogContent>
 
 					<DialogActions>
-						<Button className={classes.dialogButton} href={dialogLink} target='_blank' rel="noopener noreferrer" variant='contained'>
+						<Button
+							className={classes.dialogButton}
+							href={dialogLink}
+							target='_blank'
+							rel='noopener noreferrer'
+							variant='contained'
+						>
 							Explore More
 						</Button>
 					</DialogActions>
