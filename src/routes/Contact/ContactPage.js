@@ -1,13 +1,51 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 
+// email
+import emailjs from "emailjs-com";
+
 // material component
-import { Grid } from "@mui/material";
+import { Grid, Snackbar, Alert, AlertTitle } from "@mui/material";
 
 // icon
 import SendIcon from "@mui/icons-material/Send";
 
 export default function ContactPage({ nightMode }) {
+	const [successOpen, setSuccessOpen] = useState(false);
+	const [errorOpen, setErrorOpen] = useState(false);
+	const emailService = process.env.REACT_APP_EMAILSERVICE;
+	const emailTemplate = process.env.REACT_APP_EMAILTEMPLATE;
+	const emailEmailKey = process.env.REACT_APP_EMAILKEY;
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
+	const sendEmail = (e) => {
+		e.preventDefault(e);
+
+		emailjs.sendForm(emailService, emailTemplate, e.target, emailEmailKey).then(
+			(result) => {
+				setSuccessOpen(true);
+				console.log(result.text);
+			},
+			(error) => {
+				setErrorOpen(true);
+				console.log(error.text);
+			}
+		);
+		e.target.reset();
+	};
+
+	const handleClose = (reason) => {
+		if (reason === "clickaway") {
+			return;
+		}
+
+		setSuccessOpen(false);
+		setErrorOpen(false);
+	};
+
 	// styled component
 	const Container = styled.section`
 		position: relative;
@@ -187,19 +225,31 @@ export default function ContactPage({ nightMode }) {
 						</MessageBox>
 					</Grid>
 					<Grid item xs={12} sm={6} md={6}>
-						<form onSubmit=''>
+						<form onSubmit={sendEmail}>
 							<InputBox>
 								<InputDiv>
-									<Input type='text' placeholder='Your Name' required />
+									<Input type='text' id='personName' name='name' placeholder='Your Name' required />
 								</InputDiv>
 								<InputDiv>
-									<Input type='email' placeholder='Your Email' required />
+									<Input
+										type='email'
+										id='personEmail'
+										name='email'
+										placeholder='Your Email'
+										required
+									/>
 								</InputDiv>
 								<InputDiv>
-									<Input type='text' placeholder='Subject' required />
+									<Input type='text' id='Subject' name='subject' placeholder='Subject' required />
 								</InputDiv>
 								<InputDiv>
-									<Input type='text' placeholder='Your Message' required />
+									<Input
+										type='text'
+										id='personMessage'
+										name='message'
+										placeholder='Your Message'
+										required
+									/>
 								</InputDiv>
 								<SubmitButtonBox>
 									<SubmitButton type='submit'>
@@ -212,6 +262,20 @@ export default function ContactPage({ nightMode }) {
 					</Grid>
 				</Grid>
 			</Wrapper>
+
+			<Snackbar open={successOpen} autoHideDuration={8000} onClose={handleClose}>
+				<Alert onClose={handleClose} severity='success' variant='filled'>
+					<AlertTitle>Success!</AlertTitle>
+					Message has been sent.
+				</Alert>
+			</Snackbar>
+
+			<Snackbar open={errorOpen} autoHideDuration={8000} onClose={handleClose}>
+				<Alert severity='error' onClose={handleClose} variant='filled'>
+					<AlertTitle>Failed!</AlertTitle>
+					Please try again.
+				</Alert>
+			</Snackbar>
 		</Container>
 	);
 }
