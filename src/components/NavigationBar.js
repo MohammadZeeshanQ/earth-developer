@@ -97,9 +97,9 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 	`;
 
 	const TabButton = styled.button`
-		background-color: transparent;
 		font: var(--pcTextSize) Nunito-Reg;
-		color: ${(props) => (nightMode ? "var(--lightBg)" : "var(--darkBg)")};
+		background-color: transparent;
+		color: ${nightMode ? "var(--lightBg)" : "var(--darkBg)"};
 		border: none;
 		border-radius: 0.3rem;
 		letter-spacing: 0.5px;
@@ -108,9 +108,9 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 		padding: 0.5rem 1rem;
 
 		&:hover {
-			background-color: var(--darkPurple);
+			background-color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
+			color: ${nightMode ? "var(--darkBg)" : "var(--lightBg)"};
 			transition: 0.25s all linear;
-			color: #fcfcfc;
 		}
 	`;
 
@@ -120,6 +120,21 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 		}
 		@media (min-width: 1025px) {
 			display: none;
+		}
+	`;
+
+	const MobileBurgerButton = styled.div`
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		padding: 0.4rem;
+		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
+		cursor: pointer;
+
+		&:hover {
+			background-color: #e5e4e2;
+			transition: all 0.3s linear;
 		}
 	`;
 
@@ -223,9 +238,9 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 
 					{/* Mobile Menu Box */}
 					<MobileMenuBox>
-						<IconButton size='small' onClick={drawerHandler}>
-							<MenuIcon style={{ fontSize: "2em", color: "#7619FF" }} />
-						</IconButton>
+						<MobileBurgerButton size='small' onClick={drawerHandler}>
+							<MenuIcon style={{ fontSize: "2em" }} />
+						</MobileBurgerButton>
 					</MobileMenuBox>
 
 					{/* Night Mode  Box */}

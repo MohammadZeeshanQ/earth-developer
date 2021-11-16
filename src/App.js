@@ -14,7 +14,7 @@ import Footer from "./components/Footer";
 import Index from "./routes/LandingPage/Index.js";
 import PortfolioPage from "./routes/Portfolio/Index.js";
 import AboutPage from "./routes/About/About";
-import ContactPage from "./routes/Contact/Contact";
+import ContactPage from "./routes/Contact/ContactPage";
 
 // Css
 import "./App.css";
