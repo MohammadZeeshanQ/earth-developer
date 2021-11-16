@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Fab, IconButton } from "@mui/material";
+import { IconButton } from "@mui/material";
 
 // logo
 import ChatIcon from "@mui/icons-material/Chat";
