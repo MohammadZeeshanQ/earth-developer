@@ -5,12 +5,14 @@
 	--ligthDescriptionColor: #adadad;
 	--lightBg: #fcfcfc;
 	--darkBg: #444444;
-	--mobileTextSize: 0.8rem;
-	--tabTextSize: 0.6rem;
-	--pcTextSize: 1rem;
+
 	--pcTextSizeButton: 0.9rem;
 	--darkThemeHeader: #ffff33;
 	--lightThemeHeader: #7619ff;
+
+	--mobileTextSize: 0.9rem;
+	--tabTextSize: 0.6rem;
+	--pcTextSize: 1rem;
 }
 
 ::-moz-selection {

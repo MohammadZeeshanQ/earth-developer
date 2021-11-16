@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Typography } from "@mui/material";
 
 // component
-import Portfolio from "./Portfolio.js";
+import PortfolioGrid from "./PortfolioGrid";
 import ButtonList from "./ButtonContainer.js";
 
 export default function Index({ nightMode }) {
@@ -78,7 +78,7 @@ export default function Index({ nightMode }) {
 						))}
 					</ButtonWrapper>
 				</ButtonContainer>
-				<Portfolio nightMode={nightMode} projectOption={projectOption} />
+				<PortfolioGrid nightMode={nightMode} projectOption={projectOption} />
 			</Wrapper>
 		</Container>
 	);

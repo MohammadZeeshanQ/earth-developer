@@ -8,6 +8,8 @@ import { AppBar, Toolbar, Divider, List, ListItem, Switch, SwipeableDrawer, Icon
 // Icons
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
+import WbSunnyIcon from "@mui/icons-material/WbSunny";
+import NightsStayIcon from "@mui/icons-material/NightsStay";
 
 // Logo
 import Logo from "../assets/images/icons/Logo.png";
@@ -145,6 +147,11 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 		}
 	`;
 
+	const nightModeButton = styled.button`
+		border: 1px solid green;
+		cursor: pointer;
+	`;
+
 	const NightModeIcon = styled.span`
 		text-align: center;
 	`;
@@ -198,10 +205,7 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 
 					{/* Night Mode  Box */}
 					<NightModeBox>
-						<NightModeIcon>&#9728;&#65039;</NightModeIcon>
-
-						<SwitchCustom color='default' checked={nightMode} onChange={nightModeHandler} />
-						<NightModeIcon>&#127769;</NightModeIcon>
+						<nightModeButton onClick={nightModeHandler}>Night</nightModeButton>
 					</NightModeBox>
 				</ToolbarCustom>
 
