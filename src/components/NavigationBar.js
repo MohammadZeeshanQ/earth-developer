@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 // material component
 import { AppBar, Toolbar, Divider, List, ListItem, Switch, SwipeableDrawer, IconButton } from "@mui/material";
@@ -138,6 +137,11 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 		}
 	`;
 
+	const MobileButtonFullWidth = styled.a`
+		width: 100%;
+		text-decoration: none;
+	`;
+
 	const MobileMenuButton = styled.button`
 		font: var(--pcTextSize) Nunito-Semi;
 		background: transparent;
@@ -146,7 +150,6 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 		border-radius: 0.3rem;
 		letter-spacing: 1.5px;
 		cursor: pointer;
-		width: 100%;
 		display: flex;
 		justify-content: flex-start;
 		padding: 0.8em 1rem;
@@ -274,9 +277,9 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 						{/* Mobile Menus */}
 						{mobileMenuData.map((item, index) => (
 							<ListItem key={index}>
-								<a href={item.link}>
-									<MobileMenuButton Link={item.link}>{item.name}</MobileMenuButton>
-								</a>
+								<MobileButtonFullWidth href={item.link} onClick={drawerHandler}>
+									<MobileMenuButton>{item.name}</MobileMenuButton>
+								</MobileButtonFullWidth>
 								<Divider />
 							</ListItem>
 						))}

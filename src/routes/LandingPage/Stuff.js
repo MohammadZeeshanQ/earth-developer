@@ -8,7 +8,7 @@ import PurpleButton from "../../components/PurpleButton";
 
 // images
 import FrontDeveloper from "../../assets/images/services/frontDeveloper.png";
-import WebDesigner from "../../assets/images/services/webDesigner.png";
+import WebDesigner from "../../assets/images/services/UI.png";
 import GraphicDesigner from "../../assets/images/services/graphicDesigner.png";
 
 // import Tilt from 'react-tilt' Old Library
@@ -142,7 +142,7 @@ export default function Stuff({ nightMode }) {
 		letter-spacing: 1px;
 
 		@media (max-width: 600px) {
-			font-size: 1.6rem;
+			font-size: 1.8rem;
 			margin-top: 2rem;
 			line-height: 160%;
 		}
@@ -176,7 +176,7 @@ export default function Stuff({ nightMode }) {
 					<Grid container key={index} direction={item.layoutDirection} className={classes.gridContainer}>
 						<Grid item className={classes.gridItemImage} xs={12} sm={5} md={5}>
 							<div className={classes.imageWrapper}>
-								<Tilty max={25} speed={300} perspective={1000} scale={1.1}>
+								<Tilty max={25} speed={300} perspective={1000} scale={1.05}>
 									<img
 										src={item.image}
 										className={classes.image}

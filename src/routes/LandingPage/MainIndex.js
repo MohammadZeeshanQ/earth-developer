@@ -1,135 +1,60 @@
 import React from "react";
 import styled from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography, Grid, Button } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import Typical from "react-typical";
 
 // Illustration
 import Person from "../../assets/images/background/person.png";
 
 // icons
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import Scroll from "../../assets/images/icons/scroll.png";
-
-// CSS
-import "../../styles/MainIndex.css";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 // Tilt
 import Tilty from "react-tilty";
 
-const useStyles = makeStyles({
-	root: {
-		position: "relative",
-		"@media(max-width: 600px)": {},
-
-		"@media(min-width: 601px) and (max-width: 1024px)": {},
-	},
-	wrapper: {
-		position: "relative",
-		width: "83%",
-		margin: "auto",
-		padding: "6rem 0",
-
-		"@media(max-width: 600px)": {
-			width: "90%",
-			padding: "3rem 0",
-		},
-
-		"@media(min-width: 601px) and (max-width: 1024px)": {},
-	},
-
-	headingContainer: {
-		display: "grid",
-		alignItems: "center",
-
-		"@media(max-width: 600px)": {
-			textAlign: "center",
-			padding: "5rem 0 4rem 0",
-		},
-	},
-
-	header: {
-		fontFamily: "Nunito-Bold",
-		letterSpacing: "2px",
-		fontSize: "4rem",
-		fontWeight: "800",
-		color: "#7619FF",
-
-		"@media(max-width: 600px)": {
-			fontSize: "3.5em",
-		},
-
-		"@media(min-width: 601px) and (max-width: 1024px)": {
-			fontSize: "2.5em",
-		},
-	},
-
-	description: {
-		margin: "2rem 0 4rem 0",
-		color: "#656565",
-		letterSpacing: "2px",
-		fontFamily: "Nunito-Reg",
-
-		"@media(max-width: 600px)": {
-			margin: "4rem 0",
-			fontSize: "1.3rem",
-			lineHeight: "190%",
-		},
-
-		"@media(min-width: 601px) and (max-width: 1024px)": {
-			fontSize: "1rem",
-			width: "90%",
-		},
-	},
-
-	button: {
-		backgroundColor: "#7619FF",
-		color: "#fcfcfc",
-		padding: ".7rem 1.5rem",
-		fontFamily: "Nunito-Bold",
-		letterSpacing: "1.5px",
-		textTransform: "none",
-
-		"&:hover": {
-			backgroundColor: "#AA72FE",
-			color: "#fcfcfc",
-			transform: "scale(1.05)",
-			transition: "all .3s ease-in-out",
-		},
-
-		"@media(max-width: 600px)": {
-			padding: "1rem 2rem",
-			letterSpacing: "3px",
-		},
-
-		"@media(min-width: 601px) and (max-width: 1024px)": {
-			fontSize: ".7rem",
-			padding: ".5rem .6rem",
-		},
-	},
-
-	imageContainer: {
-		overflow: "hidden",
-	},
-
-	image: {
-		height: "100%",
-		width: "100%",
-		objectFit: "cover",
-	},
-});
-
 export default function MainIndex({ nightMode }) {
-	const classes = useStyles();
-
 	// styled component
+	const Container = styled.section`
+		position: relative;
+	`;
+
+	const Wrapper = styled.div`
+		position: relative;
+		width: 83%;
+		margin: auto;
+		padding: 6rem 0;
+
+		@media (max-width: 600px) {
+			width: 90%relative;
+			padding: 3rem 0;
+		}
+	`;
+
+	const TextWrapper = styled.div`
+		display: flex;
+		align-items: center;
+		height: 100%;
+
+		@media (max-width: 600px) {
+			justify-content: center;
+			padding: 5rem 0 4rem 0;
+		}
+	`;
+
+	const TextBox = styled.div`
+		@media (max-width: 600px) {
+			text-align: center;
+		}
+	`;
+
 	const Header = styled.h1`
 		font: 4rem Nunito-Bold;
 		letter-spacing: 1px;
 		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
 
 		@media (max-width: 600px) {
-			font-size: 3.5rem;
+			font-size: 2.6rem;
 		}
 		@media (min-width: 601px) and (max-width: 1024px) {
 			font-size: 2.5rem;
@@ -139,12 +64,12 @@ export default function MainIndex({ nightMode }) {
 	const Description = styled.p`
 		font: 1.4rem Nunito-Reg;
 		color: ${nightMode ? "var(--ligthDescriptionColor)" : "var(--darkDescriptionColor)"};
-		margin: 1rem 0 4rem 0;
+		margin: 1rem 0 3rem 0;
 		letter-spacing: 1px;
 
 		@media (max-width: 600px) {
 			font-size: 1.2rem;
-			margin: 4rem 0;
+			margin: 2rem 0 3rem 0;
 			line-height: 190%;
 		}
 		@media (min-width: 601px) and (max-width: 1024px) {
@@ -153,51 +78,113 @@ export default function MainIndex({ nightMode }) {
 		}
 	`;
 
-	return (
-		<div className={classes.root}>
-			<div className={classes.wrapper}>
-				<div className='mainIndex-scrollContainer'>
-					<img className='mainIndex-scroll' src={Scroll} alt='Scroll Bar' />
-				</div>
-				<Grid container>
-					<Grid item xs={12} sm={7} md={7} className={classes.headingContainer}>
-						<div>
-							<Header>Hi, I'm Zeshan.</Header>
-							<Description>
-								<Typical
-									steps={[
-										"I'm a",
-										1000,
-										`I'm a Front-End Developer.`,
-										1500,
-										"I'm a UI/UX Designer.",
-										1500,
-										"I'm a Web Designer.",
-										1500,
-									]}
-									loop={Infinity}
-									wrapper='b'
-								/>
-							</Description>
+	const ButtonBox = styled.a`
+		display: flex;
+		justify-content: flex-start;
 
-							<Button
-								variant='contained'
-								href='/earth-developer/#/portfolio'
-								className={classes.button}
-								endIcon={<ArrowForwardIosIcon style={{ marginLeft: ".5rem", fontSize: "1rem" }} />}
-							>
-								Check Projects
-							</Button>
-						</div>
+		@media (max-width: 600px) {
+			justify-content: center;
+		}
+	`;
+
+	const CustomButton = styled.button`
+		position: relative;
+		display: flex;
+		align-items: center;
+		background-color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
+		font: var(--pcTextSizeButton) Nunito-Bold;
+		color: ${nightMode ? "var(--darkBg)" : "var(--lightBg)"};
+		border: none;
+		border-radius: 0.3rem;
+		letter-spacing: 0.5px;
+		cursor: pointer;
+		margin: 0 0.2rem;
+		padding: 0.7rem 1.5rem;
+
+		&:hover {
+			transform: translateY(-0.3rem) scale(1.02);
+			transition: all 0.35s ease;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			border-radius: 0.3rem;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0;
+			box-shadow: 4px 6px 15px #adadad;
+			transition: all 0.35s ease;
+		}
+
+		&:hover::after {
+			opacity: 1;
+		}
+
+		@media (max-width: 600px) {
+			font-size: var(--mobileTextSize);
+		}
+		@media (min-width: 601px) and (max-width: 1024px) {
+			font-size: var(--tabTextSize);
+		}
+	`;
+
+	const ImageBox = styled.div`
+		overflow: hidden;
+	`;
+
+	const Image = styled.img`
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	`;
+
+	return (
+		<Container>
+			<Wrapper>
+				<Grid container>
+					<Grid item xs={12} sm={7} md={7}>
+						<TextWrapper>
+							<TextBox>
+								<Header>Hi, I'm Zeshan.</Header>
+								<Description>
+									<Typical
+										steps={[
+											"I'm a",
+											1000,
+											`I'm a Front-End Developer.`,
+											1500,
+											"I'm a UI/UX Designer.",
+											1500,
+											"I'm a Web Designer.",
+											1500,
+										]}
+										loop={Infinity}
+										wrapper='b'
+									/>
+								</Description>
+
+								<ButtonBox href='/earth-developer/#/portfolio'>
+									<CustomButton href='/earth-developer/#/portfolio' nightMode={nightMode}>
+										Check Projects
+										<KeyboardArrowRightIcon style={{ marginLeft: ".5rem" }} />
+									</CustomButton>
+								</ButtonBox>
+							</TextBox>
+						</TextWrapper>
 					</Grid>
 
-					<Grid item xs={12} sm={5} md={5} className={classes.imageContainer}>
-						<Tilty max={25} speed={300} perspective={1000} scale={1.1}>
-							<img src={Person} className={classes.image} alt='3D Illustration' />
-						</Tilty>
+					<Grid item xs={12} sm={5} md={5}>
+						<ImageBox>
+							<Tilty max={25} speed={300} perspective={1000} scale={1.1}>
+								<Image src={Person} alt='3D Illustration' />
+							</Tilty>
+						</ImageBox>
 					</Grid>
 				</Grid>
-			</div>
-		</div>
+			</Wrapper>
+		</Container>
 	);
 }
