@@ -138,18 +138,39 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 	`;
 
 	const NightModeBox = styled.div`
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
 		@media (max-width: 1024px) {
 			display: none;
 		}
 	`;
 
-	const nightModeButton = styled.button`
-		border: 1px solid green;
+	const NightModeButton = styled.button`
+		display: flex;
+		align-items: center;
+		font: var(--pcTextSizeButton) Nunito-Reg;
+		background-color: transparent;
+		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
+		border: 1px solid ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
+		border-radius: 0.3rem;
+		letter-spacing: 0.5px;
 		cursor: pointer;
+		padding: 0.5rem 0.6rem;
+
+		&:hover {
+			background: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
+			color: ${nightMode ? "var(--darkBg)" : "var(--lightBg)"};
+			transition: 0.4s all ease;
+		}
+	`;
+
+	const NightModeButtonMobile = styled(NightModeButton)`
+		border: 1px solid ${nightMode ? "var(--darkThemeHeader)" : "var(--lightBg)"};
+		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightBg)"};
+
+		&:hover {
+			background: none;
+			color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightBg)"};
+			transition: none;
+		}
 	`;
 
 	const NightModeIcon = styled.span`
@@ -170,9 +191,13 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 
 	const DrawerCustom = styled(SwipeableDrawer)`
 		& .MuiDrawer-paper {
-			background-color: ${(props) => (nightMode ? "var(--darkBg)" : "var(--darkPurple)")};
+			background-color: ${nightMode ? "var(--darkBg)" : "var(--darkPurple)"};
 			border-radius: 3rem 0 0 3rem;
 		}
+	`;
+
+	const ActionBox = styled.div`
+		width: 100%;
 	`;
 
 	return (
@@ -205,7 +230,14 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 
 					{/* Night Mode  Box */}
 					<NightModeBox>
-						<nightModeButton onClick={nightModeHandler}>Night</nightModeButton>
+						<NightModeButton onClick={nightModeHandler}>
+							{nightMode ? "DayMode" : "NightMode"}
+							{nightMode ? (
+								<WbSunnyIcon fontSize='small' sx={{ marginLeft: ".7rem" }} />
+							) : (
+								<NightsStayIcon fontSize='small' sx={{ marginLeft: ".7rem" }} />
+							)}
+						</NightModeButton>
 					</NightModeBox>
 				</ToolbarCustom>
 
@@ -215,7 +247,6 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 						<ListItem style={{ justifyContent: "flex-end" }}>
 							<IconButton
 								style={{
-									backgroundColor: "#7619FF",
 									color: "#fcfcfc",
 									border: "1px #fcfcfc solid",
 								}}
@@ -234,6 +265,14 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 								<Divider />
 							</ListItem>
 						))}
+
+						<Divider sx={{ backgroundColor: "var(--lightBg)", margin: "2rem 1rem" }} />
+						<ListItem>
+							<NightModeButtonMobile onClick={nightModeHandler}>
+								{nightMode ? "DayMode" : "NightMode"}
+								<NightsStayIcon fontSize='small' sx={{ marginLeft: ".7rem" }} />
+							</NightModeButtonMobile>
+						</ListItem>
 					</List>
 				</DrawerCustom>
 			</Container>

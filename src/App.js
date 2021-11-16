@@ -32,7 +32,7 @@ function App() {
 		<Container>
 			<NavBar nightMode={nightMode} setNightMode={setNightMode} />
 			<SideBavBar />
-			<FloatingButton />
+			<FloatingButton nightMode={nightMode} />
 			<Suspense fallback={LoadingPage}>
 				<Switch>
 					<Route exact path='/'>

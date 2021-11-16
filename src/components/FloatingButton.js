@@ -1,39 +1,58 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import { Fab, IconButton } from "@material-ui/core";
-import MessageIcon from "@material-ui/icons/Message";
+import styled from "styled-components";
+import { Fab, IconButton } from "@mui/material";
 
-const useStyles = makeStyles({
-	root: {
-		position: "fixed",
-		right: "1.5%",
-		bottom: "5%",
-		zIndex: "5",
+// logo
+import ChatIcon from "@mui/icons-material/Chat";
 
-		"@media(max-width: 600px)": {
-			right: "3%",
-		},
-	},
-	button: {
-		backgroundColor: "#7619FF",
-		color: "#fcfcfc",
+export default function FloatingButton({ nightMode }) {
+	const Container = styled.div`
+		position: fixed;
+		right: 1.5%;
+		bottom: 5%;
+		z-index: 5;
 
-		"&:hover": {
-			transform: "scale(1.1)",
-			transition: ".4s ease all",
-		},
-	},
-});
+		@media (max-width: 600px) {
+			right: 3%;
+		}
+	`;
 
-export default function FloatingButton() {
-	const classes = useStyles();
+	const Wrapper = styled.div`
+		position: relative;
+		background: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
+		color: ${nightMode ? "var(--darkBg)" : "var(--lightBg)"};
+		border-radius: 50%;
+		padding: 0.8em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&:hover {
+			transform: translateY(-3px) scale(1.05);
+			transition: 0.4s all ease;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0;
+			transition: 0.4s all ease;
+		}
+		&:hover::after {
+			opacity: 1;
+		}
+	`;
+
 	return (
-		<div className={classes.root}>
+		<Container>
 			<IconButton href='/earth-developer/#/contact' size='small'>
-				<Fab className={classes.button} size='large'>
-					<MessageIcon />
-				</Fab>
+				<Wrapper>
+					<ChatIcon />
+				</Wrapper>
 			</IconButton>
-		</div>
+		</Container>
 	);
 }
