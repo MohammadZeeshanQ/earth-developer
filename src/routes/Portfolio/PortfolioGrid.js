@@ -150,6 +150,10 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 		justify-content: center;
 	`;
 
+	const ButtonLink = styled.a`
+		text-decoration: none;
+	`;
+
 	const ButtonTemplate = styled.button`
 		font: var(--pcTextSizeButton) Nunito-Reg;
 		display: flex;
@@ -186,7 +190,7 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 		<Container>
 			<Wrapper>
 				<Grid container justifyContent='center'>
-					{displayTitle.map(({ title, image, link, program, description }, index) => (
+					{displayTitle.map(({ title, image, link, githubLink, program, description }, index) => (
 						<Grid item key={index} xs={12} sm={6} md={4} onClick={() => dialogData(image, link, title)}>
 							<GridBox>
 								<ImageBox>
@@ -218,15 +222,19 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 								</ChipBox>
 								<Divider sx={{ width: "80%", margin: "0 auto" }} />
 								<ButtonBox>
-									<SiteButton>
-										Demo
-										<WebIcon fontSize='small' sx={{ marginLeft: ".6rem" }} />
-									</SiteButton>
+									<ButtonLink href={link} target='_blank' rel='noopener noreferrer'>
+										<SiteButton>
+											Demo
+											<WebIcon fontSize='small' sx={{ marginLeft: ".6rem" }} />
+										</SiteButton>
+									</ButtonLink>
 
-									<CodeButton>
-										Source Code
-										<CodeIcon fontSize='small' sx={{ marginLeft: ".6rem" }} />
-									</CodeButton>
+									<ButtonLink href={githubLink} target='_blank' rel='noopener noreferrer'>
+										<CodeButton>
+											Source Code
+											<CodeIcon fontSize='small' sx={{ marginLeft: ".6rem" }} />
+										</CodeButton>
+									</ButtonLink>
 								</ButtonBox>
 							</GridBox>
 						</Grid>
