@@ -209,7 +209,7 @@ export default function ContactPage({ nightMode }) {
 	return (
 		<Container>
 			<Wrapper>
-				<Grid container justifyContent='center'>
+				<Grid container justifyContent='space-between'>
 					<Grid item xs={12} sm={6} md={6}>
 						<MessageBox>
 							<Header>
@@ -224,7 +224,7 @@ export default function ContactPage({ nightMode }) {
 							</Description>
 						</MessageBox>
 					</Grid>
-					<Grid item xs={12} sm={6} md={6}>
+					<Grid item xs={12} sm={6} md={5}>
 						<form onSubmit={sendEmail}>
 							<InputBox>
 								<InputDiv>

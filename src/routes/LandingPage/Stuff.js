@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid } from "@mui/material";
 
 // Component
 import PurpleButton from "../../components/PurpleButton";
@@ -45,72 +45,14 @@ const useStyles = makeStyles({
 		},
 	},
 
-	imageWrapper: {},
-
 	image: {
 		width: "100%",
 		height: "100%",
 		objectFit: "cover",
 	},
-
-	gridItemText: {},
-
-	textWrapper: {
-		display: "flex",
-		justifyContent: "flex-start",
-		alignItems: "center",
-		padding: "1rem",
-
-		"@media(max-width: 600px)": {
-			textAlign: "center",
-			padding: "1rem 0",
-		},
-
-		"@media(min-width: 601px) and (max-width: 1024px)": {
-			padding: "0 2rem 0 3rem",
-		},
-	},
-
-	textHeader: {
-		color: "#7619FF",
-		fontFamily: "Oxy-Bold",
-		letterSpacing: "3px",
-		fontSize: "2.5rem",
-
-		"@media(max-width: 600px)": {
-			fontSize: "1.8em",
-			marginTop: "2rem",
-			lineHeight: "160%",
-		},
-
-		"@media(min-width: 600px) and (max-width: 900px)": {
-			fontSize: "1.5rem",
-		},
-	},
-
-	textDescription: {
-		fontFamily: "Nunito-Reg",
-		letterSpacing: "1px",
-		lineHeight: "180%",
-		color: "#535353",
-		margin: "1rem 0 3rem 0",
-
-		"@media(min-width: 600px) and (max-width: 900px)": {
-			fontSize: ".7rem",
-			letterSpacing: "1px",
-			lineHeight: "160%",
-		},
-
-		"@media(max-width: 600px)": {
-			paddingTop: "1rem",
-			fontSize: "1.1rem",
-		},
-	},
 });
 
 export default function Stuff({ nightMode }) {
-	const classes = useStyles();
-
 	const gridData = [
 		{
 			title: "Front-End Development",
@@ -136,6 +78,34 @@ export default function Stuff({ nightMode }) {
 	];
 
 	// styled component
+	const Container = styled.section`
+		padding: 1rem 0;
+	`;
+
+	const Wrapper = styled.div`
+		width: 80%;
+		margin: auto;
+
+		@media (max-width: 600px) {
+			width: 90%;
+		}
+
+		@media (min-width: 601px) and (max-width: 1024px) {
+			width: 90%;
+		}
+	`;
+
+	const TextWrapper = styled.div`
+		display: flex;
+		align-items: center;
+
+		@media (max-width: 600px) {
+			text-align: center;
+		}
+	`;
+
+	const TextBox = styled.div``;
+
 	const Header = styled.h2`
 		font: 2.3rem Nunito-Bold;
 		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
@@ -164,44 +134,54 @@ export default function Stuff({ nightMode }) {
 			line-height: 160%;
 		}
 		@media (min-width: 601px) and (max-width: 1024px) {
-			padding-top: 1rem;
+			padding-top: 0;
+			margin-bottom: 1.5rem;
+			line-height: 150%;
 			font-size: var(--tabTextSize);
 		}
 	`;
 
+	const ImageWrapper = styled.div``;
+
+	const Image = styled.img`
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	`;
+
 	return (
-		<div className={classes.root}>
-			<div className={classes.wrapper}>
+		<Container>
+			<Wrapper>
 				{gridData.map((item, index) => (
-					<Grid container key={index} direction={item.layoutDirection} className={classes.gridContainer}>
-						<Grid item className={classes.gridItemImage} xs={12} sm={5} md={5}>
-							<div className={classes.imageWrapper}>
+					<Grid
+						container
+						key={index}
+						direction={item.layoutDirection}
+						justifyContent='space-between'
+						sx={{ margin: { xs: "4rem 0", sm: "5rem 0", md: "8rem 0" } }}
+					>
+						<Grid item xs={12} sm={5} md={5}>
+							<ImageWrapper>
 								<Tilty max={25} speed={300} perspective={1000} scale={1.05}>
-									<img
-										src={item.image}
-										className={classes.image}
-										alt={item.title}
-										width='650px'
-										height='400px'
-									/>
+									<Image src={item.image} alt={item.title} width='650px' height='400px' />
 								</Tilty>
-							</div>
+							</ImageWrapper>
 						</Grid>
 
-						<Grid item className={classes.gridItemText} xs={12} sm={7} md={7}>
-							<div className={classes.textWrapper}>
-								<div>
+						<Grid item xs={12} sm={6} md={6}>
+							<TextWrapper>
+								<TextBox>
 									<Header>{item.title}</Header>
 									<Description>{item.description}</Description>
 									<PurpleButton nightMode={nightMode} href='/earth-developer/#/portfolio'>
 										Explore More
 									</PurpleButton>
-								</div>
-							</div>
+								</TextBox>
+							</TextWrapper>
 						</Grid>
 					</Grid>
 				))}
-			</div>
-		</div>
+			</Wrapper>
+		</Container>
 	);
 }

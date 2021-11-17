@@ -55,7 +55,8 @@ export default function PurpleButton({ children, href, nightMode }) {
 			justify-content: center;
 		}
 		@media (min-width: 601px) and (max-width: 1024px) {
-			font-size: var(--tabTextSize);
+			font-size: var(--tabTextSizeButton);
+			padding: 0.5rem 0.8rem;
 		}
 	`;
 

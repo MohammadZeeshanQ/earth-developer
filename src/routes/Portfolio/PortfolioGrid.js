@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 // material component
-import { Grid } from "@mui/material";
+import { Grid, Chip, Divider } from "@mui/material";
 
 // icons
-import CloseIcon from "@material-ui/icons/Close";
+import WebIcon from "@mui/icons-material/Web";
+import CodeIcon from "@mui/icons-material/Code";
 
 // data Object
 import { UiProject, WebAppProject } from "../../middleware/Portfolio.js";
@@ -71,7 +72,6 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 			transition: 0.5s all ease;
 		}
 		&::after {
-			content: "";
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -130,7 +130,7 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 		color: ${nightMode ? "var(--ligthDescriptionColor)" : "var(--darkDescriptionColor)"};
 		font: 0.8rem Nunito-Reg;
 		letter-spacing: 0.5px;
-		margin: 1rem 0 2rem 0;
+		margin: 1rem 0;
 
 		@media (max-width: 600px) {
 			font-size: var(--mobileTextSize);
@@ -140,7 +140,47 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 		}
 	`;
 
-	const ButtonBox = styled.div``;
+	const ChipBox = styled.div`
+		text-align: center;
+		padding: 0.7rem 0;
+	`;
+
+	const ButtonBox = styled.div`
+		display: flex;
+		justify-content: center;
+	`;
+
+	const ButtonTemplate = styled.button`
+		font: var(--pcTextSizeButton) Nunito-Reg;
+		display: flex;
+		align-items: center;
+		background: transparent;
+		cursor: pointer;
+		border: none;
+		border-radius: 0.3rem;
+		padding: 0.4rem 1rem;
+		margin: 1rem;
+
+		@media (max-width: 600px) {
+			font-size: var(--mobileTextSize);
+			padding: 0.7rem 1.2rem;
+		}
+		@media (min-width: 601px) and (max-width: 1024px) {
+			font-size: var(--tabTextSize);
+			margin: 1rem 0.5rem;
+			padding: 0.3rem 0.6rem;
+		}
+	`;
+
+	const SiteButton = styled(ButtonTemplate)`
+		background: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
+		color: ${nightMode ? "var(--darkBg)" : "var(--lightBg)"};
+	`;
+
+	const CodeButton = styled(ButtonTemplate)`
+		border: 1px solid ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
+		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
+	`;
 
 	return (
 		<Container>
@@ -156,6 +196,38 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 									<Title>{title}</Title>
 									<Description>{description}</Description>
 								</TextBox>
+								<Divider sx={{ width: "80%", margin: "0 auto" }} />
+								<ChipBox>
+									{program.map((item, index) => (
+										<Chip
+											key={index}
+											label={item.code}
+											size='small'
+											variant='outlined'
+											sx={{
+												border: `1px solid ${
+													nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"
+												}`,
+												color: `${
+													nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"
+												}`,
+												margin: { xs: "0 .2rem", sm: " 0 .2rem", md: "0 .1rem" },
+											}}
+										/>
+									))}
+								</ChipBox>
+								<Divider sx={{ width: "80%", margin: "0 auto" }} />
+								<ButtonBox>
+									<SiteButton>
+										Demo
+										<WebIcon fontSize='small' sx={{ marginLeft: ".6rem" }} />
+									</SiteButton>
+
+									<CodeButton>
+										Source Code
+										<CodeIcon fontSize='small' sx={{ marginLeft: ".6rem" }} />
+									</CodeButton>
+								</ButtonBox>
 							</GridBox>
 						</Grid>
 					))}

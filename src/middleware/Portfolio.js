@@ -73,7 +73,7 @@ export const UiProject = [
 		image: ProductLotion,
 		link: "https://lotion-product-mozzie.netlify.app/",
 		description: "UI designed using Styled-Component and Material-Ui",
-		program: [{ code: "React.js" }, { code: "CSS" }, { code: "Styled-component" }, { code: "Material-Ui" }],
+		program: [{ code: "React.js" }, { code: "Styled-component" }, { code: "Material-Ui" }],
 	},
 	{
 		title: "Fashion Website",
@@ -115,21 +115,21 @@ export const UiProject = [
 		image: loginWeb,
 		link: "https://github.com/MohammadZeeshanQ/log-in-theme",
 		description: "Multiple Login and SingIn webpages template.",
-		program: [{ code: "HTML" }, { code: "CSS" }, { code: "Material-Ui" }],
+		program: [{ code: "HTML" }, { code: "Material-Ui" }],
 	},
 	{
 		title: "Product: Speaker",
 		image: SoundImage,
 		link: "https://github.com/MohammadZeeshanQ/sound-bass",
 		description: "Landing Page for a Speaker Product with basic UI",
-		program: [{ code: "HTML" }, { code: "LESS" }, { code: "CSS" }],
+		program: [{ code: "HTML" }, { code: "LESS" }],
 	},
 	{
 		title: "Parallax Website",
 		image: earthWeb,
 		link: "https://github.com/MohammadZeeshanQ/parallax-website",
 		description: "Website build with Parallax library for object scrolling animation.",
-		program: [{ code: "HTML" }, { code: "LESS" }, { code: "Javascript" }, { code: "Parallax.js" }],
+		program: [{ code: "HTML" }, { code: "LESS" }, { code: "Parallax.js" }],
 	},
 	{
 		title: "Mountainer Website",
