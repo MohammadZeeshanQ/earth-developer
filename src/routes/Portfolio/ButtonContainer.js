@@ -1,17 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 export default function ButtonContainer({ active, title, setProjectOption, setSelected, nightMode }) {
+	const [value, setValue] = useState("lightMode");
+	const [buttonColor, setButtonColor] = useState("var(--lightBg)");
+	const [textColor, setTextColor] = useState("var(--lightThemeHeader)");
+	const [useColor, setUseColor] = useState(false);
+
 	const projectHandler = (type) => {
 		setProjectOption(type);
 	};
 
+	const modeHandler = (nightMode, active) => {
+		if ((!nightMode && active) || (nightMode && active)) {
+			nightMode && active ? setButtonColor("var(--darkThemeHeader)") : setButtonColor("var(--lightThemeHeader)");
+			nightMode && active ? setTextColor("var(--darkBg)") : setTextColor("var(--lightBg)");
+			setUseColor(!useColor);
+		} else if ((nightMode && !active) || (!nightMode && !active)) {
+			nightMode && !active ? setButtonColor("var(--lightBg)") : setButtonColor("var(--lightBg)");
+			!nightMode && !active ? setTextColor("var(--lightThemeHeader)") : setTextColor("var(--darkBg)");
+			setUseColor(false);
+		} else {
+			console.log("Error");
+			setUseColor(false);
+		}
+	};
+
+	useEffect(() => {
+		modeHandler(nightMode, active);
+	}, [buttonColor]);
+
+	// (nightMode && active) || (!nightMode && active)
+
 	const ButtonTemplate = styled.button`
-		background-color: ${(active && !nightMode) || (!active && nightMode)
-			? "var(--lightThemeHeader)"
-			: "var(--lightBg)"};
-		color: ${(active && !nightMode) || (!active && nightMode) ? "#fcfcfc" : "#7619ff"};
-		border: 1px #7619ff solid;
+		background-color: ${useColor ? buttonColor : buttonColor};
+		color: ${useColor ? textColor : textColor};
+		border: 1px solid ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
 		cursor: pointer;
 		border-radius: 0.3rem;
 		letter-spacing: 0.6px;
