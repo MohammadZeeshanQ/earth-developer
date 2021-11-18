@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 // Routes
 import Index from "./routes/LandingPage/Index.js";
 import PortfolioPage from "./routes/Portfolio/Index.js";
-import AboutPage from "./routes/About/About";
+import AboutPage from "./routes/About/Index";
 import ContactPage from "./routes/Contact/ContactPage";
 
 // Css
