@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { makeStyles } from "@material-ui/core/styles";
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 import Typical from "react-typical";
 
 // Illustration
@@ -88,12 +87,12 @@ export default function MainIndex({ nightMode }) {
 	`;
 
 	const CustomButton = styled.button`
+		font: var(--pcTextSizeButton) Nunito-Semi;
+		background-color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
+		color: ${nightMode ? "var(--darkBg)" : "var(--lightBg)"};
 		position: relative;
 		display: flex;
 		align-items: center;
-		background-color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
-		font: var(--pcTextSizeButton) Nunito-Bold;
-		color: ${nightMode ? "var(--darkBg)" : "var(--lightBg)"};
 		border: none;
 		border-radius: 0.3rem;
 		letter-spacing: 0.5px;

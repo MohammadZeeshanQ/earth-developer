@@ -19,7 +19,7 @@ export default function PurpleButton({ children, href, nightMode }) {
 		display: flex;
 		align-items: center;
 		background-color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
-		font: var(--pcTextSizeButton) Nunito-Reg;
+		font: var(--pcTextSizeButton) Nunito-Semi;
 		color: ${nightMode ? "var(--darkBg)" : "var(--lightBg)"};
 		border: none;
 		border-radius: 0.3rem;

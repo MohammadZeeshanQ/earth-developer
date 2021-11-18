@@ -6,7 +6,7 @@ import { Grid, Divider } from "@mui/material";
 
 // logo
 import FrontEnd from "../../assets/images/icons/Icon4.svg";
-import WebDesign from "../../assets/images/icons/Icon2.js";
+import WebDesign from "../../assets/images/icons/Icon2.svg";
 import UiUx from "../../assets/images/icons/Icon3.svg";
 
 // icon path objects
@@ -296,7 +296,7 @@ export default function Index({ nightMode }) {
 									<br />
 									Curiosity and Driven are the two main factors that have helped me to reach where I
 									am. I'm a Front-end <ColorSpanText>Developer</ColorSpanText>, whose always looking
-									forward to growing skillsets and
+									forward to <ColorSpanText>growing</ColorSpanText> skillsets and
 									<ColorSpanText> contributing</ColorSpanText> in the best way possible.
 									<br />
 									<br />I mainly <ColorSpanText>focus</ColorSpanText> on ensure the website is
@@ -311,7 +311,7 @@ export default function Index({ nightMode }) {
 								{gigData.map((item, index) => (
 									<GigBox key={index}>
 										<GigLabel>{item.name}</GigLabel>
-										<GigIcon fill='red' src={WebDesign} alt={item.name} />
+										<GigIcon src={item.icon} alt={item.name} />
 									</GigBox>
 								))}
 							</GigWrapper>
