@@ -6,7 +6,7 @@ import { Grid, Divider } from "@mui/material";
 
 // logo
 import FrontEnd from "../../assets/images/icons/Icon4.svg";
-import WebDesign from "../../assets/images/icons/Icon2.svg";
+import WebDesign from "../../assets/images/icons/Icon2.js";
 import UiUx from "../../assets/images/icons/Icon3.svg";
 
 // icon path objects
@@ -290,7 +290,8 @@ export default function Index({ nightMode }) {
 								<Description>
 									My name is Mohammad Zeeshan. I love creating
 									<ColorSpanText> Captivating</ColorSpanText> and{" "}
-									<ColorSpanText>Elegant</ColorSpanText> Websites for small businesses.
+									<ColorSpanText>Elegant</ColorSpanText> Websites, Portfolio and Landing Pages for
+									small businesses.
 									<br />
 									<br />
 									Curiosity and Driven are the two main factors that have helped me to reach where I
@@ -310,7 +311,7 @@ export default function Index({ nightMode }) {
 								{gigData.map((item, index) => (
 									<GigBox key={index}>
 										<GigLabel>{item.name}</GigLabel>
-										<GigIcon src={item.icon} alt={item.name} />
+										<GigIcon fill='red' src={WebDesign} alt={item.name} />
 									</GigBox>
 								))}
 							</GigWrapper>

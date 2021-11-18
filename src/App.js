@@ -31,7 +31,7 @@ function App() {
 	return (
 		<Container>
 			<NavBar nightMode={nightMode} setNightMode={setNightMode} />
-			<SideBavBar />
+			<SideBavBar nightMode={nightMode} />
 			<FloatingButton nightMode={nightMode} />
 			<Suspense fallback={LoadingPage}>
 				<Switch>

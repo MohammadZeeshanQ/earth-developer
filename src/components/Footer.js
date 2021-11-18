@@ -5,9 +5,7 @@ import { IconButton } from "@material-ui/core";
 
 // Logo
 import Logo from "../assets/images/icons/Logo.png";
-import FacebookIcon from "../assets/images/icons/facebook.png";
-import Github from "../assets/images/icons/github.png";
-import LinkedIn from "../assets/images/icons/linkedin.png";
+import { FaFacebookSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
 
 const useStyles = makeStyles({
 	wrapper: {
@@ -66,25 +64,8 @@ const useStyles = makeStyles({
 	madeByDiv: {
 		marginTop: "2em",
 	},
-
-	madeByLabel: {
-		fontFamily: "Nunito-Reg",
-	},
-
-	madeByName: {
-		fontFamily: "Nunito-Reg",
-	},
-
 	copyrightDiv: {
 		marginTop: "1em",
-	},
-
-	copyrightLabel: {
-		fontFamily: "Nunito-Reg",
-	},
-
-	copyrightPreservedLabel: {
-		fontFamily: "Nunito-Reg",
 	},
 });
 
@@ -114,6 +95,41 @@ export default function Footer({ nightMode }) {
 		letter-spacing: 0.5px;
 	`;
 
+	const IconLink = styled.a`
+		margin-right: 1rem;
+	`;
+
+	const IconBox = styled.div``;
+
+	const IconFace = styled(FaFacebookSquare)`
+		font-size: 2.5rem;
+		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
+
+		&:hover {
+			transform: scale(1.2);
+			transition: 0.3s ease all;
+		}
+	`;
+
+	const IconGit = styled(FaGithubSquare)`
+		font-size: 2.5rem;
+		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
+
+		&:hover {
+			transform: scale(1.2);
+			transition: 0.3s ease all;
+		}
+	`;
+	const IconLinked = styled(FaLinkedin)`
+		font-size: 2.5rem;
+		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
+
+		&:hover {
+			transform: scale(1.2);
+			transition: 0.3s ease all;
+		}
+	`;
+
 	return (
 		<Container>
 			<div className={classes.wrapper}>
@@ -125,17 +141,23 @@ export default function Footer({ nightMode }) {
 				</div>
 
 				<div className={classes.socialMediaDiv}>
-					<IconButton size='small' href='https://www.facebook.com/Mohammad.Zzeshan'>
-						<img className={classes.socialMediaIcons} src={FacebookIcon} alt='Facebook' />
-					</IconButton>
+					<IconLink href='https://www.facebook.com/Mohammad.Zzeshan'>
+						<IconBox>
+							<IconFace />
+						</IconBox>
+					</IconLink>
 
-					<IconButton size='small' href='https://www.linkedin.com/in/mohammad-zeeshan-dev'>
-						<img className={classes.socialMediaIcons} src={LinkedIn} alt='LinkedIn' />
-					</IconButton>
+					<IconLink href='https://github.com/MohammadZeeshanQ'>
+						<IconBox>
+							<IconGit />
+						</IconBox>
+					</IconLink>
 
-					<IconButton size='small' href='https://github.com/MohammadZeeshanQ'>
-						<img className={classes.socialMediaIcons} src={Github} alt='Github' />
-					</IconButton>
+					<IconLink href='https://www.linkedin.com/in/mohammad-zeeshan-dev'>
+						<IconBox>
+							<IconLinked />
+						</IconBox>
+					</IconLink>
 				</div>
 
 				<div className={classes.madeByDiv}>
