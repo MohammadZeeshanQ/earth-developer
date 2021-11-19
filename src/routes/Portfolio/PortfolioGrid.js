@@ -156,6 +156,10 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 	const ButtonLink = styled.a`
 		text-decoration: none;
 		margin: 1rem;
+
+		@media (max-width: 600px) {
+			margin: 1rem 0.5rem;
+		}
 	`;
 
 	const ButtonTemplate = styled.button`

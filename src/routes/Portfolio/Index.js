@@ -38,7 +38,7 @@ export default function Index({ nightMode }) {
 		margin: auto;
 
 		@media (max-width: 600px) {
-			width: 90%;
+			width: 95%;
 		}
 	`;
 
