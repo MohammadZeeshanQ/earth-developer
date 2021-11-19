@@ -16,9 +16,9 @@ export default function ButtonContainer({ active, title, setProjectOption, setSe
 			nightMode && active ? setTextColor("var(--darkBg)") : setTextColor("var(--lightBg)");
 			setUseColor(!useColor);
 		} else if ((nightMode && !active) || (!nightMode && !active)) {
+			setUseColor(false);
 			nightMode && !active ? setButtonColor("var(--lightBg)") : setButtonColor("var(--lightBg)");
 			!nightMode && !active ? setTextColor("var(--lightThemeHeader)") : setTextColor("var(--darkBg)");
-			setUseColor(false);
 		} else {
 			console.log("Error");
 			setUseColor(false);
@@ -31,6 +31,7 @@ export default function ButtonContainer({ active, title, setProjectOption, setSe
 
 	// styled component
 	const ButtonTemplate = styled.button`
+		position: relative;
 		background-color: ${useColor ? buttonColor : buttonColor};
 		color: ${useColor ? textColor : textColor};
 		border: 1px solid ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
@@ -40,6 +41,11 @@ export default function ButtonContainer({ active, title, setProjectOption, setSe
 		font: 0.8rem Nunito-Semi;
 		padding: 0.5rem 1.5rem;
 		margin: 0 0.5rem;
+
+		&:hover {
+			transform: translateY(-3px) scale(1.05);
+			transition: all 0.35s ease;
+		}
 
 		@media (max-width: 600px) {
 			font-size: 1rem;

@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
+// loadingPage
+import Loading from "../../components/LoadingPage";
+
 // material component
 import { Grid, Chip, Divider } from "@mui/material";
 
@@ -16,7 +19,7 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 	const [dialog, setDialog] = useState(false);
 	const [pictureIndex, setPictureIndex] = useState([]);
 	const [dialogLink, setDialogLink] = useState("");
-	const [name, setName] = useState("");
+	const [loading, setLoading] = useState(true);
 
 	// Dialog Box Handler
 	const toggleDialog = () => {
@@ -25,10 +28,10 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 
 	// Set data upon clicking project from DIalog Box
 	const dialogData = (image, link, title) => {
+		setLoading(!loading);
 		toggleDialog();
 		setPictureIndex(image);
 		setDialogLink(link);
-		setName(title);
 	};
 
 	// Set Data Object to Display Based on State value
@@ -152,6 +155,7 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 
 	const ButtonLink = styled.a`
 		text-decoration: none;
+		margin: 1rem;
 	`;
 
 	const ButtonTemplate = styled.button`
@@ -163,7 +167,27 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 		border: none;
 		border-radius: 0.3rem;
 		padding: 0.4rem 1rem;
-		margin: 1rem;
+
+		&:hover {
+			transform: translateY(-3px) scale(1.05);
+			transition: all 0.35s ease;
+		}
+
+		&::after {
+			position: absolute;
+			border-radius: 0.3rem;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0;
+			transform: translateY(-3px) scale(1.05);
+			transition: all 0.35s ease;
+		}
+
+		&:hover::after {
+			opacity: 1;
+		}
 
 		@media (max-width: 600px) {
 			font-size: var(--mobileTextSize);
@@ -187,60 +211,77 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 	`;
 
 	return (
-		<Container>
-			<Wrapper>
-				<Grid container justifyContent='center'>
-					{displayTitle.map(({ title, image, link, githubLink, program, description }, index) => (
-						<Grid item key={index} xs={12} sm={6} md={4} onClick={() => dialogData(image, link, title)}>
-							<GridBox>
-								<ImageBox>
-									<Image src={image} alt='Project Images' />
-								</ImageBox>
-								<TextBox>
-									<Title>{title}</Title>
-									<Description>{description}</Description>
-								</TextBox>
-								<Divider sx={{ width: "80%", margin: "0 auto" }} />
-								<ChipBox>
-									{program.map((item, index) => (
-										<Chip
-											key={index}
-											label={item.code}
-											size='small'
-											variant='outlined'
-											sx={{
-												border: `1px solid ${
-													nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"
-												}`,
-												color: `${
-													nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"
-												}`,
-												margin: { xs: "0 .2rem", sm: " 0 .2rem", md: "0 .1rem" },
-											}}
-										/>
-									))}
-								</ChipBox>
-								<Divider sx={{ width: "80%", margin: "0 auto" }} />
-								<ButtonBox>
-									<ButtonLink href={link} target='_blank' rel='noopener noreferrer'>
-										<SiteButton>
-											Demo
-											<WebIcon fontSize='small' sx={{ marginLeft: ".6rem" }} />
-										</SiteButton>
-									</ButtonLink>
+		<div>
+			{projectOption ? (
+				<Container>
+					<Wrapper>
+						<Grid container justifyContent='center'>
+							{displayTitle.map(({ title, image, link, githubLink, program, description }, index) => (
+								<Grid
+									item
+									key={index}
+									xs={12}
+									sm={6}
+									md={4}
+									onClick={() => dialogData(image, link, title)}
+								>
+									<GridBox>
+										<ImageBox>
+											<Image src={image} alt='Project Images' />
+										</ImageBox>
+										<TextBox>
+											<Title>{title}</Title>
+											<Description>{description}</Description>
+										</TextBox>
+										<Divider sx={{ width: "80%", margin: "0 auto" }} />
+										<ChipBox>
+											{program.map((item, index) => (
+												<Chip
+													key={index}
+													label={item.code}
+													size='small'
+													variant='outlined'
+													sx={{
+														border: `1px solid ${
+															nightMode
+																? "var(--darkThemeHeader)"
+																: "var(--lightThemeHeader)"
+														}`,
+														color: `${
+															nightMode
+																? "var(--darkThemeHeader)"
+																: "var(--lightThemeHeader)"
+														}`,
+														margin: { xs: "0 .2rem", sm: " 0 .2rem", md: "0 .1rem" },
+													}}
+												/>
+											))}
+										</ChipBox>
+										<Divider sx={{ width: "80%", margin: "0 auto" }} />
+										<ButtonBox>
+											<ButtonLink href={link} target='_blank' rel='noopener noreferrer'>
+												<SiteButton>
+													Demo
+													<WebIcon fontSize='small' sx={{ marginLeft: ".6rem" }} />
+												</SiteButton>
+											</ButtonLink>
 
-									<ButtonLink href={githubLink} target='_blank' rel='noopener noreferrer'>
-										<CodeButton>
-											Source Code
-											<CodeIcon fontSize='small' sx={{ marginLeft: ".6rem" }} />
-										</CodeButton>
-									</ButtonLink>
-								</ButtonBox>
-							</GridBox>
+											<ButtonLink href={githubLink} target='_blank' rel='noopener noreferrer'>
+												<CodeButton>
+													Source Code
+													<CodeIcon fontSize='small' sx={{ marginLeft: ".6rem" }} />
+												</CodeButton>
+											</ButtonLink>
+										</ButtonBox>
+									</GridBox>
+								</Grid>
+							))}
 						</Grid>
-					))}
-				</Grid>
-			</Wrapper>
-		</Container>
+					</Wrapper>
+				</Container>
+			) : (
+				<Loading />
+			)}
+		</div>
 	);
 }

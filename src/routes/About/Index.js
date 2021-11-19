@@ -5,9 +5,6 @@ import styled from "styled-components";
 import { Grid, Divider } from "@mui/material";
 
 // logo
-// import FrontEnd from "../../assets/images/icons/Icon4.svg";
-// import WebDesign from "../../assets/images/icons/Icon2.svg";
-// import UiUx from "../../assets/images/icons/Icon3.svg";
 import { ReactComponent as FrontEnd } from "../../assets/images/icons/Icon4.svg";
 import { ReactComponent as WebDesign } from "../../assets/images/icons/Icon5.svg";
 import { ReactComponent as UiUx } from "../../assets/images/icons/Icon2.svg";

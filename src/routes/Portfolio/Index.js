@@ -46,7 +46,12 @@ export default function Index({ nightMode }) {
 		font: 2.8rem Nunito-Bold;
 		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
 		letter-spacing: 2px;
+
+		@media (max-width: 600px) {
+			font-size: 2.4rem;
+		}
 	`;
+
 	const ButtonContainer = styled.div`
 		text-align: center;
 	`;
