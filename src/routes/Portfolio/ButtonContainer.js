@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 export default function ButtonContainer({ active, title, setProjectOption, setSelected, nightMode }) {
-	const [value, setValue] = useState("lightMode");
 	const [buttonColor, setButtonColor] = useState("var(--lightBg)");
 	const [textColor, setTextColor] = useState("var(--lightThemeHeader)");
 	const [useColor, setUseColor] = useState(false);
@@ -30,8 +29,7 @@ export default function ButtonContainer({ active, title, setProjectOption, setSe
 		modeHandler(nightMode, active);
 	}, [buttonColor]);
 
-	// (nightMode && active) || (!nightMode && active)
-
+	// styled component
 	const ButtonTemplate = styled.button`
 		background-color: ${useColor ? buttonColor : buttonColor};
 		color: ${useColor ? textColor : textColor};

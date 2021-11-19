@@ -5,9 +5,12 @@ import styled from "styled-components";
 import { Grid, Divider } from "@mui/material";
 
 // logo
-import FrontEnd from "../../assets/images/icons/Icon4.svg";
-import WebDesign from "../../assets/images/icons/Icon2.svg";
-import UiUx from "../../assets/images/icons/Icon3.svg";
+// import FrontEnd from "../../assets/images/icons/Icon4.svg";
+// import WebDesign from "../../assets/images/icons/Icon2.svg";
+// import UiUx from "../../assets/images/icons/Icon3.svg";
+import { ReactComponent as FrontEnd } from "../../assets/images/icons/Icon4.svg";
+import { ReactComponent as WebDesign } from "../../assets/images/icons/Icon5.svg";
+import { ReactComponent as UiUx } from "../../assets/images/icons/Icon2.svg";
 
 // icon path objects
 import { HtmlData, CssData, JsData, GitData, OtherData } from "../../middleware/AboutData.js";
@@ -41,15 +44,15 @@ export default function Index({ nightMode }) {
 	const gigData = [
 		{
 			name: "Front End Developer",
-			icon: FrontEnd,
+			icon: <FrontEnd fill={`${nightMode ? "var(--darkBg)" : "var(--lightBg)"}`} />,
 		},
 		{
 			name: "Web Designer",
-			icon: WebDesign,
+			icon: <WebDesign fill={`${nightMode ? "var(--darkBg)" : "var(--lightBg)"}`} />,
 		},
 		{
 			name: "UI/UX Designer",
-			icon: UiUx,
+			icon: <UiUx fill={`${nightMode ? "var(--darkBg)" : "var(--lightBg)"}`} />,
 		},
 	];
 
@@ -150,7 +153,7 @@ export default function Index({ nightMode }) {
 			padding: 0.6rem 1rem;
 		}
 	`;
-	const GigIcon = styled.img`
+	const GigIconWrapper = styled.div`
 		width: 2.5rem;
 		height: 100%;
 		object-fit: cover;
@@ -311,7 +314,7 @@ export default function Index({ nightMode }) {
 								{gigData.map((item, index) => (
 									<GigBox key={index}>
 										<GigLabel>{item.name}</GigLabel>
-										<GigIcon src={item.icon} alt={item.name} />
+										<GigIconWrapper>{item.icon}</GigIconWrapper>
 									</GigBox>
 								))}
 							</GigWrapper>
