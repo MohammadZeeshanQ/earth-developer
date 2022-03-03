@@ -118,7 +118,7 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 
 	const Title = styled.h6`
 		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
-		font: 1.25rem Nunito-Bold;
+		font-size: 1.25rem;
 		letter-spacing: 1px;
 
 		@media (max-width: 600px) {
@@ -131,7 +131,7 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 
 	const Description = styled.p`
 		color: ${nightMode ? "var(--ligthDescriptionColor)" : "var(--darkDescriptionColor)"};
-		font: 0.8rem Nunito-Reg;
+		font-size: 0.8rem;
 		letter-spacing: 0.5px;
 		margin: 1rem 0;
 
@@ -163,7 +163,7 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 	`;
 
 	const ButtonTemplate = styled.button`
-		font: var(--pcTextSizeButton) Nunito-Reg;
+		font-size: var(--pcTextSizeButton);
 		display: flex;
 		align-items: center;
 		background: transparent;

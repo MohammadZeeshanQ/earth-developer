@@ -38,7 +38,7 @@ export default function ButtonContainer({ active, title, setProjectOption, setSe
 		cursor: pointer;
 		border-radius: 0.3rem;
 		letter-spacing: 0.6px;
-		font: 0.8rem Nunito-Semi;
+		font-size: 0.8rem;
 		padding: 0.5rem 1.5rem;
 		margin: 0 0.5rem;
 
