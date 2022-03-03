@@ -82,15 +82,16 @@ export default function Footer({ nightMode }) {
 	`;
 
 	const LogoText = styled.h3`
-		font-family: Nunito-Bold;
+		font-weight: 600;
+		font-style: italic;
 		color: ${(props) => (nightMode ? "var(--lightBg)" : "var(--darkBg)")};
 		position: relative;
-		left: -0.4rem;
+		left: -0.5rem;
 		letter-spacing: 1px;
 	`;
 
 	const DetailText = styled.p`
-		font: var(--pxTextSize) Nunito-Light;
+		font-size: var(--pxTextSize);
 		color: ${(props) => (nightMode ? "var(--lightBg)" : "var(--darkBg)")};
 		letter-spacing: 0.5px;
 	`;
@@ -136,7 +137,7 @@ export default function Footer({ nightMode }) {
 				<div className={classes.logoDiv}>
 					<IconButton size='small' href='/earth-developer/#/'>
 						<LogoIcon src={Logo} alt='Mohammad Zeshan' />
-						<LogoText>eshan.</LogoText>
+						<LogoText>eshan</LogoText>
 					</IconButton>
 				</div>
 

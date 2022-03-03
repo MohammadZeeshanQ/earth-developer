@@ -81,7 +81,8 @@ export default function ContactPage({ nightMode }) {
 	`;
 
 	const Header = styled.h2`
-		font: 2.5rem Nunito-Bold;
+		font-size: 3rem;
+		font-weight: 800;
 		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
 		letter-spacing: 1px;
 		line-height: 1.1;
@@ -95,10 +96,10 @@ export default function ContactPage({ nightMode }) {
 	`;
 
 	const Description = styled.p`
-		font: var(--pcTextSize) Nunito-Reg;
+		font-size: var(--pcTextSize);
 		color: ${nightMode ? "var(--ligthDescriptionColor)" : "var(--darkDescriptionColor)"};
 		letter-spacing: 0.5px;
-		margin-top: 1rem;
+		margin-top: 2rem;
 
 		@media (max-width: 600px) {
 			font-size: var(--mobileTextSize);
@@ -128,7 +129,7 @@ export default function ContactPage({ nightMode }) {
 		width: 100%;
 		background-color: transparent;
 		color: ${nightMode ? "var(--lightBg)" : "var(--lightThemeHeader)"};
-		font: var(--pcTextSize) Nunito-Bold;
+		font-size: var(--pcTextSize);
 		letter-spacing: 0.6px;
 		padding: 0.75rem 1rem;
 		border: 1px solid var(--ligthDescriptionColor);
@@ -139,7 +140,7 @@ export default function ContactPage({ nightMode }) {
 		}
 		&::placeholder {
 			color: ${nightMode ? "var(--ligthDescriptionColor)" : "var(--darkDescriptionColor)"};
-			font: var(--pcTextSize) Nunito-Reg;
+			font-size: var(--pcTextSize);
 		}
 		@media (min-width: 601px) and (max-width: 1024px) {
 			font-size: 0.5rem;
@@ -162,7 +163,8 @@ export default function ContactPage({ nightMode }) {
 	`;
 
 	const SubmitButton = styled.button`
-		font: var(--pcTextSizeButton) Nunito-Reg;
+		font-size: var(--pcTextSizeButton);
+		font-weight: 500;
 		display: flex;
 		align-items: center;
 		position: relative;
@@ -170,7 +172,7 @@ export default function ContactPage({ nightMode }) {
 		color: ${nightMode ? "var(--darkBg)" : "var(--lightBg)"};
 		border: none;
 		border-radius: 0.3rem;
-		letter-spacing: 0.5px;
+		letter-spacing: 1px;
 		cursor: pointer;
 		margin: 0 0.2rem;
 		padding: 0.7rem 2rem;

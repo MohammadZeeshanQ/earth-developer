@@ -19,11 +19,12 @@ export default function PurpleButton({ children, href, nightMode }) {
 		display: flex;
 		align-items: center;
 		background-color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
-		font: var(--pcTextSizeButton) Nunito-Semi;
+		font-size: var(--pcTextSizeButton);
+		font-weight: 500;
 		color: ${nightMode ? "var(--darkBg)" : "var(--lightBg)"};
 		border: none;
 		border-radius: 0.3rem;
-		letter-spacing: 0.5px;
+		letter-spacing: 1px;
 		cursor: pointer;
 		margin: 0 0.2rem;
 		padding: 0.7rem 1rem;

@@ -100,7 +100,7 @@ export default function Index({ nightMode }) {
 	`;
 
 	const AboutHeader = styled.h2`
-		font: 3rem Nunito-Bold;
+		font-size: 3rem;
 		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
 		letter-spacing: 1px;
 
@@ -113,7 +113,7 @@ export default function Index({ nightMode }) {
 	`;
 
 	const Description = styled.p`
-		font: 1.1rem Nunito-Reg;
+		font-size: 1.1rem;
 		color: ${nightMode ? "var(--lightBg)" : "var(--darkBg)"};
 		letter-spacing: 0.5px;
 		text-align: left;
@@ -127,8 +127,8 @@ export default function Index({ nightMode }) {
 	`;
 
 	const ColorSpanText = styled.span`
+		font-weight: 700;
 		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
-		font-family: Nunito-Bold;
 	`;
 
 	const GigWrapper = styled.div`
@@ -163,7 +163,8 @@ export default function Index({ nightMode }) {
 		}
 	`;
 	const GigLabel = styled.h4`
-		font: 1.3rem Nunito-Semi;
+		font-size: 1.3rem;
+		font-weight: 500;
 		color: ${nightMode ? "var(--darkBg)" : "var(--lightBg)"};
 
 		@media (max-width: 600px) {
@@ -183,7 +184,7 @@ export default function Index({ nightMode }) {
 	`;
 
 	const SkillHeader = styled.h3`
-		font: 2.5rem Nunito-Bold;
+		font-size: 2.5rem;
 		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
 		letter-spacing: 0.5px;
 
@@ -199,7 +200,8 @@ export default function Index({ nightMode }) {
 	const SkillBox = styled.div``;
 
 	const SkillTitle = styled.h4`
-		font: 1.4rem Nunito-Semi;
+		font-size: 1.4rem;
+		font-weight: 500;
 		color: ${nightMode ? "var(--lightBg)" : "var(--darkBg)"};
 		letter-spacing: 0.5px;
 
@@ -263,7 +265,7 @@ export default function Index({ nightMode }) {
 	`;
 
 	const SkillLabel = styled.p`
-		font: 0.7rem Nunito-Reg;
+		font-size: 0.7rem;
 		color: ${nightMode ? "var(--ligthDescriptionColor)" : "var(--darkDescriptionColor)"};
 		letter-spacing: 0.5px;
 		margin-top: 0.5rem;

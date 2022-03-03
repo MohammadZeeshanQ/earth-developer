@@ -65,7 +65,7 @@ export default function MainIndex({ nightMode }) {
 		font-size: 1.4rem;
 		font-weight: 500;
 		color: ${nightMode ? "var(--ligthDescriptionColor)" : "var(--darkDescriptionColor)"};
-		margin: 1rem 0 3rem 0;
+		margin: 2rem 0 4rem 0;
 		letter-spacing: 1px;
 
 		@media (max-width: 600px) {

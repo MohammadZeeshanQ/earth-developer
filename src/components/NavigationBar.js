@@ -80,10 +80,12 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 	`;
 
 	const LogoText = styled.h3`
-		font-family: Nunito-Bold;
+		font-size: 1.5rem;
+		font-weight: 600;
+		font-style: italic;
 		color: ${(props) => (nightMode ? "var(--lightBg)" : "var(--darkBg)")};
 		position: relative;
-		left: -0.4rem;
+		left: -0.3rem;
 		letter-spacing: 1px;
 	`;
 
@@ -96,12 +98,12 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 	`;
 
 	const TabButton = styled.button`
-		font: var(--pcTextSize) Nunito-Reg;
+		font-size: var(--pcTextSize);
 		background-color: transparent;
 		color: ${nightMode ? "var(--lightBg)" : "var(--darkBg)"};
 		border: none;
 		border-radius: 0.3rem;
-		letter-spacing: 0.5px;
+		letter-spacing: 1px;
 		cursor: pointer;
 		margin: 0 0.2rem;
 		padding: 0.5rem 1rem;
@@ -143,7 +145,7 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 	`;
 
 	const MobileMenuButton = styled.button`
-		font: var(--pcTextSize) Nunito-Semi;
+		font-size: var(--pcTextSize);
 		background: transparent;
 		color: #ffff;
 		border: none;
@@ -164,12 +166,12 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 	const NightModeButton = styled.button`
 		display: flex;
 		align-items: center;
-		font: var(--pcTextSizeButton) Nunito-Reg;
+		font-size: var(--pcTextSizeButton);
 		background-color: transparent;
 		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
 		border: 1px solid ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
 		border-radius: 0.3rem;
-		letter-spacing: 0.5px;
+		letter-spacing: 1px;
 		cursor: pointer;
 		padding: 0.5rem 0.6rem;
 
@@ -226,7 +228,7 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 					<LogoBox>
 						<IconButton size='small' href='/earth-developer/#/'>
 							<LogoIcon src={Logo} alt='Mohammad Zeshan' />
-							<LogoText>eshan.</LogoText>
+							<LogoText>eshan</LogoText>
 						</IconButton>
 					</LogoBox>
 

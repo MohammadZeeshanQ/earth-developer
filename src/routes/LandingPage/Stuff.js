@@ -107,7 +107,7 @@ export default function Stuff({ nightMode }) {
 	const TextBox = styled.div``;
 
 	const Header = styled.h2`
-		font: 2.3rem Nunito-Bold;
+		font-size: 2.3rem;
 		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
 		letter-spacing: 1px;
 
@@ -122,11 +122,11 @@ export default function Stuff({ nightMode }) {
 	`;
 
 	const Description = styled.p`
-		font: var(--pcTextSize) Nunito-Reg;
+		font-size: var(--pcTextSize);
 		color: ${nightMode ? "var(--ligthDescriptionColor)" : "var(--darkDescriptionColor)"};
 		letter-spacing: 0.5px;
 		line-height: 180%;
-		margin: 1rem 0 3rem 0;
+		margin: 2rem 0 4rem 0;
 
 		@media (max-width: 600px) {
 			font-size: var(--mobileTextSize);
