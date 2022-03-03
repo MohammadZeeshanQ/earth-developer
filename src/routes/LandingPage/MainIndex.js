@@ -48,7 +48,8 @@ export default function MainIndex({ nightMode }) {
 	`;
 
 	const Header = styled.h1`
-		font: 4rem Nunito-Bold;
+		font-size: 4rem;
+		font-weight: 700;
 		letter-spacing: 1px;
 		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
 
@@ -61,7 +62,8 @@ export default function MainIndex({ nightMode }) {
 	`;
 
 	const Description = styled.p`
-		font: 1.4rem Nunito-Reg;
+		font-size: 1.4rem;
+		font-weight: 500;
 		color: ${nightMode ? "var(--ligthDescriptionColor)" : "var(--darkDescriptionColor)"};
 		margin: 1rem 0 3rem 0;
 		letter-spacing: 1px;
@@ -87,7 +89,8 @@ export default function MainIndex({ nightMode }) {
 	`;
 
 	const CustomButton = styled.button`
-		font: var(--pcTextSizeButton) Nunito-Semi;
+		font-size: var(--pcTextSizeButton);
+		font-weight: 500;
 		background-color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
 		color: ${nightMode ? "var(--darkBg)" : "var(--lightBg)"};
 		position: relative;
@@ -95,7 +98,7 @@ export default function MainIndex({ nightMode }) {
 		align-items: center;
 		border: none;
 		border-radius: 0.3rem;
-		letter-spacing: 0.5px;
+		letter-spacing: 1px;
 		cursor: pointer;
 		margin: 0 0.2rem;
 		padding: 0.7rem 1.5rem;

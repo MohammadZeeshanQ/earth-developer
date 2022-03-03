@@ -1,29 +1,3 @@
-@font-face {
-	font-family: Nunito-Reg;
-	src: url(./assets/fonts/Nunito-Regular.ttf);
-	font-display: swap;
-}
-@font-face {
-	font-family: Nunito-Semi;
-	src: url(./assets/fonts/Nunito-SemiBold.ttf);
-	font-display: swap;
-}
-@font-face {
-	font-family: Nunito-Bold;
-	src: url(./assets/fonts/Nunito-Bold.ttf);
-	font-display: swap;
-}
-@font-face {
-	font-family: Oxy-Reg;
-	src: url(./assets/fonts/Oxygen-Regular.ttf);
-	font-display: swap;
-}
-@font-face {
-	font-family: Oxy-Bold;
-	src: url(./assets/fonts/Oxygen-Bold.ttf);
-	font-display: swap;
-}
-
 body {
 	background-color: #fcfcfc;
 	overflow-x: hidden;

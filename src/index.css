@@ -1,13 +1,13 @@
 :root {
 	--lightPurple: #e4d2ff;
-	--darkPurple: #7619ff;
+	--darkPurple: #571b7e;
 	--darkDescriptionColor: #777777;
 	--ligthDescriptionColor: #adadad;
 	--lightBg: #fcfcfc;
-	--darkBg: #444444;
+	--darkBg: #4b0150;
 
 	--darkThemeHeader: #ffff33;
-	--lightThemeHeader: #7619ff;
+	--lightThemeHeader: #571b7e;
 
 	--pcTextSizeButton: 0.9rem;
 	--tabTextSizeButton: 0.65rem;
@@ -35,8 +35,8 @@
 
 body {
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-		"Droid Sans", "Helvetica Neue", sans-serif;
+	font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+		"Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	overflow-x: hidden;

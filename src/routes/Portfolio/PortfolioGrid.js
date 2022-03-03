@@ -170,7 +170,7 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 		cursor: pointer;
 		border: none;
 		border-radius: 0.3rem;
-		padding: 0.4rem 1rem;
+		padding: 0.6rem 1rem;
 
 		&:hover {
 			transform: translateY(-3px) scale(1.05);
@@ -208,12 +208,6 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 		background: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
 		color: ${nightMode ? "var(--darkBg)" : "var(--lightBg)"};
 	`;
-
-	const CodeButton = styled(ButtonTemplate)`
-		border: 1px solid ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
-		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
-	`;
-
 	return (
 		<div>
 			{projectOption ? (
@@ -265,16 +259,9 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 										<ButtonBox>
 											<ButtonLink href={link} target='_blank' rel='noopener noreferrer'>
 												<SiteButton>
+													<WebIcon fontSize='small' sx={{ marginRight: ".8rem" }} />
 													Demo
-													<WebIcon fontSize='small' sx={{ marginLeft: ".6rem" }} />
 												</SiteButton>
-											</ButtonLink>
-
-											<ButtonLink href={githubLink} target='_blank' rel='noopener noreferrer'>
-												<CodeButton>
-													Source Code
-													<CodeIcon fontSize='small' sx={{ marginLeft: ".6rem" }} />
-												</CodeButton>
 											</ButtonLink>
 										</ButtonBox>
 									</GridBox>
