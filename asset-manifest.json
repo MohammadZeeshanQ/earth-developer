@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/earth-developer/static/css/main.a3aed42f.chunk.css",
-    "main.js": "/earth-developer/static/js/main.3b7b51e2.chunk.js",
-    "main.js.map": "/earth-developer/static/js/main.3b7b51e2.chunk.js.map",
+    "main.js": "/earth-developer/static/js/main.aa050b53.chunk.js",
+    "main.js.map": "/earth-developer/static/js/main.aa050b53.chunk.js.map",
     "runtime-main.js": "/earth-developer/static/js/runtime-main.44c6cb57.js",
     "runtime-main.js.map": "/earth-developer/static/js/runtime-main.44c6cb57.js.map",
     "static/js/2.f66d7f8b.chunk.js": "/earth-developer/static/js/2.f66d7f8b.chunk.js",
@@ -52,6 +52,6 @@
     "static/js/runtime-main.44c6cb57.js",
     "static/js/2.f66d7f8b.chunk.js",
     "static/css/main.a3aed42f.chunk.css",
-    "static/js/main.3b7b51e2.chunk.js"
+    "static/js/main.aa050b53.chunk.js"
   ]
 }
