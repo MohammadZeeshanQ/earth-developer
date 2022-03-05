@@ -214,7 +214,7 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 				<Container>
 					<Wrapper>
 						<Grid container justifyContent='center'>
-							{displayTitle.map(({ title, image, link, githubLink, program, description }, index) => (
+							{displayTitle.map(({ title, image, link, program, description }, index) => (
 								<Grid
 									item
 									key={index}
