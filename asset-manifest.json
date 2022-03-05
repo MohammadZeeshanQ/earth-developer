@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/earth-developer/static/css/main.a3aed42f.chunk.css",
-    "main.js": "/earth-developer/static/js/main.aa050b53.chunk.js",
-    "main.js.map": "/earth-developer/static/js/main.aa050b53.chunk.js.map",
+    "main.js": "/earth-developer/static/js/main.caa7ecd8.chunk.js",
+    "main.js.map": "/earth-developer/static/js/main.caa7ecd8.chunk.js.map",
     "runtime-main.js": "/earth-developer/static/js/runtime-main.44c6cb57.js",
     "runtime-main.js.map": "/earth-developer/static/js/runtime-main.44c6cb57.js.map",
     "static/js/2.f66d7f8b.chunk.js": "/earth-developer/static/js/2.f66d7f8b.chunk.js",
@@ -23,6 +23,7 @@
     "static/media/Logo.f562cbbc.png": "/earth-developer/static/media/Logo.f562cbbc.png",
     "static/media/ProductLotion.f4ad5b52.png": "/earth-developer/static/media/ProductLotion.f4ad5b52.png",
     "static/media/UI.36434c57.png": "/earth-developer/static/media/UI.36434c57.png",
+    "static/media/arabNewsApp.c3589d07.png": "/earth-developer/static/media/arabNewsApp.c3589d07.png",
     "static/media/bagWeb.a772cd7f.png": "/earth-developer/static/media/bagWeb.a772cd7f.png",
     "static/media/businessCoffee.67d05ded.png": "/earth-developer/static/media/businessCoffee.67d05ded.png",
     "static/media/businessDiet.e94ae4d1.png": "/earth-developer/static/media/businessDiet.e94ae4d1.png",
@@ -52,6 +53,6 @@
     "static/js/runtime-main.44c6cb57.js",
     "static/js/2.f66d7f8b.chunk.js",
     "static/css/main.a3aed42f.chunk.css",
-    "static/js/main.aa050b53.chunk.js"
+    "static/js/main.caa7ecd8.chunk.js"
   ]
 }
