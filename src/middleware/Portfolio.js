@@ -24,9 +24,17 @@ import BusinessJatour from "../assets/images/projects/businessJaptour.png";
 import BusinessHouse from "../assets/images/projects/businessHouse.png";
 import BusinessCoffee from "../assets/images/projects/businessCoffee.png";
 import BusinessDiet from "../assets/images/projects/businessDiet.png";
+import PrinterWeb from "../assets/images/projects/PrinterWeb.png";
 
 // Landing Page Data object
 export const UiProject = [
+	{
+		title: "3D Printer Business",
+		image: PrinterWeb,
+		link: "https://fdind-setup.netlify.app/",
+		description: "3D Printer and Scanner Business Landing Page with complete navigation",
+		program: [{ code: "Next.js" }, { code: "Styled-component" }, { code: "Material-Ui" }],
+	},
 	{
 		title: "Diet Plus Workout ",
 		image: BusinessDiet,
