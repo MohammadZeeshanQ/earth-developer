@@ -25,6 +25,9 @@ import BusinessHouse from "../assets/images/projects/businessHouse.png";
 import BusinessCoffee from "../assets/images/projects/businessCoffee.png";
 import BusinessDiet from "../assets/images/projects/businessDiet.png";
 import PrinterWeb from "../assets/images/projects/PrinterWeb.png";
+import CodebookWeb from "../assets/images/projects/codebook-landingPage.png";
+import AiWeb from "../assets/images/projects/ai-landingPage.png";
+import StanWeb from "../assets/images/projects/stan-landingPage.png";
 
 // Landing Page Data object
 export const UiProject = [
@@ -37,21 +40,21 @@ export const UiProject = [
 	},
 	{
 		title: "Codebook Studio",
-		image: PrinterWeb,
+		image: CodebookWeb,
 		link: "https://codebook-landingpage-mozzie.netlify.app",
 		description: "Modern Landing page with a decent animation and dark theme.",
 		program: [{ code: "Next.js" }, { code: "Styled-component" }, { code: "Material-Ui" }],
 	},
 	{
 		title: "STAN Dev Team",
-		image: PrinterWeb,
+		image: StanWeb,
 		link: "https://standev-landingpage-mozzie.netlify.app",
 		description: "Landing page build for a developer team with a decent animation and dark theme.",
 		program: [{ code: "Next.js" }, { code: "Styled-component" }, { code: "Material-Ui" }],
 	},
 	{
 		title: "Zemoo-3 AI",
-		image: PrinterWeb,
+		image: AiWeb,
 		link: "https://ai-theme-mozzie.netlify.app/",
 		description: "Basic Landing Page based AI with a dark background element",
 		program: [{ code: "React.js" }, { code: "Styled-component" }, { code: "Material-Ui" }],
