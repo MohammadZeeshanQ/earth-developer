@@ -43,7 +43,7 @@ export default function Index({ nightMode }) {
 	`;
 
 	const Header = styled.h2`
-		font: 2.8rem Nunito-Bold;
+		font-size: 2.8rem;
 		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
 		letter-spacing: 2px;
 

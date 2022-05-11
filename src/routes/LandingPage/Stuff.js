@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { makeStyles } from "@material-ui/core/styles";
 import { Grid } from "@mui/material";
 
 // Component
@@ -13,44 +12,6 @@ import GraphicDesigner from "../../assets/images/services/graphicDesigner.png";
 
 // import Tilt from 'react-tilt' Old Library
 import Tilty from "react-tilty";
-
-const useStyles = makeStyles({
-	root: {
-		padding: "2rem 0",
-
-		"@media(min-width: 601px) and (max-width: 1024px)": {
-			padding: "0",
-		},
-	},
-
-	wrapper: {
-		width: "83%",
-		margin: "auto",
-
-		"@media(max-width: 600px)": {
-			width: "90%",
-		},
-
-		"@media(min-width: 601px) and (max-width: 1024px)": {
-			width: "90%",
-		},
-	},
-
-	gridContainer: {
-		margin: "5rem 0",
-		padding: "2rem 0",
-
-		"@media(max-width: 600px)": {
-			margin: "0 0 5rem 0",
-		},
-	},
-
-	image: {
-		width: "100%",
-		height: "100%",
-		objectFit: "cover",
-	},
-});
 
 export default function Stuff({ nightMode }) {
 	const gridData = [
@@ -107,7 +68,8 @@ export default function Stuff({ nightMode }) {
 	const TextBox = styled.div``;
 
 	const Header = styled.h2`
-		font-size: 2.3rem;
+		font-size: 2.5rem;
+		font-weight: 700;
 		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
 		letter-spacing: 1px;
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 // material component
-import { AppBar, Toolbar, Divider, List, ListItem, Switch, SwipeableDrawer, IconButton } from "@mui/material";
+import { AppBar, Toolbar, Divider, List, ListItem, SwipeableDrawer, IconButton } from "@mui/material";
 
 // Icons
 import MenuIcon from "@material-ui/icons/Menu";
@@ -31,6 +31,10 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 
 	// Mobile Menu Data
 	const mobileMenuData = [
+		{
+			name: "Home",
+			link: "/earth-developer/#/",
+		},
 		{
 			name: "Portfolio",
 			link: "/earth-developer/#/portfolio",
@@ -83,7 +87,7 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 		font-size: 1.5rem;
 		font-weight: 600;
 		font-style: italic;
-		color: ${(props) => (nightMode ? "var(--lightBg)" : "var(--darkBg)")};
+		color: ${nightMode ? "var(--lightBg)" : "var(--darkBg)"};
 		position: relative;
 		left: -0.3rem;
 		letter-spacing: 1px;
@@ -193,31 +197,11 @@ export default function NavigationBar({ nightMode, setNightMode }) {
 		}
 	`;
 
-	const NightModeIcon = styled.span`
-		text-align: center;
-	`;
-
-	const SwitchCustom = styled(Switch)`
-		& .MuiSwitch-switchBase {
-			color: var(--darkPurple);
-		}
-		& .Mui-checked {
-			color: var(--lightPurple);
-		}
-		& .MuiSwitch-track {
-			background-color: var(--lightPurple);
-		}
-	`;
-
 	const DrawerCustom = styled(SwipeableDrawer)`
 		& .MuiDrawer-paper {
 			background-color: ${nightMode ? "var(--darkBg)" : "var(--darkPurple)"};
 			border-radius: 3rem 0 0 3rem;
 		}
-	`;
-
-	const ActionBox = styled.div`
-		width: 100%;
 	`;
 
 	return (

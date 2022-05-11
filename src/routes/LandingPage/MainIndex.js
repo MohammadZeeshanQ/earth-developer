@@ -48,8 +48,8 @@ export default function MainIndex({ nightMode }) {
 	`;
 
 	const Header = styled.h1`
-		font-size: 4rem;
-		font-weight: 700;
+		font-size: 4.5rem;
+		font-weight: 900;
 		letter-spacing: 1px;
 		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
 

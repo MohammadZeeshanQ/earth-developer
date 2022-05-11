@@ -9,7 +9,6 @@ import { Grid, Chip, Divider } from "@mui/material";
 
 // icons
 import WebIcon from "@mui/icons-material/Web";
-import CodeIcon from "@mui/icons-material/Code";
 
 // data Object
 import { UiProject, WebAppProject } from "../../middleware/Portfolio.js";
@@ -60,8 +59,6 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 	`;
 
 	const Wrapper = styled.div``;
-
-	const GridItemContainer = styled.div``;
 
 	const GridBox = styled.div`
 		position: relative;
@@ -119,6 +116,7 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 	const Title = styled.h6`
 		color: ${nightMode ? "var(--darkThemeHeader)" : "var(--lightThemeHeader)"};
 		font-size: 1.25rem;
+		font-weight: 800;
 		letter-spacing: 1px;
 
 		@media (max-width: 600px) {
@@ -213,7 +211,7 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 			{projectOption ? (
 				<Container>
 					<Wrapper>
-						<Grid container justifyContent='center'>
+						<Grid container justifyContent='center' sx={{ display: "flex", alignItems: "stretch" }}>
 							{displayTitle.map(({ title, image, link, program, description }, index) => (
 								<Grid
 									item
@@ -222,6 +220,7 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 									sm={6}
 									md={4}
 									onClick={() => dialogData(image, link, title)}
+									sx={{ display: "flex", alignItems: "stretch" }}
 								>
 									<GridBox>
 										<ImageBox>
@@ -255,12 +254,12 @@ export default function PortfolioGrid({ projectOption, nightMode }) {
 												/>
 											))}
 										</ChipBox>
-										<Divider sx={{ width: "80%", margin: "0 auto" }} />
+										<Divider sx={{ width: "80%", margin: "0 auto", flex: 1 }} />
 										<ButtonBox>
 											<ButtonLink href={link} target='_blank' rel='noopener noreferrer'>
 												<SiteButton>
-													<WebIcon fontSize='small' sx={{ marginRight: ".8rem" }} />
 													Demo
+													<WebIcon fontSize='small' sx={{ marginLeft: ".8rem" }} />
 												</SiteButton>
 											</ButtonLink>
 										</ButtonBox>

@@ -29,11 +29,32 @@ import PrinterWeb from "../assets/images/projects/PrinterWeb.png";
 // Landing Page Data object
 export const UiProject = [
 	{
-		title: "3D Printer Business",
+		title: "Future Dimension",
 		image: PrinterWeb,
-		link: "https://fdind-setup.netlify.app/",
+		link: "https://fdind-draft.netlify.app/",
 		description: "3D Printer and Scanner Business Landing Page with complete navigation",
 		program: [{ code: "Next.js" }, { code: "Styled-component" }, { code: "Material-Ui" }],
+	},
+	{
+		title: "Codebook Studio",
+		image: PrinterWeb,
+		link: "https://codebook-landingpage-mozzie.netlify.app",
+		description: "Modern Landing page with a decent animation and dark theme.",
+		program: [{ code: "Next.js" }, { code: "Styled-component" }, { code: "Material-Ui" }],
+	},
+	{
+		title: "STAN Dev Team",
+		image: PrinterWeb,
+		link: "https://standev-landingpage-mozzie.netlify.app",
+		description: "Landing page build for a developer team with a decent animation and dark theme.",
+		program: [{ code: "Next.js" }, { code: "Styled-component" }, { code: "Material-Ui" }],
+	},
+	{
+		title: "Zemoo-3 AI",
+		image: PrinterWeb,
+		link: "https://ai-theme-mozzie.netlify.app/",
+		description: "Basic Landing Page based AI with a dark background element",
+		program: [{ code: "React.js" }, { code: "Styled-component" }, { code: "Material-Ui" }],
 	},
 	{
 		title: "Diet Plus Workout ",

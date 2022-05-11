@@ -116,6 +116,7 @@ export default function Index({ nightMode }) {
 		font-size: 1.1rem;
 		color: ${nightMode ? "var(--lightBg)" : "var(--darkBg)"};
 		letter-spacing: 0.5px;
+		line-height: 1.5;
 		text-align: left;
 
 		@media (max-width: 600px) {
@@ -163,7 +164,7 @@ export default function Index({ nightMode }) {
 		}
 	`;
 	const GigLabel = styled.h4`
-		font-size: 1.3rem;
+		font-size: 1.2rem;
 		font-weight: 500;
 		color: ${nightMode ? "var(--darkBg)" : "var(--lightBg)"};
 
@@ -192,8 +193,6 @@ export default function Index({ nightMode }) {
 			font-size: 1.8rem;
 		}
 	`;
-
-	const GridContainer = styled.div``;
 
 	const GridItem = styled.div``;
 
